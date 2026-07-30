@@ -26,3 +26,4 @@ projects/__pycache__
 projects/*ipynb
 
 *.pyc
+/test_pose/
