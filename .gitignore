@@ -27,3 +27,5 @@ projects/*ipynb
 
 *.pyc
 /test_pose/
+/.vscode/
+/tmp/
