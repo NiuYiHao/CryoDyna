@@ -3,7 +3,7 @@
 
 数据流：粒子图像 -> encoder 得到 z ->
     1. 原 decoder 预测结构形变量；
-    2. pose head 通过线性层，根据 z 和当前旋转矩阵预测三维轴角修正量；
+    2. pose head 通过有界的两层 GELU MLP，根据 z 预测三维轴角修正量；
 随后用修正后的旋转矩阵投影结构，并沿用原版 loss 训练。
 
 开发情况：重构原版
@@ -73,6 +73,68 @@ from cryodyna.utils.rotation_conversion import axis_angle_to_matrix
 
 
 TASK_NAME = "atom"
+
+
+class PoseHeadMLP(torch.nn.Module):
+    """Predict a bounded local axis-angle correction from the latent code."""
+
+    def __init__(
+        self,
+        in_dim: int,
+        hidden_dims: tuple[int, ...] = (128, 128),
+        max_angle_deg: float = 45.0,
+    ) -> None:
+        super().__init__()
+        if len(hidden_dims) == 0:
+            raise ValueError("hidden_dims must contain at least one layer")
+
+        layers: list[torch.nn.Module] = [torch.nn.LayerNorm(in_dim)]
+        prev_dim = in_dim
+        for hidden_dim in hidden_dims:
+            layers.extend(
+                [
+                    torch.nn.Linear(prev_dim, hidden_dim),
+                    torch.nn.GELU(),
+                ]
+            )
+            prev_dim = hidden_dim
+        layers.append(torch.nn.Linear(prev_dim, 3))
+        self.net = torch.nn.Sequential(*layers)
+        self.theta_max = float(np.deg2rad(max_angle_deg))
+
+        # Keep the original zero-correction starting point while preserving
+        # a non-zero gradient through the bounded output parameterisation.
+        torch.nn.init.zeros_(self.net[-1].weight)
+        torch.nn.init.zeros_(self.net[-1].bias)
+
+    def forward(self, z: torch.Tensor) -> torch.Tensor:
+        raw = self.net(z)
+        # The bound is applied component-wise; the result remains in radians.
+        return self.theta_max * torch.tanh(raw)
+
+
+class PoseHeadSmallMLP(torch.nn.Module):
+    """Predict a bounded local axis-angle correction with one hidden layer."""
+
+    def __init__(
+        self,
+        in_dim: int,
+        hidden_dim: int = 64,
+        max_angle_deg: float = 45.0,
+    ) -> None:
+        super().__init__()
+        self.net = torch.nn.Sequential(
+            torch.nn.LayerNorm(in_dim),
+            torch.nn.Linear(in_dim, hidden_dim),
+            torch.nn.GELU(),
+            torch.nn.Linear(hidden_dim, 3),
+        )
+        self.theta_max = float(np.deg2rad(max_angle_deg))
+        torch.nn.init.zeros_(self.net[-1].weight)
+        torch.nn.init.zeros_(self.net[-1].bias)
+
+    def forward(self, z: torch.Tensor) -> torch.Tensor:
+        return self.theta_max * torch.tanh(self.net(z))
 
 
 class AbstractCryoEMTask(pl.LightningModule, ABC):
@@ -252,9 +314,22 @@ class CryoEMTask(AbstractCryoEMTask):
                 meta_2_node_edge = meta_2_node_edge.long(),
                 meta_2_node_vector = meta_2_node_vector,
                 **cfg.model.model_cfg)
-        self.pose_head = torch.nn.Linear(cfg.model.model_cfg.z_dim, 3)
-        torch.nn.init.zeros_(self.pose_head.weight)
-        torch.nn.init.zeros_(self.pose_head.bias)
+        pose_head_type = cfg.model.get("pose_head_type", "mlp")
+        pose_max_angle_deg = cfg.model.get("pose_max_angle_deg", 45.0)
+        if pose_head_type == "small_mlp":
+            self.pose_head = PoseHeadSmallMLP(
+                in_dim=cfg.model.model_cfg.z_dim,
+                hidden_dim=cfg.model.get("pose_head_small_hidden_dim", 64),
+                max_angle_deg=pose_max_angle_deg,
+            )
+        elif pose_head_type == "mlp":
+            self.pose_head = PoseHeadMLP(
+                in_dim=cfg.model.model_cfg.z_dim,
+                hidden_dims=tuple(cfg.model.get("pose_head_hidden_dim", (128, 128))),
+                max_angle_deg=pose_max_angle_deg,
+            )
+        else:
+            raise ValueError(f"Unknown pose_head_type: {pose_head_type}")
         
         self.deformer = E3Deformer()
         self._prepare_structural_loss_dependencies(meta)
@@ -498,6 +573,7 @@ class CryoEMTask(AbstractCryoEMTask):
         torch.save(
             {
                 "model": self.model.state_dict(),
+                "pose_head": self.pose_head.state_dict(),
                 "gmm_sigmas": self.gmm_sigmas.data,
                 "gmm_amps": self.gmm_amps.data,
             },
@@ -686,6 +762,9 @@ class CryoEMTask(AbstractCryoEMTask):
         weighted_sse_loss = self._calculate_sse_loss(pred_struc)
         weighted_dist_loss = self._calculate_dist_loss(pred_struc)
         weighted_clash_loss = self._calculate_clash_loss(pred_struc)
+        # Axis-angle vectors are in radians; average over particles, not coordinates.
+        delta_omega = self.pose_head(mu)
+        pose_reg_loss = self.cfg.loss.get("pose_reg_weight", 0.) * delta_omega.square().sum(dim=-1).mean()
         
         loss = (
             weighted_gmm_proj_loss
@@ -693,6 +772,7 @@ class CryoEMTask(AbstractCryoEMTask):
             + weighted_dist_loss
             + weighted_sse_loss
             + weighted_clash_loss
+            + pose_reg_loss
         )
 
         tmp_metric = {
@@ -702,6 +782,7 @@ class CryoEMTask(AbstractCryoEMTask):
             "sse": weighted_sse_loss.item(),
             "dist": weighted_dist_loss.item(),
             "clash": weighted_clash_loss.item(),
+            "pose_reg": pose_reg_loss.item(),
         }
         self.training_step_outputs.append(
             {name: value for name, value in tmp_metric.items() if name != "loss"}

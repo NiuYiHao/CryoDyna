@@ -28,10 +28,5 @@ projects/*ipynb
 *.pyc
 /test_pose/
 /.vscode/
-/tmp/
-projects/test_pose/
-lightning_logs/
-projects/pose_robustness_stars/
-projects/compare_pose_refinement_rmsd.py
-pose_robustness_runs/
-projects/pose_robustness_results/
+
+/develop/
