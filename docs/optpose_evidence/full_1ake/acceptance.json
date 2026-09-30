@@ -1,0 +1,205 @@
+{
+  "full_particle_count": true,
+  "default_angles_complete": true,
+  "prediction_replay": true,
+  "prediction_replay_scope": "endpoint",
+  "initialization_verification": {
+    "pass_initialization": true,
+    "reference": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/0deg_seed1",
+    "atol": 1e-06,
+    "rtol": 1e-06,
+    "tensor_count": 86,
+    "comparisons": [
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/0deg_seed1",
+        "max_absolute_difference": 0.0
+      },
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/5deg_seed1",
+        "max_absolute_difference": 1.1920928955078125e-07
+      },
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/10deg_seed1",
+        "max_absolute_difference": 6.556510925292969e-07
+      },
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/15deg_seed1",
+        "max_absolute_difference": 1.1920928955078125e-07
+      },
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/20deg_seed1",
+        "max_absolute_difference": 1.1920928955078125e-07
+      },
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/0deg_seed1",
+        "max_absolute_difference": 6.556510925292969e-07
+      },
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/5deg_seed1",
+        "max_absolute_difference": 1.1920928955078125e-07
+      },
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/10deg_seed1",
+        "max_absolute_difference": 6.556510925292969e-07
+      },
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/15deg_seed1",
+        "max_absolute_difference": 1.1920928955078125e-07
+      },
+      {
+        "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/20deg_seed1",
+        "max_absolute_difference": 1.1920928955078125e-07
+      }
+    ]
+  },
+  "perturbation_pass": false,
+  "checks": [
+    {
+      "angle": 0.0,
+      "seed": 1,
+      "rmsd_pass": false,
+      "pose_pass": false,
+      "pass": false,
+      "rmsd_difference_A": 0.10429342464572189,
+      "pose_difference_deg": 2.5075770473572017
+    },
+    {
+      "angle": 5.0,
+      "seed": 1,
+      "rmsd_pass": false,
+      "pose_pass": true,
+      "pass": false,
+      "rmsd_difference_A": 0.0056590306261323775,
+      "pose_difference_deg": -0.5429514417865855
+    },
+    {
+      "angle": 10.0,
+      "seed": 1,
+      "rmsd_pass": false,
+      "pose_pass": true,
+      "pass": false,
+      "rmsd_difference_A": 0.36834784630671,
+      "pose_difference_deg": -2.878177224309561
+    },
+    {
+      "angle": 15.0,
+      "seed": 1,
+      "rmsd_pass": true,
+      "pose_pass": true,
+      "pass": true,
+      "rmsd_difference_A": -0.2152690685207428,
+      "pose_difference_deg": -4.729708676765098
+    },
+    {
+      "angle": 20.0,
+      "seed": 1,
+      "rmsd_pass": true,
+      "pose_pass": true,
+      "pass": true,
+      "rmsd_difference_A": -0.7314120157681181,
+      "pose_difference_deg": -5.610180401514265
+    }
+  ],
+  "results": [
+    {
+      "method": "original",
+      "angle": 0.0,
+      "seed": 1,
+      "rmsd_A": 1.0830245844553754,
+      "pose_deg": 0.0040779928370649,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    },
+    {
+      "method": "original",
+      "angle": 5.0,
+      "seed": 1,
+      "rmsd_A": 1.1455307512236133,
+      "pose_deg": 4.999999908478184,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    },
+    {
+      "method": "original",
+      "angle": 10.0,
+      "seed": 1,
+      "rmsd_A": 1.3336410819365303,
+      "pose_deg": 10.000000012089105,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    },
+    {
+      "method": "original",
+      "angle": 15.0,
+      "seed": 1,
+      "rmsd_A": 1.5721502408377437,
+      "pose_deg": 15.000000006422002,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    },
+    {
+      "method": "original",
+      "angle": 20.0,
+      "seed": 1,
+      "rmsd_A": 2.44578231857759,
+      "pose_deg": 20.00000000069578,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    },
+    {
+      "method": "opt",
+      "angle": 0.0,
+      "seed": 1,
+      "rmsd_A": 1.1873180091010973,
+      "pose_deg": 2.5116550401942668,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    },
+    {
+      "method": "opt",
+      "angle": 5.0,
+      "seed": 1,
+      "rmsd_A": 1.1511897818497456,
+      "pose_deg": 4.457048466691599,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    },
+    {
+      "method": "opt",
+      "angle": 10.0,
+      "seed": 1,
+      "rmsd_A": 1.7019889282432403,
+      "pose_deg": 7.121822787779544,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    },
+    {
+      "method": "opt",
+      "angle": 15.0,
+      "seed": 1,
+      "rmsd_A": 1.356881172317001,
+      "pose_deg": 10.270291329656905,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    },
+    {
+      "method": "opt",
+      "angle": 20.0,
+      "seed": 1,
+      "rmsd_A": 1.714370302809472,
+      "pose_deg": 14.389819599181516,
+      "epoch": 20,
+      "particles": 50000,
+      "status": "complete"
+    }
+  ]
+}

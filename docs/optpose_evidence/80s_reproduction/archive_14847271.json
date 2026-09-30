@@ -1,0 +1,4782 @@
+{
+  "record": 14847271,
+  "file": {
+    "id": "3a7f21c7-2211-4496-81b8-24245fe05f7d",
+    "key": "outputs.zip",
+    "size": 4819998578,
+    "checksum": "md5:73ff89743e2f3e7b1b1ff9fc78b3b88e",
+    "links": {
+      "self": "https://zenodo.org/api/records/14847271/files/outputs.zip/content"
+    }
+  },
+  "entries": [
+    {
+      "name": "outputs/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 0,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/spike/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 66,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/spike/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 138,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/spike/maps/open.mrc",
+      "size": 8389632,
+      "compressed": 7752952,
+      "offset": 215,
+      "crc32": 123959709,
+      "method": 8
+    },
+    {
+      "name": "outputs/spike/maps/closed.mrc",
+      "size": 8389632,
+      "compressed": 7721004,
+      "offset": 7753252,
+      "crc32": 4156358960,
+      "method": 8
+    },
+    {
+      "name": "outputs/spike/conf.100.pkl",
+      "size": 11821892,
+      "compressed": 6415032,
+      "offset": 15474343,
+      "crc32": 1264895368,
+      "method": 8
+    },
+    {
+      "name": "outputs/spike/pose.100.pkl",
+      "size": 32509967,
+      "compressed": 17433832,
+      "offset": 21889459,
+      "crc32": 1020164025,
+      "method": 8
+    },
+    {
+      "name": "outputs/spike/config.pkl",
+      "size": 2567,
+      "compressed": 1284,
+      "offset": 39323375,
+      "crc32": 557854025,
+      "method": 8
+    },
+    {
+      "name": "outputs/spike/weights.100.pkl",
+      "size": 57202216,
+      "compressed": 53515671,
+      "offset": 39324741,
+      "crc32": 1293763308,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 92840499,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10076/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 92840577,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10076/maps/vol_005_class_B.mrc",
+      "size": 67109888,
+      "compressed": 61711484,
+      "offset": 92840660,
+      "crc32": 1037491146,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/maps/vol_001_class_C.mrc",
+      "size": 67109888,
+      "compressed": 61736498,
+      "offset": 154552246,
+      "crc32": 1420913332,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/maps/vol_000_class_E.mrc",
+      "size": 67109888,
+      "compressed": 61658427,
+      "offset": 216288846,
+      "crc32": 3627326806,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/maps/vol_003_class_D.mrc",
+      "size": 67109888,
+      "compressed": 61743889,
+      "offset": 277947375,
+      "crc32": 102135370,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/maps/vol_002_junk.mrc",
+      "size": 67109888,
+      "compressed": 61512118,
+      "offset": 339691366,
+      "crc32": 844161918,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/maps/vol_004.mrc",
+      "size": 67109888,
+      "compressed": 61672588,
+      "offset": 401203583,
+      "crc32": 3280805975,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/config.pkl",
+      "size": 2494,
+      "compressed": 1231,
+      "offset": 462876265,
+      "crc32": 3355543556,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/conf.104.pkl",
+      "size": 8441700,
+      "compressed": 4588068,
+      "offset": 462877584,
+      "crc32": 3837875484,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/weights.104.pkl",
+      "size": 31511592,
+      "compressed": 28552720,
+      "offset": 467465742,
+      "crc32": 72740046,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10076/pose.104.pkl",
+      "size": 11607327,
+      "compressed": 6213057,
+      "offset": 496018555,
+      "crc32": 2308991904,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 502231702,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 502231780,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 502231872,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 502231969,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_008.mrc",
+      "size": 8389632,
+      "compressed": 7743723,
+      "offset": 502232073,
+      "crc32": 481665611,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_001.mrc",
+      "size": 8389632,
+      "compressed": 7750478,
+      "offset": 509975911,
+      "crc32": 3891844000,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/umap_traversal.png",
+      "size": 198139,
+      "compressed": 197174,
+      "offset": 517726504,
+      "crc32": 3570709324,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_000.mrc",
+      "size": 8389632,
+      "compressed": 7752832,
+      "offset": 517923800,
+      "crc32": 130288742,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/pca_traversal.png",
+      "size": 72995,
+      "compressed": 72130,
+      "offset": 525676747,
+      "crc32": 2901202336,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_006.mrc",
+      "size": 8389632,
+      "compressed": 7747486,
+      "offset": 525748998,
+      "crc32": 3064672217,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_009.mrc",
+      "size": 8389632,
+      "compressed": 7739486,
+      "offset": 533496599,
+      "crc32": 331185902,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_003.mrc",
+      "size": 8389632,
+      "compressed": 7748765,
+      "offset": 541236200,
+      "crc32": 1861633540,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_002.mrc",
+      "size": 8389632,
+      "compressed": 7748784,
+      "offset": 548985080,
+      "crc32": 4269049378,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_007.mrc",
+      "size": 8389632,
+      "compressed": 7746331,
+      "offset": 556733979,
+      "crc32": 588065038,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_005.mrc",
+      "size": 8389632,
+      "compressed": 7747943,
+      "offset": 564480425,
+      "crc32": 2105548735,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/z_values.txt",
+      "size": 1016,
+      "compressed": 499,
+      "offset": 572228483,
+      "crc32": 3908692204,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/pca_traversal_hex.png",
+      "size": 63064,
+      "compressed": 61984,
+      "offset": 572229098,
+      "crc32": 685452585,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/umap_traversal_connected.png",
+      "size": 200271,
+      "compressed": 199442,
+      "offset": 572291207,
+      "crc32": 284782312,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/vol_004.mrc",
+      "size": 8389632,
+      "compressed": 7748259,
+      "offset": 572490781,
+      "crc32": 286793312,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/maps/pc1_10/umap.png",
+      "size": 362508,
+      "compressed": 361126,
+      "offset": 580239155,
+      "crc32": 1409298461,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/conf.100.pkl",
+      "size": 2427492,
+      "compressed": 1319829,
+      "offset": 580600393,
+      "crc32": 918462447,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/pose.100.pkl",
+      "size": 6675367,
+      "compressed": 3574205,
+      "offset": 581920326,
+      "crc32": 4189340379,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/config.pkl",
+      "size": 609559,
+      "compressed": 119826,
+      "offset": 585494635,
+      "crc32": 93689156,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/heterogeneous/weights.100.pkl",
+      "size": 14927464,
+      "compressed": 13552813,
+      "offset": 585614563,
+      "crc32": 3857799097,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/homogeneous/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 599167483,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11846/homogeneous/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 599167573,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11846/homogeneous/maps/vol_001.mrc",
+      "size": 8389632,
+      "compressed": 7764695,
+      "offset": 599167668,
+      "crc32": 2436468829,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/homogeneous/maps/vol_000.mrc",
+      "size": 8389632,
+      "compressed": 7762534,
+      "offset": 606932469,
+      "crc32": 2042356291,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/homogeneous/maps/vol_002.mrc",
+      "size": 8389632,
+      "compressed": 7781581,
+      "offset": 614695109,
+      "crc32": 3060776692,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/homogeneous/conf.100.pkl",
+      "size": 6864516,
+      "compressed": 3721777,
+      "offset": 622476796,
+      "crc32": 3683688815,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/homogeneous/pose.100.pkl",
+      "size": 18877183,
+      "compressed": 10083656,
+      "offset": 626198675,
+      "crc32": 1760714738,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/homogeneous/config.pkl",
+      "size": 1718757,
+      "compressed": 330012,
+      "offset": 636282433,
+      "crc32": 3879635696,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11846/homogeneous/weights.100.pkl",
+      "size": 34893928,
+      "compressed": 32391380,
+      "offset": 636612545,
+      "crc32": 2833248934,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 669004030,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/synthetic-1d/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 669004109,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/synthetic-1d/maps/vol_010.mrc",
+      "size": 8389632,
+      "compressed": 7734405,
+      "offset": 669004193,
+      "crc32": 3319928607,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/maps/vol_019.mrc",
+      "size": 8389632,
+      "compressed": 7735105,
+      "offset": 676738693,
+      "crc32": 724517587,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/maps/vol_009.mrc",
+      "size": 8389632,
+      "compressed": 7732379,
+      "offset": 684473893,
+      "crc32": 2641749745,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/maps/vol_003.mrc",
+      "size": 8389632,
+      "compressed": 7735146,
+      "offset": 692206367,
+      "crc32": 3660815477,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/maps/vol_007.mrc",
+      "size": 8389632,
+      "compressed": 7733784,
+      "offset": 699941608,
+      "crc32": 2531275953,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/maps/vol_005.mrc",
+      "size": 8389632,
+      "compressed": 7740539,
+      "offset": 707675487,
+      "crc32": 343932180,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/conf.100.pkl",
+      "size": 1600162,
+      "compressed": 847870,
+      "offset": 715416121,
+      "crc32": 239346247,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/pose.100.pkl",
+      "size": 4400211,
+      "compressed": 2357135,
+      "offset": 716264082,
+      "crc32": 800001017,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/weights.100.pkl",
+      "size": 11205217,
+      "compressed": 10058435,
+      "offset": 718621308,
+      "crc32": 4050402351,
+      "method": 8
+    },
+    {
+      "name": "outputs/synthetic-1d/configs.yaml",
+      "size": 263,
+      "compressed": 164,
+      "offset": 728679837,
+      "crc32": 226766106,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10180/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 728680092,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10180/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 728680170,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10180/maps/vol_001.mrc",
+      "size": 8389632,
+      "compressed": 7660265,
+      "offset": 728680253,
+      "crc32": 741519154,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10180/maps/vol_000.mrc",
+      "size": 8389632,
+      "compressed": 7668595,
+      "offset": 736340612,
+      "crc32": 2117923328,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10180/maps/vol_003.mrc",
+      "size": 8389632,
+      "compressed": 7660879,
+      "offset": 744009301,
+      "crc32": 1442083297,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10180/maps/vol_002.mrc",
+      "size": 8389632,
+      "compressed": 7659014,
+      "offset": 751670274,
+      "crc32": 81712712,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10180/maps/vol_004.mrc",
+      "size": 8389632,
+      "compressed": 7665458,
+      "offset": 759329382,
+      "crc32": 3905062267,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10180/conf.100.pkl",
+      "size": 5240004,
+      "compressed": 2843452,
+      "offset": 766994934,
+      "crc32": 1834605500,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10180/pose.100.pkl",
+      "size": 28819335,
+      "compressed": 15330380,
+      "offset": 769838476,
+      "crc32": 4243366309,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10180/config.pkl",
+      "size": 2900,
+      "compressed": 1416,
+      "offset": 785168946,
+      "crc32": 2760590644,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10180/weights.100.pkl",
+      "size": 43297192,
+      "compressed": 40300550,
+      "offset": 785170450,
+      "crc32": 2790431110,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 825471093,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 825471171,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 825471254,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_072.mrc",
+      "size": 8389632,
+      "compressed": 7756620,
+      "offset": 825471347,
+      "crc32": 3573739354,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_049_AP_state.mrc",
+      "size": 8389632,
+      "compressed": 7769457,
+      "offset": 833228071,
+      "crc32": 668431880,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_039.mrc",
+      "size": 8389632,
+      "compressed": 7746727,
+      "offset": 840997641,
+      "crc32": 2245010800,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_093_P_state.mrc",
+      "size": 8389632,
+      "compressed": 7742037,
+      "offset": 848744472,
+      "crc32": 3356792346,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_024.mrc",
+      "size": 8389632,
+      "compressed": 7709323,
+      "offset": 856486621,
+      "crc32": 2811241683,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_008.mrc",
+      "size": 8389632,
+      "compressed": 7714916,
+      "offset": 864196048,
+      "crc32": 536969878,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_010.mrc",
+      "size": 8389632,
+      "compressed": 7729565,
+      "offset": 871911068,
+      "crc32": 2017470658,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_071.mrc",
+      "size": 8389632,
+      "compressed": 7784122,
+      "offset": 879640737,
+      "crc32": 3503645163,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/junk.pkl",
+      "size": 12135,
+      "compressed": 2591,
+      "offset": 887424963,
+      "crc32": 1683825791,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_065.mrc",
+      "size": 8389632,
+      "compressed": 7742401,
+      "offset": 887427655,
+      "crc32": 783289176,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_047.mrc",
+      "size": 8389632,
+      "compressed": 7792850,
+      "offset": 895170160,
+      "crc32": 2326432630,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_001.mrc",
+      "size": 8389632,
+      "compressed": 7779051,
+      "offset": 902963114,
+      "crc32": 1945193603,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/eftup.pkl",
+      "size": 10735,
+      "compressed": 2338,
+      "offset": 910742269,
+      "crc32": 3527946065,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_049.mrc",
+      "size": 8389632,
+      "compressed": 7769457,
+      "offset": 910744709,
+      "crc32": 668431880,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_019.mrc",
+      "size": 8389632,
+      "compressed": 7726293,
+      "offset": 918514270,
+      "crc32": 1809561609,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_063.mrc",
+      "size": 8389632,
+      "compressed": 7777420,
+      "offset": 926240667,
+      "crc32": 4107495166,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_096.mrc",
+      "size": 8389632,
+      "compressed": 7649904,
+      "offset": 934018191,
+      "crc32": 1624019894,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_041.mrc",
+      "size": 8389632,
+      "compressed": 7741175,
+      "offset": 941668199,
+      "crc32": 2051888881,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 949409478,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap_v2/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 949409580,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap_v2/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7782428,
+      "offset": 949409696,
+      "crc32": 189340505,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap_v2/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7782676,
+      "offset": 957192254,
+      "crc32": 4175051103,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap_v2/fsc-plot.png",
+      "size": 236174,
+      "compressed": 212591,
+      "offset": 964975060,
+      "crc32": 3538283466,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap_v2/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7780591,
+      "offset": 965187779,
+      "crc32": 1732786797,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap_v2/fsc-vals.txt",
+      "size": 3391,
+      "compressed": 1310,
+      "offset": 972968501,
+      "crc32": 1944010324,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 972969939,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7783202,
+      "offset": 972970044,
+      "crc32": 3614927733,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7783131,
+      "offset": 980753365,
+      "crc32": 3426219727,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap/fsc-plot.png",
+      "size": 230978,
+      "compressed": 206736,
+      "offset": 988536615,
+      "crc32": 2065098249,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7779705,
+      "offset": 988743468,
+      "crc32": 685459142,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap/fsc-vals.txt",
+      "size": 3383,
+      "compressed": 1309,
+      "offset": 996523293,
+      "crc32": 4017911829,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 996524719,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7776264,
+      "offset": 996524831,
+      "crc32": 1177759317,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7776441,
+      "offset": 1004301221,
+      "crc32": 150301178,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed/fsc-plot.png",
+      "size": 297645,
+      "compressed": 278029,
+      "offset": 1012077788,
+      "crc32": 539200046,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7775998,
+      "offset": 1012355941,
+      "crc32": 3753885962,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed/fsc-vals.txt",
+      "size": 3386,
+      "compressed": 1411,
+      "offset": 1020132066,
+      "crc32": 2884711992,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/p/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1020133601,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/p/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7773883,
+      "offset": 1020133705,
+      "crc32": 433598171,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/p/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7773959,
+      "offset": 1027907706,
+      "crc32": 1690615533,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/p/fsc-plot.png",
+      "size": 308599,
+      "compressed": 289211,
+      "offset": 1035681783,
+      "crc32": 3371201902,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/p/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7774669,
+      "offset": 1035971110,
+      "crc32": 3055481457,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/p/fsc-vals.txt",
+      "size": 3382,
+      "compressed": 1409,
+      "offset": 1043745898,
+      "crc32": 2586746008,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294_v2/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1043747423,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294_v2/half_map_b.mrc",
+      "size": 101649760,
+      "compressed": 94082337,
+      "offset": 1043747535,
+      "crc32": 203586086,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294_v2/half_map_a.mrc",
+      "size": 101649760,
+      "compressed": 94082003,
+      "offset": 1137829998,
+      "crc32": 1905671488,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294_v2/fsc-plot.png",
+      "size": 288985,
+      "compressed": 269625,
+      "offset": 1231912127,
+      "crc32": 121996191,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294_v2/backproject.mrc",
+      "size": 101649760,
+      "compressed": 94126245,
+      "offset": 1232181876,
+      "crc32": 2925306349,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294_v2/fsc-vals.txt",
+      "size": 7842,
+      "compressed": 3117,
+      "offset": 1326308248,
+      "crc32": 2062949000,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k90/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1326311489,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k90/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7768455,
+      "offset": 1326311595,
+      "crc32": 4291628852,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k90/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7768300,
+      "offset": 1334080170,
+      "crc32": 2979194886,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k90/fsc-plot.png",
+      "size": 293464,
+      "compressed": 273618,
+      "offset": 1341848590,
+      "crc32": 2563320152,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k90/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7770932,
+      "offset": 1342122326,
+      "crc32": 97821280,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k90/fsc-vals.txt",
+      "size": 3381,
+      "compressed": 1368,
+      "offset": 1349893379,
+      "crc32": 569136376,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1349894865,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294/backproject.lowpass.mrc",
+      "size": 101649760,
+      "compressed": 94173357,
+      "offset": 1349894974,
+      "crc32": 4000579741,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294/half_map_b.mrc",
+      "size": 101649760,
+      "compressed": 94080679,
+      "offset": 1444068463,
+      "crc32": 197689113,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294/half_map_a.mrc",
+      "size": 101649760,
+      "compressed": 94082738,
+      "offset": 1538149265,
+      "crc32": 200832905,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294/backproject.lowpass7.87.mrc",
+      "size": 101649760,
+      "compressed": 94053988,
+      "offset": 1632232126,
+      "crc32": 548122251,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294/fsc-plot.png",
+      "size": 287355,
+      "compressed": 268211,
+      "offset": 1726286250,
+      "crc32": 2793120756,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294/backproject.mrc",
+      "size": 101649760,
+      "compressed": 94126159,
+      "offset": 1726554582,
+      "crc32": 726311531,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294/mask.mrc",
+      "size": 101649760,
+      "compressed": 756071,
+      "offset": 1820680865,
+      "crc32": 412275379,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/ap.294/fsc-vals.txt",
+      "size": 7828,
+      "compressed": 3086,
+      "offset": 1821437053,
+      "crc32": 2054411684,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k30/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1821440260,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k30/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7768266,
+      "offset": 1821440366,
+      "crc32": 1463574741,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k30/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7768203,
+      "offset": 1829208752,
+      "crc32": 2280128375,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k30/fsc-plot.png",
+      "size": 290587,
+      "compressed": 271192,
+      "offset": 1836977075,
+      "crc32": 982240532,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k30/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7771279,
+      "offset": 1837248385,
+      "crc32": 2978344463,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k30/fsc-vals.txt",
+      "size": 3386,
+      "compressed": 1368,
+      "offset": 1845019785,
+      "crc32": 2292779241,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1845021271,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7782494,
+      "offset": 1845021384,
+      "crc32": 3404873351,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7782766,
+      "offset": 1852804005,
+      "crc32": 1479434726,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap/fsc-plot.png",
+      "size": 235894,
+      "compressed": 212390,
+      "offset": 1860586898,
+      "crc32": 2241888518,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7780352,
+      "offset": 1860799413,
+      "crc32": 3201751673,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_open_ap/fsc-vals.txt",
+      "size": 3384,
+      "compressed": 1316,
+      "offset": 1868579893,
+      "crc32": 1710751421,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed_v2/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1868581334,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed_v2/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7775225,
+      "offset": 1868581449,
+      "crc32": 2593826991,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed_v2/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7775381,
+      "offset": 1876356803,
+      "crc32": 62070602,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed_v2/fsc-plot.png",
+      "size": 304776,
+      "compressed": 285566,
+      "offset": 1884132313,
+      "crc32": 1561263230,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed_v2/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7775249,
+      "offset": 1884418006,
+      "crc32": 3691112658,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/l1_closed_v2/fsc-vals.txt",
+      "size": 3387,
+      "compressed": 1418,
+      "offset": 1892193385,
+      "crc32": 4093323101,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/eftup/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1892194930,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/eftup/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7776664,
+      "offset": 1892195038,
+      "crc32": 543414705,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/eftup/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7776101,
+      "offset": 1899971824,
+      "crc32": 3547316231,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/eftup/fsc-plot.png",
+      "size": 300931,
+      "compressed": 281149,
+      "offset": 1907748047,
+      "crc32": 3117404009,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/eftup/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7775231,
+      "offset": 1908029316,
+      "crc32": 34773376,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/eftup/fsc-vals.txt",
+      "size": 3393,
+      "compressed": 1409,
+      "offset": 1915804670,
+      "crc32": 898806225,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k17/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1915806199,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k17/half_map_b.mrc",
+      "size": 8389632,
+      "compressed": 7767937,
+      "offset": 1915806305,
+      "crc32": 2791881364,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k17/half_map_a.mrc",
+      "size": 8389632,
+      "compressed": 7767382,
+      "offset": 1923574362,
+      "crc32": 3305516718,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k17/fsc-plot.png",
+      "size": 283223,
+      "compressed": 262083,
+      "offset": 1931341864,
+      "crc32": 1543289216,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k17/backproject.mrc",
+      "size": 8389632,
+      "compressed": 7767467,
+      "offset": 1931604065,
+      "crc32": 1344343051,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/backproj/k17/fsc-vals.txt",
+      "size": 3424,
+      "compressed": 1365,
+      "offset": 1939371653,
+      "crc32": 109034319,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_071_polysome_3.mrc",
+      "size": 8389632,
+      "compressed": 7784122,
+      "offset": 1939373136,
+      "crc32": 3503645163,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_032.mrc",
+      "size": 8389632,
+      "compressed": 7776763,
+      "offset": 1947157373,
+      "crc32": 1881406151,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_087.mrc",
+      "size": 8389632,
+      "compressed": 7779123,
+      "offset": 1954934240,
+      "crc32": 2308067329,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/l1_closed.pkl",
+      "size": 12055,
+      "compressed": 2575,
+      "offset": 1962713467,
+      "crc32": 1456988429,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_040.mrc",
+      "size": 8389632,
+      "compressed": 7723797,
+      "offset": 1962716148,
+      "crc32": 4019131749,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_027.mrc",
+      "size": 8389632,
+      "compressed": 7737713,
+      "offset": 1970440049,
+      "crc32": 1217199612,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_073.mrc",
+      "size": 8389632,
+      "compressed": 7786224,
+      "offset": 1978177866,
+      "crc32": 197368235,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_050.mrc",
+      "size": 8389632,
+      "compressed": 7764686,
+      "offset": 1985964194,
+      "crc32": 1102122502,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/ap.pkl",
+      "size": 119016,
+      "compressed": 22880,
+      "offset": 1993728984,
+      "crc32": 2186314063,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 1993751963,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/vol_071_lowpass14.mrc",
+      "size": 8389632,
+      "compressed": 7754636,
+      "offset": 1993752062,
+      "crc32": 26343530,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/vol_028_lowpass10.mrc",
+      "size": 8389632,
+      "compressed": 7730307,
+      "offset": 2001506818,
+      "crc32": 3594652852,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/vol_028_lowpass13.mrc",
+      "size": 8389632,
+      "compressed": 7723437,
+      "offset": 2009237245,
+      "crc32": 2415655059,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/vol_070_lowpass14.mrc",
+      "size": 8389632,
+      "compressed": 7745301,
+      "offset": 2016960802,
+      "crc32": 3064287720,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/vol_064_lowpass10.mrc",
+      "size": 8389632,
+      "compressed": 7699244,
+      "offset": 2024706223,
+      "crc32": 1269424425,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/vol_028_lowpass12.mrc",
+      "size": 8389632,
+      "compressed": 7725686,
+      "offset": 2032405587,
+      "crc32": 325034637,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/vol_028_lowpass14.mrc",
+      "size": 8389632,
+      "compressed": 7723262,
+      "offset": 2040131393,
+      "crc32": 2788646066,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/vol_061_lowpass14.mrc",
+      "size": 8389632,
+      "compressed": 7757160,
+      "offset": 2047854775,
+      "crc32": 2426316143,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/other/vol_028_lowpass15.mrc",
+      "size": 8389632,
+      "compressed": 7722396,
+      "offset": 2055612055,
+      "crc32": 2459455548,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_084.mrc",
+      "size": 8389632,
+      "compressed": 7749984,
+      "offset": 2063334571,
+      "crc32": 1662119225,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_000.mrc",
+      "size": 8389632,
+      "compressed": 7624306,
+      "offset": 2071084659,
+      "crc32": 19795611,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_045.mrc",
+      "size": 8389632,
+      "compressed": 7756614,
+      "offset": 2078709069,
+      "crc32": 2244392151,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_013.mrc",
+      "size": 8389632,
+      "compressed": 7757789,
+      "offset": 2086465787,
+      "crc32": 3023910771,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_030.mrc",
+      "size": 8389632,
+      "compressed": 7754058,
+      "offset": 2094223680,
+      "crc32": 3261022207,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_089.mrc",
+      "size": 8389632,
+      "compressed": 7782558,
+      "offset": 2101977842,
+      "crc32": 1011481178,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_029.mrc",
+      "size": 8389632,
+      "compressed": 7741812,
+      "offset": 2109760504,
+      "crc32": 430844828,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_028.mrc",
+      "size": 8389632,
+      "compressed": 7767201,
+      "offset": 2117502420,
+      "crc32": 3222037323,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_012.mrc",
+      "size": 8389632,
+      "compressed": 7723846,
+      "offset": 2125269725,
+      "crc32": 859554073,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_069.mrc",
+      "size": 8389632,
+      "compressed": 7789284,
+      "offset": 2132993675,
+      "crc32": 2007502285,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_060.mrc",
+      "size": 8389632,
+      "compressed": 7756134,
+      "offset": 2140783063,
+      "crc32": 3591119032,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/l1_open_ap.pkl",
+      "size": 107112,
+      "compressed": 20642,
+      "offset": 2148539301,
+      "crc32": 1734303037,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_076.mrc",
+      "size": 8389632,
+      "compressed": 7751728,
+      "offset": 2148560050,
+      "crc32": 730972797,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_083.mrc",
+      "size": 8389632,
+      "compressed": 7788174,
+      "offset": 2156311882,
+      "crc32": 461387313,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_026.mrc",
+      "size": 8389632,
+      "compressed": 7746631,
+      "offset": 2164100160,
+      "crc32": 4077986750,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_062.mrc",
+      "size": 8389632,
+      "compressed": 7763637,
+      "offset": 2171846895,
+      "crc32": 2830595649,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_081.mrc",
+      "size": 8389632,
+      "compressed": 7780138,
+      "offset": 2179610636,
+      "crc32": 3281206281,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_044.mrc",
+      "size": 8389632,
+      "compressed": 7748252,
+      "offset": 2187390878,
+      "crc32": 1611168015,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_023.mrc",
+      "size": 8389632,
+      "compressed": 7757253,
+      "offset": 2195139234,
+      "crc32": 2338766656,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/centers.txt",
+      "size": 40810,
+      "compressed": 17941,
+      "offset": 2202896591,
+      "crc32": 3425020173,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/k90.pkl",
+      "size": 2239,
+      "compressed": 689,
+      "offset": 2202914636,
+      "crc32": 4018812188,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/centers_ind.txt",
+      "size": 541,
+      "compressed": 270,
+      "offset": 2202915425,
+      "crc32": 3757680477,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/l1_closed_v2.pkl",
+      "size": 6471,
+      "compressed": 1522,
+      "offset": 2202915803,
+      "crc32": 1966022137,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_070.mrc",
+      "size": 8389632,
+      "compressed": 7777444,
+      "offset": 2202917434,
+      "crc32": 1609777899,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_034.mrc",
+      "size": 8389632,
+      "compressed": 7750926,
+      "offset": 2210694982,
+      "crc32": 802935396,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_006.mrc",
+      "size": 8389632,
+      "compressed": 7737520,
+      "offset": 2218446012,
+      "crc32": 1852206391,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_009.mrc",
+      "size": 8389632,
+      "compressed": 7733854,
+      "offset": 2226183636,
+      "crc32": 3890672997,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_003.mrc",
+      "size": 8389632,
+      "compressed": 7740221,
+      "offset": 2233917594,
+      "crc32": 447698100,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_002.mrc",
+      "size": 8389632,
+      "compressed": 7791957,
+      "offset": 2241657919,
+      "crc32": 2820694934,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_018.mrc",
+      "size": 8389632,
+      "compressed": 7773500,
+      "offset": 2249449980,
+      "crc32": 2008901606,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_033_EfTu-tRNA-P.mrc",
+      "size": 8389632,
+      "compressed": 7776896,
+      "offset": 2257223584,
+      "crc32": 1758526073,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_091.mrc",
+      "size": 8389632,
+      "compressed": 7773698,
+      "offset": 2265000596,
+      "crc32": 1744521276,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_017.mrc",
+      "size": 8389632,
+      "compressed": 7745461,
+      "offset": 2272774398,
+      "crc32": 2948415031,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/labels.pkl",
+      "size": 147888,
+      "compressed": 25394,
+      "offset": 2280519963,
+      "crc32": 795939065,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_055.mrc",
+      "size": 8389632,
+      "compressed": 7695089,
+      "offset": 2280545460,
+      "crc32": 2476019458,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_068.mrc",
+      "size": 8389632,
+      "compressed": 7783550,
+      "offset": 2288240653,
+      "crc32": 835356869,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_057.mrc",
+      "size": 8389632,
+      "compressed": 7764120,
+      "offset": 2296024307,
+      "crc32": 4117506577,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_054.mrc",
+      "size": 8389632,
+      "compressed": 7772752,
+      "offset": 2303788531,
+      "crc32": 1251557974,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_093.mrc",
+      "size": 8389632,
+      "compressed": 7742037,
+      "offset": 2311561387,
+      "crc32": 3356792346,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_094.mrc",
+      "size": 8389632,
+      "compressed": 7763354,
+      "offset": 2319303528,
+      "crc32": 2251578202,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_042.mrc",
+      "size": 8389632,
+      "compressed": 7767436,
+      "offset": 2327066986,
+      "crc32": 3010355561,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_020.mrc",
+      "size": 8389632,
+      "compressed": 7743700,
+      "offset": 2334834526,
+      "crc32": 4201843900,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_098.mrc",
+      "size": 8389632,
+      "compressed": 7733311,
+      "offset": 2342578330,
+      "crc32": 331038578,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_025.mrc",
+      "size": 8389632,
+      "compressed": 7737973,
+      "offset": 2350311745,
+      "crc32": 1261768626,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/k17.pkl",
+      "size": 974,
+      "compressed": 397,
+      "offset": 2358049822,
+      "crc32": 450386123,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_077.mrc",
+      "size": 8389632,
+      "compressed": 7760079,
+      "offset": 2358050319,
+      "crc32": 793924090,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/k94.pkl",
+      "size": 2062,
+      "compressed": 660,
+      "offset": 2365810502,
+      "crc32": 3808437354,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_074.mrc",
+      "size": 8389632,
+      "compressed": 7785542,
+      "offset": 2365811262,
+      "crc32": 2484648727,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_064.mrc",
+      "size": 8389632,
+      "compressed": 7731190,
+      "offset": 2373596908,
+      "crc32": 705377932,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_053.mrc",
+      "size": 8389632,
+      "compressed": 7742878,
+      "offset": 2381328202,
+      "crc32": 1931105751,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_043.mrc",
+      "size": 8389632,
+      "compressed": 7741862,
+      "offset": 2389071184,
+      "crc32": 553703955,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_007.mrc",
+      "size": 8389632,
+      "compressed": 7746697,
+      "offset": 2396813150,
+      "crc32": 1017517679,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_086.mrc",
+      "size": 8389632,
+      "compressed": 7742589,
+      "offset": 2404559951,
+      "crc32": 811318183,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_061_polysome_1.mrc",
+      "size": 8389632,
+      "compressed": 7792226,
+      "offset": 2412302644,
+      "crc32": 3551321223,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_022.mrc",
+      "size": 8389632,
+      "compressed": 7755311,
+      "offset": 2420094985,
+      "crc32": 4052570945,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/junk.png",
+      "size": 152222,
+      "compressed": 150727,
+      "offset": 2427850400,
+      "crc32": 621181199,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_058.mrc",
+      "size": 8389632,
+      "compressed": 7749803,
+      "offset": 2428001228,
+      "crc32": 3746509880,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/umap_hex.png",
+      "size": 92815,
+      "compressed": 92078,
+      "offset": 2435751135,
+      "crc32": 1428563934,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_014.mrc",
+      "size": 8389632,
+      "compressed": 7737255,
+      "offset": 2435843318,
+      "crc32": 2910939227,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_051.mrc",
+      "size": 8389632,
+      "compressed": 7734929,
+      "offset": 2443580677,
+      "crc32": 1516455898,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_031.mrc",
+      "size": 8389632,
+      "compressed": 7783609,
+      "offset": 2451315710,
+      "crc32": 4187362975,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_005.mrc",
+      "size": 8389632,
+      "compressed": 7691286,
+      "offset": 2459099423,
+      "crc32": 1755912549,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_067.mrc",
+      "size": 8389632,
+      "compressed": 7701194,
+      "offset": 2466790813,
+      "crc32": 321373027,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/z_values.txt",
+      "size": 40810,
+      "compressed": 17941,
+      "offset": 2474492111,
+      "crc32": 3425020173,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_061.mrc",
+      "size": 8389632,
+      "compressed": 7792226,
+      "offset": 2474510157,
+      "crc32": 3551321223,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_082.mrc",
+      "size": 8389632,
+      "compressed": 7771990,
+      "offset": 2482302487,
+      "crc32": 1810511182,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_075.mrc",
+      "size": 8389632,
+      "compressed": 7724641,
+      "offset": 2490074581,
+      "crc32": 2317893616,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_078.mrc",
+      "size": 8389632,
+      "compressed": 7782289,
+      "offset": 2497799326,
+      "crc32": 3752806615,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_033.mrc",
+      "size": 8389632,
+      "compressed": 7776896,
+      "offset": 2505581719,
+      "crc32": 1758526073,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_095.mrc",
+      "size": 8389632,
+      "compressed": 7678554,
+      "offset": 2513358719,
+      "crc32": 1262910864,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_036.mrc",
+      "size": 8389632,
+      "compressed": 7783524,
+      "offset": 2521037377,
+      "crc32": 4058760228,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_092.mrc",
+      "size": 8389632,
+      "compressed": 7769302,
+      "offset": 2528821005,
+      "crc32": 3786834199,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/l1_open_ap_v2.pkl",
+      "size": 112696,
+      "compressed": 21659,
+      "offset": 2536590411,
+      "crc32": 478965577,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_035.mrc",
+      "size": 8389632,
+      "compressed": 7763498,
+      "offset": 2536612180,
+      "crc32": 1957457673,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_015.mrc",
+      "size": 8389632,
+      "compressed": 7759306,
+      "offset": 2544375782,
+      "crc32": 2531970945,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_021.mrc",
+      "size": 8389632,
+      "compressed": 7752346,
+      "offset": 2552135192,
+      "crc32": 556400037,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_038.mrc",
+      "size": 8389632,
+      "compressed": 7782496,
+      "offset": 2559887642,
+      "crc32": 1627234453,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_097.mrc",
+      "size": 8389632,
+      "compressed": 7703601,
+      "offset": 2567670242,
+      "crc32": 780032177,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_080.mrc",
+      "size": 8389632,
+      "compressed": 7750755,
+      "offset": 2575373947,
+      "crc32": 2180882212,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_070_polysome_2.mrc",
+      "size": 8389632,
+      "compressed": 7777444,
+      "offset": 2583124806,
+      "crc32": 1609777899,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_066.mrc",
+      "size": 8389632,
+      "compressed": 7762957,
+      "offset": 2590902365,
+      "crc32": 2133843581,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_099.mrc",
+      "size": 8389632,
+      "compressed": 7704959,
+      "offset": 2598665426,
+      "crc32": 3760248984,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_016.mrc",
+      "size": 8389632,
+      "compressed": 7744957,
+      "offset": 2606370489,
+      "crc32": 2214868802,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_079.mrc",
+      "size": 8389632,
+      "compressed": 7766024,
+      "offset": 2614115550,
+      "crc32": 1130321610,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/z_pca.png",
+      "size": 52295,
+      "compressed": 51355,
+      "offset": 2621881678,
+      "crc32": 2864287090,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_090.mrc",
+      "size": 8389632,
+      "compressed": 7781694,
+      "offset": 2621933135,
+      "crc32": 1227225138,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_059.mrc",
+      "size": 8389632,
+      "compressed": 7746984,
+      "offset": 2629714933,
+      "crc32": 1300212441,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/z_pca_hex.png",
+      "size": 37657,
+      "compressed": 35742,
+      "offset": 2637462021,
+      "crc32": 958832764,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_037.mrc",
+      "size": 8389632,
+      "compressed": 7727724,
+      "offset": 2637497869,
+      "crc32": 1438764427,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_046.mrc",
+      "size": 8389632,
+      "compressed": 7758815,
+      "offset": 2645225697,
+      "crc32": 2853407964,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/k30.pkl",
+      "size": 2166,
+      "compressed": 676,
+      "offset": 2652984616,
+      "crc32": 43584059,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/k93.pkl",
+      "size": 2455,
+      "compressed": 739,
+      "offset": 2652985392,
+      "crc32": 1367089052,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/p.pkl",
+      "size": 6455,
+      "compressed": 1521,
+      "offset": 2652986231,
+      "crc32": 3170906183,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_048.mrc",
+      "size": 8389632,
+      "compressed": 7750621,
+      "offset": 2652987850,
+      "crc32": 3667860673,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_052.mrc",
+      "size": 8389632,
+      "compressed": 7747369,
+      "offset": 2660738575,
+      "crc32": 4094860234,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_088.mrc",
+      "size": 8389632,
+      "compressed": 7782558,
+      "offset": 2668486048,
+      "crc32": 1011481178,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_085.mrc",
+      "size": 8389632,
+      "compressed": 7773246,
+      "offset": 2676268710,
+      "crc32": 2662659213,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/ap_tilts.pkl",
+      "size": 4873258,
+      "compressed": 930548,
+      "offset": 2684042060,
+      "crc32": 1924522390,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_004.mrc",
+      "size": 8389632,
+      "compressed": 7741869,
+      "offset": 2684972713,
+      "crc32": 2807853200,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_011.mrc",
+      "size": 8389632,
+      "compressed": 7734725,
+      "offset": 2692714686,
+      "crc32": 461667267,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/umap.png",
+      "size": 148557,
+      "compressed": 147835,
+      "offset": 2700449515,
+      "crc32": 2067871538,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/maps/kmeans100/vol_056.mrc",
+      "size": 8389632,
+      "compressed": 7756323,
+      "offset": 2700597451,
+      "crc32": 3939009056,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/weights.108.pkl",
+      "size": 101218269,
+      "compressed": 57100447,
+      "offset": 2708353878,
+      "crc32": 4022379192,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/pose.108.pkl",
+      "size": 66625543,
+      "compressed": 8676429,
+      "offset": 2765454418,
+      "crc32": 245411538,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/conf.108.pkl",
+      "size": 2363810,
+      "compressed": 1284278,
+      "offset": 2774130937,
+      "crc32": 1356198360,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10499/configs.yaml",
+      "size": 514,
+      "compressed": 252,
+      "offset": 2775415305,
+      "crc32": 2796140202,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 2775415647,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11043/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 2775415725,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 2775415808,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/vol_000_class_2a.mrc",
+      "size": 8389632,
+      "compressed": 7731010,
+      "offset": 2775415899,
+      "crc32": 4152092908,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/centers.txt",
+      "size": 610,
+      "compressed": 306,
+      "offset": 2783147020,
+      "crc32": 743310539,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/centers_ind.txt",
+      "size": 42,
+      "compressed": 36,
+      "offset": 2783147428,
+      "crc32": 3774258467,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/vol_002_class_3.mrc",
+      "size": 8389632,
+      "compressed": 7696110,
+      "offset": 2783147570,
+      "crc32": 1899854982,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/labels.pkl",
+      "size": 5683658,
+      "compressed": 389210,
+      "offset": 2790843790,
+      "crc32": 91775943,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/vol_001_class_2b.mrc",
+      "size": 8389632,
+      "compressed": 7760609,
+      "offset": 2791233101,
+      "crc32": 116812807,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/vol_003_class_5.mrc",
+      "size": 8389632,
+      "compressed": 7762515,
+      "offset": 2798993821,
+      "crc32": 192067960,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/z_values.txt",
+      "size": 610,
+      "compressed": 306,
+      "offset": 2806756446,
+      "crc32": 743310539,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/z_pca.png",
+      "size": 56108,
+      "compressed": 55261,
+      "offset": 2806756855,
+      "crc32": 3428246246,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/z_pca_hex.png",
+      "size": 26806,
+      "compressed": 25562,
+      "offset": 2806812216,
+      "crc32": 1157943629,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/vol_005_class_1.mrc",
+      "size": 8389632,
+      "compressed": 7701578,
+      "offset": 2806837882,
+      "crc32": 307883270,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans6/vol_004_class_6.mrc",
+      "size": 8389632,
+      "compressed": 7724463,
+      "offset": 2814539570,
+      "crc32": 1398994275,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 2822264143,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_072.mrc",
+      "size": 8389632,
+      "compressed": 7721967,
+      "offset": 2822264236,
+      "crc32": 564713774,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_039.mrc",
+      "size": 8389632,
+      "compressed": 7711056,
+      "offset": 2829986307,
+      "crc32": 3666930369,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_024.mrc",
+      "size": 8389632,
+      "compressed": 7727892,
+      "offset": 2837697467,
+      "crc32": 1984942374,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_008.mrc",
+      "size": 8389632,
+      "compressed": 7768718,
+      "offset": 2845425463,
+      "crc32": 1746893441,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_010.mrc",
+      "size": 8389632,
+      "compressed": 7760959,
+      "offset": 2853194285,
+      "crc32": 2657443933,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_071.mrc",
+      "size": 8389632,
+      "compressed": 7699245,
+      "offset": 2860955348,
+      "crc32": 3263626021,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_065.mrc",
+      "size": 8389632,
+      "compressed": 7743107,
+      "offset": 2868654697,
+      "crc32": 3730032100,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_047.mrc",
+      "size": 8389632,
+      "compressed": 7754767,
+      "offset": 2876397908,
+      "crc32": 3087586180,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_001.mrc",
+      "size": 8389632,
+      "compressed": 7724312,
+      "offset": 2884152779,
+      "crc32": 1461163626,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_049.mrc",
+      "size": 8389632,
+      "compressed": 7742785,
+      "offset": 2891877195,
+      "crc32": 3868231453,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_019.mrc",
+      "size": 8389632,
+      "compressed": 7739198,
+      "offset": 2899620084,
+      "crc32": 3253634664,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_063.mrc",
+      "size": 8389632,
+      "compressed": 7767831,
+      "offset": 2907359386,
+      "crc32": 1118527628,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_096.mrc",
+      "size": 8389632,
+      "compressed": 7683433,
+      "offset": 2915127321,
+      "crc32": 3185790487,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_041.mrc",
+      "size": 8389632,
+      "compressed": 7703893,
+      "offset": 2922810858,
+      "crc32": 702405738,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_032.mrc",
+      "size": 8389632,
+      "compressed": 7770501,
+      "offset": 2930514855,
+      "crc32": 2267787889,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_040.mrc",
+      "size": 8389632,
+      "compressed": 7698609,
+      "offset": 2938285460,
+      "crc32": 701348680,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_027.mrc",
+      "size": 8389632,
+      "compressed": 7740228,
+      "offset": 2945984173,
+      "crc32": 3453776045,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_073.mrc",
+      "size": 8389632,
+      "compressed": 7714884,
+      "offset": 2953724505,
+      "crc32": 1113615305,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_050.mrc",
+      "size": 8389632,
+      "compressed": 7747605,
+      "offset": 2961439493,
+      "crc32": 212240818,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_084.mrc",
+      "size": 8389632,
+      "compressed": 7785559,
+      "offset": 2969187202,
+      "crc32": 1687951393,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_000.mrc",
+      "size": 8389632,
+      "compressed": 7732893,
+      "offset": 2976972865,
+      "crc32": 3180322908,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_045.mrc",
+      "size": 8389632,
+      "compressed": 7761924,
+      "offset": 2984705862,
+      "crc32": 3620343180,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_013.mrc",
+      "size": 8389632,
+      "compressed": 7722275,
+      "offset": 2992467890,
+      "crc32": 3571649376,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_030.mrc",
+      "size": 8389632,
+      "compressed": 7769491,
+      "offset": 3000190269,
+      "crc32": 3893484186,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_089.mrc",
+      "size": 8389632,
+      "compressed": 7719860,
+      "offset": 3007959864,
+      "crc32": 2276045746,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_029.mrc",
+      "size": 8389632,
+      "compressed": 7767299,
+      "offset": 3015679828,
+      "crc32": 4275120676,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_028.mrc",
+      "size": 8389632,
+      "compressed": 7708584,
+      "offset": 3023447231,
+      "crc32": 390677898,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_012.mrc",
+      "size": 8389632,
+      "compressed": 7763019,
+      "offset": 3031155919,
+      "crc32": 3089909575,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_069.mrc",
+      "size": 8389632,
+      "compressed": 7758702,
+      "offset": 3038919042,
+      "crc32": 1398741072,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_060.mrc",
+      "size": 8389632,
+      "compressed": 7723581,
+      "offset": 3046677848,
+      "crc32": 3078489179,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_076.mrc",
+      "size": 8389632,
+      "compressed": 7779544,
+      "offset": 3054401533,
+      "crc32": 1432048962,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_016_class_7.mrc",
+      "size": 8389632,
+      "compressed": 7732846,
+      "offset": 3062181181,
+      "crc32": 683477648,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_083.mrc",
+      "size": 8389632,
+      "compressed": 7793436,
+      "offset": 3069914139,
+      "crc32": 2344897860,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_026.mrc",
+      "size": 8389632,
+      "compressed": 7666764,
+      "offset": 3077707679,
+      "crc32": 1623706763,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_062.mrc",
+      "size": 8389632,
+      "compressed": 7784040,
+      "offset": 3085374547,
+      "crc32": 2241990521,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_081.mrc",
+      "size": 8389632,
+      "compressed": 7786372,
+      "offset": 3093158691,
+      "crc32": 1406395721,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_044.mrc",
+      "size": 8389632,
+      "compressed": 7696929,
+      "offset": 3100945167,
+      "crc32": 2565674515,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_023.mrc",
+      "size": 8389632,
+      "compressed": 7729267,
+      "offset": 3108642200,
+      "crc32": 1606322871,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/centers.txt",
+      "size": 10195,
+      "compressed": 4570,
+      "offset": 3116371571,
+      "crc32": 3349460032,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/centers_ind.txt",
+      "size": 675,
+      "compressed": 344,
+      "offset": 3116376245,
+      "crc32": 2468312953,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_070.mrc",
+      "size": 8389632,
+      "compressed": 7677866,
+      "offset": 3116376697,
+      "crc32": 1922714568,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_034.mrc",
+      "size": 8389632,
+      "compressed": 7745642,
+      "offset": 3124054667,
+      "crc32": 4151062407,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_006.mrc",
+      "size": 8389632,
+      "compressed": 7734182,
+      "offset": 3131800413,
+      "crc32": 4235431836,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_009.mrc",
+      "size": 8389632,
+      "compressed": 7760372,
+      "offset": 3139534699,
+      "crc32": 3653102103,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_003.mrc",
+      "size": 8389632,
+      "compressed": 7772638,
+      "offset": 3147295175,
+      "crc32": 3087044300,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_002.mrc",
+      "size": 8389632,
+      "compressed": 7703644,
+      "offset": 3155067917,
+      "crc32": 2911799854,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_018.mrc",
+      "size": 8389632,
+      "compressed": 7697893,
+      "offset": 3162771665,
+      "crc32": 2799140423,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_091.mrc",
+      "size": 8389632,
+      "compressed": 7708755,
+      "offset": 3170469662,
+      "crc32": 2520180007,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_017.mrc",
+      "size": 8389632,
+      "compressed": 7739474,
+      "offset": 3178178521,
+      "crc32": 1436473254,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/labels.pkl",
+      "size": 5683658,
+      "compressed": 932798,
+      "offset": 3185918099,
+      "crc32": 2547671689,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_055.mrc",
+      "size": 8389632,
+      "compressed": 7723620,
+      "offset": 3186851000,
+      "crc32": 888355959,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_068.mrc",
+      "size": 8389632,
+      "compressed": 7740837,
+      "offset": 3194574724,
+      "crc32": 486515462,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_057.mrc",
+      "size": 8389632,
+      "compressed": 7715127,
+      "offset": 3202315665,
+      "crc32": 1448142462,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_054.mrc",
+      "size": 8389632,
+      "compressed": 7760304,
+      "offset": 3210030896,
+      "crc32": 1354517869,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_093.mrc",
+      "size": 8389632,
+      "compressed": 7744047,
+      "offset": 3217791304,
+      "crc32": 2249661931,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_094.mrc",
+      "size": 8389632,
+      "compressed": 7708007,
+      "offset": 3225535455,
+      "crc32": 1029720504,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_042.mrc",
+      "size": 8389632,
+      "compressed": 7755381,
+      "offset": 3233243566,
+      "crc32": 2603445100,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_020.mrc",
+      "size": 8389632,
+      "compressed": 7712026,
+      "offset": 3240999051,
+      "crc32": 3577680008,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_098.mrc",
+      "size": 8389632,
+      "compressed": 7693602,
+      "offset": 3248711181,
+      "crc32": 2746044997,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_025.mrc",
+      "size": 8389632,
+      "compressed": 7713249,
+      "offset": 3256404887,
+      "crc32": 3503740217,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_077.mrc",
+      "size": 8389632,
+      "compressed": 7748631,
+      "offset": 3264118240,
+      "crc32": 2957693194,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_074.mrc",
+      "size": 8389632,
+      "compressed": 7719451,
+      "offset": 3271866975,
+      "crc32": 583939527,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_064.mrc",
+      "size": 8389632,
+      "compressed": 7778487,
+      "offset": 3279586530,
+      "crc32": 371455318,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_053.mrc",
+      "size": 8389632,
+      "compressed": 7766124,
+      "offset": 3287365121,
+      "crc32": 1860149037,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_043.mrc",
+      "size": 8389632,
+      "compressed": 7725652,
+      "offset": 3295131349,
+      "crc32": 3819272234,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_007.mrc",
+      "size": 8389632,
+      "compressed": 7775494,
+      "offset": 3302857105,
+      "crc32": 657294285,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_086.mrc",
+      "size": 8389632,
+      "compressed": 7772382,
+      "offset": 3310632703,
+      "crc32": 328709680,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_022.mrc",
+      "size": 8389632,
+      "compressed": 7699072,
+      "offset": 3318405189,
+      "crc32": 3441065470,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_087_class_4.mrc",
+      "size": 8389632,
+      "compressed": 7775429,
+      "offset": 3326104365,
+      "crc32": 2117259266,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_058.mrc",
+      "size": 8389632,
+      "compressed": 7737592,
+      "offset": 3333879906,
+      "crc32": 4025847498,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/umap_hex.png",
+      "size": 112249,
+      "compressed": 111551,
+      "offset": 3341617602,
+      "crc32": 4114950340,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_014.mrc",
+      "size": 8389632,
+      "compressed": 7738505,
+      "offset": 3341729258,
+      "crc32": 3955645812,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_051.mrc",
+      "size": 8389632,
+      "compressed": 7774386,
+      "offset": 3349467867,
+      "crc32": 2280711882,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_031.mrc",
+      "size": 8389632,
+      "compressed": 7743506,
+      "offset": 3357242357,
+      "crc32": 2187423203,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_005.mrc",
+      "size": 8389632,
+      "compressed": 7741737,
+      "offset": 3364985967,
+      "crc32": 2033039152,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_067.mrc",
+      "size": 8389632,
+      "compressed": 7730376,
+      "offset": 3372727808,
+      "crc32": 4199132491,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/z_values.txt",
+      "size": 10195,
+      "compressed": 4570,
+      "offset": 3380458288,
+      "crc32": 3349460032,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_061.mrc",
+      "size": 8389632,
+      "compressed": 7731232,
+      "offset": 3380462963,
+      "crc32": 2528165352,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_082.mrc",
+      "size": 8389632,
+      "compressed": 7771265,
+      "offset": 3388194299,
+      "crc32": 2966786465,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_075.mrc",
+      "size": 8389632,
+      "compressed": 7705633,
+      "offset": 3395965668,
+      "crc32": 2654485820,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_078.mrc",
+      "size": 8389632,
+      "compressed": 7788586,
+      "offset": 3403671405,
+      "crc32": 351326070,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_033.mrc",
+      "size": 8389632,
+      "compressed": 7734343,
+      "offset": 3411460095,
+      "crc32": 262664039,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_095.mrc",
+      "size": 8389632,
+      "compressed": 7731877,
+      "offset": 3419194542,
+      "crc32": 3821780596,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_036.mrc",
+      "size": 8389632,
+      "compressed": 7675968,
+      "offset": 3426926523,
+      "crc32": 4175001496,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_092.mrc",
+      "size": 8389632,
+      "compressed": 7734533,
+      "offset": 3434602595,
+      "crc32": 2926354986,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_035.mrc",
+      "size": 8389632,
+      "compressed": 7765109,
+      "offset": 3442337232,
+      "crc32": 1980187764,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_015.mrc",
+      "size": 8389632,
+      "compressed": 7768679,
+      "offset": 3450102445,
+      "crc32": 2877463579,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_021.mrc",
+      "size": 8389632,
+      "compressed": 7738602,
+      "offset": 3457871228,
+      "crc32": 2116113248,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_038.mrc",
+      "size": 8389632,
+      "compressed": 7760685,
+      "offset": 3465609934,
+      "crc32": 2135454051,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_097.mrc",
+      "size": 8389632,
+      "compressed": 7689545,
+      "offset": 3473370723,
+      "crc32": 4045592039,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_080.mrc",
+      "size": 8389632,
+      "compressed": 7761508,
+      "offset": 3481060372,
+      "crc32": 2611307593,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_066.mrc",
+      "size": 8389632,
+      "compressed": 7776988,
+      "offset": 3488821984,
+      "crc32": 834261073,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_099.mrc",
+      "size": 8389632,
+      "compressed": 7693334,
+      "offset": 3496599076,
+      "crc32": 2188147642,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_079.mrc",
+      "size": 8389632,
+      "compressed": 7730997,
+      "offset": 3504292514,
+      "crc32": 2643304784,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/z_pca.png",
+      "size": 81177,
+      "compressed": 80443,
+      "offset": 3512023615,
+      "crc32": 2961373651,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_090.mrc",
+      "size": 8389632,
+      "compressed": 7679563,
+      "offset": 3512104160,
+      "crc32": 910091088,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_059.mrc",
+      "size": 8389632,
+      "compressed": 7751113,
+      "offset": 3519783827,
+      "crc32": 1436575397,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/z_pca_hex.png",
+      "size": 41086,
+      "compressed": 39272,
+      "offset": 3527535044,
+      "crc32": 945486079,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_037.mrc",
+      "size": 8389632,
+      "compressed": 7713240,
+      "offset": 3527574422,
+      "crc32": 4150865568,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_046.mrc",
+      "size": 8389632,
+      "compressed": 7706470,
+      "offset": 3535287766,
+      "crc32": 2683076274,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_048.mrc",
+      "size": 8389632,
+      "compressed": 7720267,
+      "offset": 3542994340,
+      "crc32": 3173795316,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_052.mrc",
+      "size": 8389632,
+      "compressed": 7781437,
+      "offset": 3550714711,
+      "crc32": 519827646,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_088.mrc",
+      "size": 8389632,
+      "compressed": 7697098,
+      "offset": 3558496252,
+      "crc32": 2136894178,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_085.mrc",
+      "size": 8389632,
+      "compressed": 7784364,
+      "offset": 3566193454,
+      "crc32": 1862399021,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_004.mrc",
+      "size": 8389632,
+      "compressed": 7772245,
+      "offset": 3573977922,
+      "crc32": 3642630681,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_011.mrc",
+      "size": 8389632,
+      "compressed": 7780082,
+      "offset": 3581750271,
+      "crc32": 1362750067,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/umap.png",
+      "size": 74899,
+      "compressed": 74083,
+      "offset": 3589530457,
+      "crc32": 1990213526,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/maps/kmeans100/vol_056.mrc",
+      "size": 8389632,
+      "compressed": 7726882,
+      "offset": 3589604641,
+      "crc32": 1997027947,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/pose.720.pkl",
+      "size": 62518671,
+      "compressed": 33464580,
+      "offset": 3597331627,
+      "crc32": 2935798968,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/config.pkl",
+      "size": 2919,
+      "compressed": 1415,
+      "offset": 3630796297,
+      "crc32": 2396875160,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/weights.720.pkl",
+      "size": 106305832,
+      "compressed": 100296018,
+      "offset": 3630797800,
+      "crc32": 4056992865,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar11043/conf.720.pkl",
+      "size": 22734148,
+      "compressed": 12381055,
+      "offset": 3731093911,
+      "crc32": 853750950,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 3743475056,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10874/run-2/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 3743475134,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 3743475218,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 3743475307,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/backmeak.pkl",
+      "size": 447920,
+      "compressed": 87056,
+      "offset": 3743475406,
+      "crc32": 3657872849,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_072.mrc",
+      "size": 8389632,
+      "compressed": 7766480,
+      "offset": 3743562573,
+      "crc32": 2244294329,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_039.mrc",
+      "size": 8389632,
+      "compressed": 7769762,
+      "offset": 3751329163,
+      "crc32": 3790111144,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_024.mrc",
+      "size": 8389632,
+      "compressed": 7768835,
+      "offset": 3759099035,
+      "crc32": 2214638934,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_008.mrc",
+      "size": 8389632,
+      "compressed": 7780510,
+      "offset": 3766867980,
+      "crc32": 1859376588,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_010.mrc",
+      "size": 8389632,
+      "compressed": 7776567,
+      "offset": 3774648600,
+      "crc32": 176582370,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_071.mrc",
+      "size": 8389632,
+      "compressed": 7770629,
+      "offset": 3782425277,
+      "crc32": 1802395445,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_065.mrc",
+      "size": 8389632,
+      "compressed": 7764723,
+      "offset": 3790196016,
+      "crc32": 300394757,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_047.mrc",
+      "size": 8389632,
+      "compressed": 7771299,
+      "offset": 3797960849,
+      "crc32": 3960273022,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_001.mrc",
+      "size": 8389632,
+      "compressed": 7774496,
+      "offset": 3805732258,
+      "crc32": 3324580318,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_049.mrc",
+      "size": 8389632,
+      "compressed": 7765658,
+      "offset": 3813506864,
+      "crc32": 2836410455,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_019.mrc",
+      "size": 8389632,
+      "compressed": 7766332,
+      "offset": 3821272632,
+      "crc32": 3497933101,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_063.mrc",
+      "size": 8389632,
+      "compressed": 7772223,
+      "offset": 3829039074,
+      "crc32": 2911115861,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_096.mrc",
+      "size": 8389632,
+      "compressed": 7771765,
+      "offset": 3836811407,
+      "crc32": 4221559339,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_041.mrc",
+      "size": 8389632,
+      "compressed": 7767486,
+      "offset": 3844583282,
+      "crc32": 450690,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_032.mrc",
+      "size": 8389632,
+      "compressed": 7766728,
+      "offset": 3852350878,
+      "crc32": 1571868617,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_087.mrc",
+      "size": 8389632,
+      "compressed": 7769628,
+      "offset": 3860117716,
+      "crc32": 1078939986,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_040.mrc",
+      "size": 8389632,
+      "compressed": 7768149,
+      "offset": 3867887454,
+      "crc32": 1142779508,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_027.mrc",
+      "size": 8389632,
+      "compressed": 7760866,
+      "offset": 3875655713,
+      "crc32": 1700096278,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/rotor2.pkl",
+      "size": 529058,
+      "compressed": 102588,
+      "offset": 3883416689,
+      "crc32": 2998615834,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_073.mrc",
+      "size": 8389632,
+      "compressed": 7766989,
+      "offset": 3883519386,
+      "crc32": 1850426876,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_050.mrc",
+      "size": 8389632,
+      "compressed": 7765752,
+      "offset": 3891286485,
+      "crc32": 668892663,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_084.mrc",
+      "size": 8389632,
+      "compressed": 7765478,
+      "offset": 3899052347,
+      "crc32": 2623585075,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_000.mrc",
+      "size": 8389632,
+      "compressed": 7777778,
+      "offset": 3906817935,
+      "crc32": 1807459573,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_045.mrc",
+      "size": 8389632,
+      "compressed": 7771238,
+      "offset": 3914595823,
+      "crc32": 4155842320,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_013.mrc",
+      "size": 8389632,
+      "compressed": 7764994,
+      "offset": 3922367171,
+      "crc32": 3536133604,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_030.mrc",
+      "size": 8389632,
+      "compressed": 7767289,
+      "offset": 3930132275,
+      "crc32": 504276236,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/meak_labels.pkl",
+      "size": 1420010,
+      "compressed": 75324,
+      "offset": 3937899674,
+      "crc32": 964678268,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_089.mrc",
+      "size": 8389632,
+      "compressed": 7769587,
+      "offset": 3937975112,
+      "crc32": 3650525318,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_029.mrc",
+      "size": 8389632,
+      "compressed": 7765238,
+      "offset": 3945744809,
+      "crc32": 1368606646,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_028.mrc",
+      "size": 8389632,
+      "compressed": 7762691,
+      "offset": 3953510157,
+      "crc32": 2107066885,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/rotor_labels.pkl",
+      "size": 1420010,
+      "compressed": 67685,
+      "offset": 3961272958,
+      "crc32": 4010830657,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/nomeak.pkl",
+      "size": 551786,
+      "compressed": 106873,
+      "offset": 3961340758,
+      "crc32": 3276920964,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_012.mrc",
+      "size": 8389632,
+      "compressed": 7760399,
+      "offset": 3961447740,
+      "crc32": 266646849,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_069.mrc",
+      "size": 8389632,
+      "compressed": 7764187,
+      "offset": 3969208249,
+      "crc32": 2056117346,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_060.mrc",
+      "size": 8389632,
+      "compressed": 7771339,
+      "offset": 3976972546,
+      "crc32": 2348155288,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/k79.pkl",
+      "size": 12279,
+      "compressed": 3342,
+      "offset": 3984743995,
+      "crc32": 3833641302,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_096_rotor_2.mrc",
+      "size": 8389632,
+      "compressed": 7771765,
+      "offset": 3984747443,
+      "crc32": 4221559339,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_076.mrc",
+      "size": 8389632,
+      "compressed": 7765186,
+      "offset": 3992519326,
+      "crc32": 1764414618,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_083.mrc",
+      "size": 8389632,
+      "compressed": 7768745,
+      "offset": 4000284622,
+      "crc32": 3519622580,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_026.mrc",
+      "size": 8389632,
+      "compressed": 7762206,
+      "offset": 4008053477,
+      "crc32": 3362939288,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_062.mrc",
+      "size": 8389632,
+      "compressed": 7770422,
+      "offset": 4015815793,
+      "crc32": 3893338610,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_081.mrc",
+      "size": 8389632,
+      "compressed": 7771469,
+      "offset": 4023586325,
+      "crc32": 1348967448,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_044.mrc",
+      "size": 8389632,
+      "compressed": 7768321,
+      "offset": 4031357904,
+      "crc32": 95654660,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/frontmeak.pkl",
+      "size": 420624,
+      "compressed": 81848,
+      "offset": 4039126335,
+      "crc32": 233511083,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_023.mrc",
+      "size": 8389632,
+      "compressed": 7775414,
+      "offset": 4039208295,
+      "crc32": 1559453414,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/centers.txt",
+      "size": 10197,
+      "compressed": 4705,
+      "offset": 4046983819,
+      "crc32": 305825204,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_041_rotor_3_mEAK.mrc",
+      "size": 8389632,
+      "compressed": 7767486,
+      "offset": 4046988634,
+      "crc32": 450690,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/centers_ind.txt",
+      "size": 636,
+      "compressed": 321,
+      "offset": 4054756243,
+      "crc32": 3821032237,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_070.mrc",
+      "size": 8389632,
+      "compressed": 7769371,
+      "offset": 4054756678,
+      "crc32": 846913594,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_034.mrc",
+      "size": 8389632,
+      "compressed": 7766747,
+      "offset": 4062526159,
+      "crc32": 2101276447,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_006.mrc",
+      "size": 8389632,
+      "compressed": 7776443,
+      "offset": 4070293016,
+      "crc32": 532691660,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_009.mrc",
+      "size": 8389632,
+      "compressed": 7781490,
+      "offset": 4078069569,
+      "crc32": 4046965957,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_003.mrc",
+      "size": 8389632,
+      "compressed": 7779851,
+      "offset": 4085851169,
+      "crc32": 661555327,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_002.mrc",
+      "size": 8389632,
+      "compressed": 7769051,
+      "offset": 4093631130,
+      "crc32": 3783833721,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_018.mrc",
+      "size": 8389632,
+      "compressed": 7763570,
+      "offset": 4101400291,
+      "crc32": 4023670242,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_091.mrc",
+      "size": 8389632,
+      "compressed": 7766456,
+      "offset": 4109163971,
+      "crc32": 508434579,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_017.mrc",
+      "size": 8389632,
+      "compressed": 7764302,
+      "offset": 4116930537,
+      "crc32": 1609212,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/labels.pkl",
+      "size": 1420010,
+      "compressed": 243604,
+      "offset": 4124694949,
+      "crc32": 709180922,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_055.mrc",
+      "size": 8389632,
+      "compressed": 7769201,
+      "offset": 4124938662,
+      "crc32": 2514231768,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_068.mrc",
+      "size": 8389632,
+      "compressed": 7767173,
+      "offset": 4132707973,
+      "crc32": 2700625008,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_057.mrc",
+      "size": 8389632,
+      "compressed": 7765980,
+      "offset": 4140475256,
+      "crc32": 4090105888,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_054.mrc",
+      "size": 8389632,
+      "compressed": 7773072,
+      "offset": 4148241346,
+      "crc32": 856946229,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_093.mrc",
+      "size": 8389632,
+      "compressed": 7774805,
+      "offset": 4156014528,
+      "crc32": 3838257628,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_094.mrc",
+      "size": 8389632,
+      "compressed": 7778327,
+      "offset": 4163789443,
+      "crc32": 3406532202,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_042.mrc",
+      "size": 8389632,
+      "compressed": 7763674,
+      "offset": 4171567880,
+      "crc32": 4116789280,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_020.mrc",
+      "size": 8389632,
+      "compressed": 7768141,
+      "offset": 4179331664,
+      "crc32": 2473336174,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_072_rotor_2_mEAK.mrc",
+      "size": 8389632,
+      "compressed": 7766480,
+      "offset": 4187099915,
+      "crc32": 2244294329,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_098.mrc",
+      "size": 8389632,
+      "compressed": 7772350,
+      "offset": 4194866518,
+      "crc32": 3966733450,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/rotor3_nomeak.pkl",
+      "size": 290200,
+      "compressed": 56903,
+      "offset": 4202638978,
+      "crc32": 876411752,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/rotor1.pkl",
+      "size": 153312,
+      "compressed": 30695,
+      "offset": 4202695997,
+      "crc32": 282173460,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_025.mrc",
+      "size": 8389632,
+      "compressed": 7766152,
+      "offset": 4202726801,
+      "crc32": 238667747,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_077.mrc",
+      "size": 8389632,
+      "compressed": 7769504,
+      "offset": 4210493063,
+      "crc32": 471876494,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_074.mrc",
+      "size": 8389632,
+      "compressed": 7763738,
+      "offset": 4218262677,
+      "crc32": 2425503415,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_064.mrc",
+      "size": 8389632,
+      "compressed": 7768355,
+      "offset": 4226026525,
+      "crc32": 1036755297,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_053.mrc",
+      "size": 8389632,
+      "compressed": 7773470,
+      "offset": 4233794990,
+      "crc32": 149186499,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/k4.pkl",
+      "size": 10015,
+      "compressed": 2860,
+      "offset": 4241568570,
+      "crc32": 3919732937,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_043.mrc",
+      "size": 8389632,
+      "compressed": 7768554,
+      "offset": 4241571535,
+      "crc32": 540934453,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_007.mrc",
+      "size": 8389632,
+      "compressed": 7772361,
+      "offset": 4249340199,
+      "crc32": 1220273733,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_086.mrc",
+      "size": 8389632,
+      "compressed": 7774539,
+      "offset": 4257112670,
+      "crc32": 3934645074,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_022.mrc",
+      "size": 8389632,
+      "compressed": 7766814,
+      "offset": 4264887319,
+      "crc32": 629209879,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_058.mrc",
+      "size": 8389632,
+      "compressed": 7767735,
+      "offset": 4272654243,
+      "crc32": 1516456165,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/umap_hex.png",
+      "size": 121923,
+      "compressed": 121352,
+      "offset": 4280422088,
+      "crc32": 691512498,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_014.mrc",
+      "size": 8389632,
+      "compressed": 7767854,
+      "offset": 4280543551,
+      "crc32": 3597427896,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_051.mrc",
+      "size": 8389632,
+      "compressed": 7762360,
+      "offset": 4288311515,
+      "crc32": 3533418886,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_031.mrc",
+      "size": 8389632,
+      "compressed": 7773135,
+      "offset": 4296073985,
+      "crc32": 2244328081,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_005.mrc",
+      "size": 8389632,
+      "compressed": 7769119,
+      "offset": 4303847230,
+      "crc32": 2226022296,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_067.mrc",
+      "size": 8389632,
+      "compressed": 7766955,
+      "offset": 4311616459,
+      "crc32": 2426025956,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/z_values.txt",
+      "size": 10197,
+      "compressed": 4705,
+      "offset": 4319383524,
+      "crc32": 305825204,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_061.mrc",
+      "size": 8389632,
+      "compressed": 7769009,
+      "offset": 4319388340,
+      "crc32": 1104986,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_082.mrc",
+      "size": 8389632,
+      "compressed": 7764770,
+      "offset": 4327157459,
+      "crc32": 2823149320,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_075.mrc",
+      "size": 8389632,
+      "compressed": 7765998,
+      "offset": 4334922339,
+      "crc32": 3250381266,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_078.mrc",
+      "size": 8389632,
+      "compressed": 7770858,
+      "offset": 4342688447,
+      "crc32": 1415103229,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_027_rotor_3.mrc",
+      "size": 8389632,
+      "compressed": 7760866,
+      "offset": 4350459415,
+      "crc32": 1700096278,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_033.mrc",
+      "size": 8389632,
+      "compressed": 7763943,
+      "offset": 4358220399,
+      "crc32": 1279610024,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_095.mrc",
+      "size": 8389632,
+      "compressed": 7774060,
+      "offset": 4365984452,
+      "crc32": 3548124771,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_036.mrc",
+      "size": 8389632,
+      "compressed": 7766940,
+      "offset": 4373758622,
+      "crc32": 1317155710,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_092.mrc",
+      "size": 8389632,
+      "compressed": 7778699,
+      "offset": 4381525672,
+      "crc32": 2302767128,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_035.mrc",
+      "size": 8389632,
+      "compressed": 7768622,
+      "offset": 4389304481,
+      "crc32": 2671561233,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_015.mrc",
+      "size": 8389632,
+      "compressed": 7764175,
+      "offset": 4397073213,
+      "crc32": 3449341178,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_021.mrc",
+      "size": 8389632,
+      "compressed": 7768240,
+      "offset": 4404837498,
+      "crc32": 2620876443,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_038.mrc",
+      "size": 8389632,
+      "compressed": 7767586,
+      "offset": 4412605848,
+      "crc32": 609086524,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_097.mrc",
+      "size": 8389632,
+      "compressed": 7769477,
+      "offset": 4420373544,
+      "crc32": 3920502967,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_080.mrc",
+      "size": 8389632,
+      "compressed": 7769368,
+      "offset": 4428143131,
+      "crc32": 1298465127,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_066.mrc",
+      "size": 8389632,
+      "compressed": 7767075,
+      "offset": 4435912609,
+      "crc32": 2369486361,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/rotor2_nomeak.pkl",
+      "size": 108592,
+      "compressed": 22123,
+      "offset": 4443679794,
+      "crc32": 1292634240,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_099.mrc",
+      "size": 8389632,
+      "compressed": 7768339,
+      "offset": 4443702033,
+      "crc32": 2252150901,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_016.mrc",
+      "size": 8389632,
+      "compressed": 7763966,
+      "offset": 4451470482,
+      "crc32": 3280092581,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_079.mrc",
+      "size": 8389632,
+      "compressed": 7769494,
+      "offset": 4459234558,
+      "crc32": 654206835,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/rotor3.pkl",
+      "size": 737962,
+      "compressed": 142261,
+      "offset": 4467004162,
+      "crc32": 347019217,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/z_pca.png",
+      "size": 75845,
+      "compressed": 75078,
+      "offset": 4467146532,
+      "crc32": 1819733286,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_090.mrc",
+      "size": 8389632,
+      "compressed": 7770589,
+      "offset": 4467221718,
+      "crc32": 4168155528,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_059.mrc",
+      "size": 8389632,
+      "compressed": 7767124,
+      "offset": 4474992417,
+      "crc32": 2911851374,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/z_pca_hex.png",
+      "size": 44089,
+      "compressed": 42277,
+      "offset": 4482759651,
+      "crc32": 3913874420,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_037.mrc",
+      "size": 8389632,
+      "compressed": 7763122,
+      "offset": 4482802040,
+      "crc32": 1450697810,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_046.mrc",
+      "size": 8389632,
+      "compressed": 7770765,
+      "offset": 4490565272,
+      "crc32": 3212713731,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_080_rotor_1.mrc",
+      "size": 8389632,
+      "compressed": 7769368,
+      "offset": 4498336147,
+      "crc32": 1298465127,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_048.mrc",
+      "size": 8389632,
+      "compressed": 7767350,
+      "offset": 4506105633,
+      "crc32": 2717579904,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_052.mrc",
+      "size": 8389632,
+      "compressed": 7767669,
+      "offset": 4513873093,
+      "crc32": 4225115415,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_088.mrc",
+      "size": 8389632,
+      "compressed": 7776558,
+      "offset": 4521640872,
+      "crc32": 12664112,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_085.mrc",
+      "size": 8389632,
+      "compressed": 7773353,
+      "offset": 4529417540,
+      "crc32": 2433561060,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_004.mrc",
+      "size": 8389632,
+      "compressed": 7769928,
+      "offset": 4537191003,
+      "crc32": 3495412544,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_011.mrc",
+      "size": 8389632,
+      "compressed": 7767634,
+      "offset": 4544961041,
+      "crc32": 1966833116,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/umap.png",
+      "size": 216499,
+      "compressed": 216184,
+      "offset": 4552728785,
+      "crc32": 2061584610,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/maps/kmeans100/vol_056.mrc",
+      "size": 8389632,
+      "compressed": 7775882,
+      "offset": 4552945076,
+      "crc32": 1465562364,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/weights.102.pkl",
+      "size": 29562337,
+      "compressed": 27348883,
+      "offset": 4560721068,
+      "crc32": 4204934172,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/conf.102.pkl",
+      "size": 5679556,
+      "compressed": 3076185,
+      "offset": 4588070050,
+      "crc32": 2021548021,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/pose.102.pkl",
+      "size": 15618543,
+      "compressed": 8358141,
+      "offset": 4591146331,
+      "crc32": 258551974,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-2/configs.yaml",
+      "size": 348,
+      "compressed": 200,
+      "offset": 4599504568,
+      "crc32": 2946955321,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 4599504864,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 4599504948,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 4599505037,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_008.mrc",
+      "size": 8389632,
+      "compressed": 7760189,
+      "offset": 4599505135,
+      "crc32": 123714678,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_010.mrc",
+      "size": 8389632,
+      "compressed": 7757760,
+      "offset": 4607265433,
+      "crc32": 393479939,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_001.mrc",
+      "size": 8389632,
+      "compressed": 7758190,
+      "offset": 4615023302,
+      "crc32": 1374423230,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_019.mrc",
+      "size": 8389632,
+      "compressed": 7757258,
+      "offset": 4622781601,
+      "crc32": 4041582182,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_000.mrc",
+      "size": 8389632,
+      "compressed": 7768645,
+      "offset": 4630538968,
+      "crc32": 657693182,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_013.mrc",
+      "size": 8389632,
+      "compressed": 7755534,
+      "offset": 4638307722,
+      "crc32": 4059590022,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_012.mrc",
+      "size": 8389632,
+      "compressed": 7761988,
+      "offset": 4646063365,
+      "crc32": 563229044,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_019_junk.mrc",
+      "size": 8389632,
+      "compressed": 7757258,
+      "offset": 4653825462,
+      "crc32": 4041582182,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/centers.txt",
+      "size": 2038,
+      "compressed": 966,
+      "offset": 4661582834,
+      "crc32": 278663352,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/centers_ind.txt",
+      "size": 133,
+      "compressed": 79,
+      "offset": 4661583909,
+      "crc32": 638508013,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_006.mrc",
+      "size": 8389632,
+      "compressed": 7767692,
+      "offset": 4661584101,
+      "crc32": 2011884179,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_009.mrc",
+      "size": 8389632,
+      "compressed": 7758276,
+      "offset": 4669351902,
+      "crc32": 1341374380,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_003.mrc",
+      "size": 8389632,
+      "compressed": 7755844,
+      "offset": 4677110287,
+      "crc32": 464816606,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_002.mrc",
+      "size": 8389632,
+      "compressed": 7759807,
+      "offset": 4684866240,
+      "crc32": 3050714643,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_018.mrc",
+      "size": 8389632,
+      "compressed": 7764750,
+      "offset": 4692626156,
+      "crc32": 2500737912,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_017.mrc",
+      "size": 8389632,
+      "compressed": 7755575,
+      "offset": 4700391015,
+      "crc32": 3919048956,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/labels.pkl",
+      "size": 2137890,
+      "compressed": 234749,
+      "offset": 4708146699,
+      "crc32": 1094314815,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_007.mrc",
+      "size": 8389632,
+      "compressed": 7761444,
+      "offset": 4708381556,
+      "crc32": 992951758,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/umap_hex.png",
+      "size": 90225,
+      "compressed": 89535,
+      "offset": 4716143109,
+      "crc32": 886080197,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_014.mrc",
+      "size": 8389632,
+      "compressed": 7753787,
+      "offset": 4716232754,
+      "crc32": 4240544975,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_005.mrc",
+      "size": 8389632,
+      "compressed": 7761663,
+      "offset": 4723986650,
+      "crc32": 2176895011,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/z_values.txt",
+      "size": 2038,
+      "compressed": 966,
+      "offset": 4731748422,
+      "crc32": 278663352,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_015.mrc",
+      "size": 8389632,
+      "compressed": 7755644,
+      "offset": 4731749498,
+      "crc32": 3132438599,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_016.mrc",
+      "size": 8389632,
+      "compressed": 7764793,
+      "offset": 4739505251,
+      "crc32": 2868765730,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/z_pca.png",
+      "size": 70704,
+      "compressed": 69984,
+      "offset": 4747270153,
+      "crc32": 909007079,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/z_pca_hex.png",
+      "size": 38581,
+      "compressed": 37457,
+      "offset": 4747340244,
+      "crc32": 3804834873,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_004.mrc",
+      "size": 8389632,
+      "compressed": 7764834,
+      "offset": 4747377812,
+      "crc32": 2694386064,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/vol_011.mrc",
+      "size": 8389632,
+      "compressed": 7755290,
+      "offset": 4755142755,
+      "crc32": 3406346841,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/maps/kmeans20/umap.png",
+      "size": 132586,
+      "compressed": 132175,
+      "offset": 4762898154,
+      "crc32": 329712013,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/weights.101.pkl",
+      "size": 42484321,
+      "compressed": 39631661,
+      "offset": 4763030435,
+      "crc32": 1059838227,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/configs.yaml",
+      "size": 316,
+      "compressed": 180,
+      "offset": 4802662195,
+      "crc32": 395041349,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/conf.101.pkl",
+      "size": 8551076,
+      "compressed": 4640005,
+      "offset": 4802662471,
+      "crc32": 1608702469,
+      "method": 8
+    },
+    {
+      "name": "outputs/empiar10874/run-1/pose.101.pkl",
+      "size": 23515223,
+      "compressed": 12624156,
+      "offset": 4807302572,
+      "crc32": 2882545663,
+      "method": 8
+    }
+  ]
+}

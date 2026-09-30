@@ -6,7 +6,7 @@
     2. pose head 通过有界的两层 GELU MLP，根据 z 预测三维轴角修正量；
 随后用修正后的旋转矩阵投影结构，并沿用原版 loss 训练。
 
-开发情况：重构原版
+开发阶段：加入HPS(Hierarchical pose search)模块，更新pose。
 """
 
 
@@ -70,6 +70,10 @@ from cryodyna.utils.vis_utils import plot_z_dist, save_tensor_image
 
 from cryodyna.utils.transforms import SpatialGridTranslate
 from cryodyna.utils.rotation_conversion import axis_angle_to_matrix
+from cryodyna.utils import so3_grid
+from cryodyna.utils import lie_tools
+from cryodyna.utils import shift_grid
+from cryodyna.optpose.pose import PoseTable, subdivide
 
 
 TASK_NAME = "atom"
@@ -135,6 +139,323 @@ class PoseHeadSmallMLP(torch.nn.Module):
 
     def forward(self, z: torch.Tensor) -> torch.Tensor:
         return self.theta_max * torch.tanh(self.net(z))
+
+class HierarchicalPoseSearch:
+    """Hierarchical SO(3) and translation grid search following drgn-ai.
+
+    生成SO3和shift grid → 在低频圆盘内打分 → 每图保留最佳候选。
+    迭代细化：每个旋转生成8个子候选 → 缩小平移网格 → 扩大频率圆盘
+    → 重新评分并筛选。
+
+    Even N-pixel images use a symmetric (N+1) Fourier lattice, excluding DC.
+    Scores retain the unnormalized FFT scale of GMM projections and observations.
+    Coarse CTF-before-in-plane interpolation follows the local drgn-ai baseline.
+    The training-facing entry point is CryoEMTask.predict_pose; shifts are YX pixels.
+    """
+    def __init__(self, configs, gmm_sigmas, gmm_amps, grid, ctf, translator):
+        self.gmm_sigmas = gmm_sigmas
+        self.gmm_amps = gmm_amps
+        self.grid = grid
+        self.ctf = ctf
+        self.translator = translator
+        self.chunk_size = int(configs.get("hps_chunk_size", 32))
+        self.particle_chunk_size = int(configs.get("hps_particle_chunk_size", 4))
+        self.ignore_dc = bool(configs.get("hps_ignore_dc", True))
+        self.score_type = configs.get("hps_score", "l2")
+        if self.score_type not in ("l2", "correlation"):
+            raise ValueError("hps_score must be l2 or correlation")
+        self._frequency_cache = {}
+        self._masked_frequencies = {}
+        if min(self.chunk_size, self.particle_chunk_size) < 1:
+            raise ValueError("HPS chunk sizes must be positive")
+        # SO3 grid层数
+        self.base_healpy = int(configs.get("base_healpy", 2))
+        # 迭代细化轮数
+        self.niter = int(configs.get("n_iter", 4))
+        # 中间层保留的候选pose个数
+        self.nkeptposes = int(configs.get("n_kept_poses", 8))
+        # 频域半径范围
+        self.l_min = int(configs.get("l_start", 12))
+        self.l_max = int(configs.get("l_end", 32))
+        # shift grid
+        self.t_extent = float(configs.get("t_extent", 20.0))
+        self.t_n_grid = int(configs.get("t_n_grid", 7))
+        self.t_xshift = float(configs.get("t_x_shift", 0.0))
+        self.t_yshift = float(configs.get("t_y_shift", 0.0))
+        shifts = shift_grid.base_shift_grid(
+            self.base_healpy - 1,
+            self.t_extent,
+            self.t_n_grid,
+            xshift=self.t_xshift,
+            yshift=self.t_yshift,
+        )
+        self.base_shifts = torch.from_numpy(shifts).float().flip(-1)  # XY 网格转为返回接口的 YX 像素顺序
+        # so3 grid
+        self.so3_base_quat = torch.from_numpy(so3_grid.grid_SO3(self.base_healpy))
+        self.base_rot = lie_tools.quaternions_to_SO3(torch.from_numpy(so3_grid.s2_grid_SO3(self.base_healpy)))
+        self.base_inplane = torch.from_numpy(so3_grid.grid_s1(self.base_healpy))
+        if self.niter < 0 or self.nkeptposes < 1 or not 0 < self.l_min <= self.l_max:
+            raise ValueError("HPS requires n_iter >= 0, n_kept_poses >= 1 and 0 < l_start <= l_end")
+
+    def _shared_projection(self, pred_struc, rot_mats):
+        pred_images = batch_projection(
+            gauss=Gaussian(
+                mus=pred_struc,
+                sigmas=self.gmm_sigmas.to(pred_struc).unsqueeze(0),
+                amplitudes=self.gmm_amps.to(pred_struc).unsqueeze(0)),
+            rot_mats=rot_mats,
+            line_grid=self.grid.line(),
+        )
+        return einops.rearrange(pred_images, "b y x -> b 1 y x")
+
+    def _apply_ctf(self, batch, f_proj):
+        """在实验图像坐标系中给预测频谱施加 CTF。"""
+        ctf_params = {
+            key: batch[key]
+            for key in ("defocusU", "defocusV", "angleAstigmatism")
+            if key in batch
+        }
+        return self.ctf(f_proj, batch["idx"], ctf_params=ctf_params,
+                        mode="gt", frequency_marcher=None)
+
+    @torch.no_grad()
+    def _predict_hps_projections(
+        self, batch, pred_struc, rotations, image_indices=None, apply_ctf=True
+    ):
+        """按候选旋转生成含 CTF 的预测频谱。"""
+        if image_indices is None:
+            image_indices = torch.arange(
+                pred_struc.shape[0], device=pred_struc.device
+            )
+        if rotations.ndim == 3:
+            rotations = rotations.unsqueeze(0).expand(len(image_indices), -1, -1, -1)
+        group_count, rotation_count = rotations.shape[:2]
+        flat_rotations = rotations.reshape(-1, 3, 3)
+        flat_image_indices = image_indices.repeat_interleave(rotation_count)
+        spectra = []
+        for start in range(0, len(flat_rotations), self.chunk_size):
+            chunk_indices = flat_image_indices[start:start + self.chunk_size]
+            projections = self._shared_projection(
+                pred_struc[chunk_indices], flat_rotations[start:start + self.chunk_size]
+            )
+            projections = primal_to_fourier_2d(projections)
+            if apply_ctf:
+                projections = projections * batch["_hps_ctf"][chunk_indices]
+            projections = self._symmetric_spectrum(projections)
+            spectra.append(projections.squeeze(1))
+        spectra = torch.cat(spectra, dim=0)
+        return spectra.reshape(group_count, rotation_count, *spectra.shape[-2:])
+
+    def get_l(self, step: int, res: int) -> int:
+        """当前轮次的频域半径"""
+        fraction = step / self.niter if self.niter > 0 else 1.0
+        radius = self.l_min + int(fraction * (self.l_max - self.l_min))
+        return min(radius, res // 2)
+
+    @staticmethod
+    def _symmetric_spectrum(spectra):
+        """Append periodic Nyquist endpoints for the upstream odd lattice."""
+        if spectra.shape[-1] % 2 == 0:
+            spectra = torch.cat((spectra, spectra[..., :1, :]), dim=-2)
+            spectra = torch.cat((spectra, spectra[..., :1]), dim=-1)
+        return spectra
+
+    def _frequency_grid(self, res, radius, device):
+        key = (res, radius, str(device))
+        if key not in self._frequency_cache:
+            axis = torch.arange(res, device=device) - res // 2
+            yy, xx = torch.meshgrid(axis, axis, indexing="ij")
+            mask = xx.square() + yy.square() <= radius ** 2
+            if self.ignore_dc:
+                mask[res // 2, res // 2] = False
+            freqs_yx = torch.stack((yy[mask], xx[mask]), -1).float() / (res - 1)
+            self._frequency_cache[key] = mask, freqs_yx
+            self._masked_frequencies[id(mask)] = freqs_yx
+        return self._frequency_cache[key]
+
+    def get_frequency_mask(self, res, radius, device):
+        return self._frequency_grid(res, radius, device)[0]
+
+    def translate_images(self, images_ft, shifts, mask):
+        """Complex spectra [B,D,D] and pixel YX shifts → [B,T,P]."""
+        freqs = self._masked_frequencies[id(mask)]
+        phase = -2 * torch.pi * (shifts.to(images_ft.real) @ freqs.T)
+        return images_ft[:, None, mask] * torch.polar(torch.ones_like(phase), phase)
+
+    @torch.no_grad()
+    def compute_err(self, images_ft, projections_ft):
+        """Hartley-equivalent score [B,T,Q] on symmetric frequencies."""
+        dots = (images_ft @ projections_ft.conj().transpose(-1, -2)).real
+        if self.score_type == "correlation":
+            image_norm = images_ft.abs().square().sum(-1).sqrt().clamp_min(1e-12)
+            projection_norm = projections_ft.abs().square().sum(-1).sqrt().clamp_min(1e-12)
+            return -dots / (image_norm[:, :, None] * projection_norm[:, None, :])
+        norm = projections_ft.abs().square().sum(-1) / 2
+        return norm[:, None, :] - dots
+
+    @torch.no_grad()
+    def eval_grid(self, images, rotations, shifts, mask, batch, pred_struc):
+        """输入对称复数频谱 [B,D,D]、YX 平移，返回评分 [B,T,Q]。"""
+        shifted_images = self.translate_images(images, shifts, mask)
+        losses = []
+        for start in range(0, len(rotations), self.chunk_size):
+            projections_ft = self._predict_hps_projections(
+                batch, pred_struc, rotations[start:start + self.chunk_size]
+            )
+            losses.append(self.compute_err(shifted_images, projections_ft[..., mask]))
+        return torch.cat(losses, dim=-1)
+
+    def _rotate_base_spectra(self, spectra, angles, mask):
+        """[B,S,H,W] → [B,S*A,P]；方向优先、面内角次之，对齐 SO(3) 网格编号。"""
+        batch_size, directions, res, _ = spectra.shape
+        axis = torch.arange(res, device=spectra.device, dtype=spectra.real.dtype) - res // 2
+        yy, xx = torch.meshgrid(axis, axis, indexing="ij")
+        coords = torch.stack((xx[mask], yy[mask]), dim=-1)
+        omega = torch.zeros((len(angles), 3), device=spectra.device)
+        omega[:, 2] = angles
+        # R候选 = Rz(angle) @ R基准；对应频谱采样坐标为 k @ Rz(angle)。
+        sample_coords = coords @ axis_angle_to_matrix(omega)[:, :2, :2]
+        # Match drgn-ai interpolate exactly, including align_corners=False.
+        grid = sample_coords * (2 / (res - 1))
+        source = spectra[..., mask].reshape(batch_size * directions, -1)
+        channels = torch.view_as_real(spectra * mask).permute(0, 1, 4, 2, 3)
+        channels = channels.reshape(batch_size * directions, 2, res, res)
+        sampled = torch.nn.functional.grid_sample(
+            channels, grid[None].expand(len(channels), -1, -1, -1), align_corners=False
+        )
+        rotated = torch.complex(sampled[:, 0], sampled[:, 1])
+        # 对齐 drgn-ai rotate_images：补偿插值造成的频谱幅度衰减。
+        # Hartley statistics preserve the upstream amplitude compensation.
+        source_std = (source.real - source.imag).std(-1)
+        rotated_std = (rotated.real - rotated.imag).std(-1)
+        scale = source_std[:, None] / rotated_std.clamp_min(1e-12)
+        rotated = rotated * scale[..., None]
+        return rotated.reshape(batch_size, directions * len(angles), -1)
+
+    @torch.no_grad()
+    def _eval_base_grid(self, images, shifts, mask, batch, pred_struc, start_angle):
+        """粗搜只投影 S2 方向，复用二维旋转生成面内候选；返回 [B,T,S*A]。"""
+        angles = self.base_inplane.to(images.real)
+        omega = images.real.new_zeros(3)
+        omega[2] = start_angle
+        rotations = axis_angle_to_matrix(omega) @ self.base_rot.to(images.real)
+        shifted_images = self.translate_images(images, shifts, mask)
+        losses = []
+        for start in range(0, len(rotations), self.chunk_size):
+            spectra = self._predict_hps_projections(
+                batch, pred_struc, rotations[start:start + self.chunk_size]
+            )
+            candidates = self._rotate_base_spectra(spectra, angles - start_angle, mask)
+            losses.append(self.compute_err(shifted_images, candidates))
+        return torch.cat(losses, dim=-1)
+
+    def keep_matrix(self, loss, batch_size, max_poses):
+        """loss：粗搜索 [B,T,Q]，细化[B*上一轮保留数,T,8]；
+        max_poses 为本轮每张图保留数。
+        返回行号、平移编号、旋转编号，三个张量均为 [B*max_poses]。
+        """
+        # 筛选误差最小的平移id
+        best_loss, best_trans = loss.min(dim=1)
+        # 将每张图的候选误差整理到同一行
+        # 粗搜索：[B, Q] → [B, Q]；细化：[B * 保留数, 8] → [B, 保留数 * 8]
+        errors_per_image = best_loss.reshape(batch_size, -1)
+        selected_indices = errors_per_image.topk(max_poses, dim=1, largest=False).indices
+        candidates_per_image = errors_per_image.shape[1]
+        # 每张图的候选起始编号，例如每图 64 个时为 0、64、128……
+        image_offsets = torch.arange(batch_size, device=loss.device) * candidates_per_image
+        flat_indices = (selected_indices + image_offsets[:, None]).reshape(-1)
+        parent_indices = flat_indices // loss.shape[-1]
+        rotation_indices = flat_indices % loss.shape[-1]
+        translation_indices = best_trans[parent_indices, rotation_indices]
+        return parent_indices, translation_indices, rotation_indices
+
+    @torch.no_grad()
+    def opt_theta_trans(self, batch, pred_struc):
+        """Bounded particle batches; one observed FFT and CTF per particle."""
+        results = []
+        batch_size = pred_struc.shape[0]
+        if batch["proj"].shape[-1] % 2:
+            raise ValueError("HPS uses even-sized images and an odd symmetric Fourier lattice")
+        start_angle = self.base_inplane[np.random.randint(len(self.base_inplane))]
+        with torch.autocast(device_type=pred_struc.device.type, enabled=False):
+            for start in range(0, batch_size, self.particle_chunk_size):
+                stop = start + self.particle_chunk_size
+                particle = {
+                    key: value[start:stop] if isinstance(value, torch.Tensor)
+                    and value.ndim > 0 and value.shape[0] == batch_size else value
+                    for key, value in batch.items()
+                }
+                particle["proj"] = particle["proj"].float()
+                particle["_hps_ctf"] = self._apply_ctf(
+                    particle, torch.ones_like(particle["proj"], dtype=torch.complex64)
+                )
+                results.append(self._search_batch(particle, pred_struc[start:stop].float(), start_angle))
+        return tuple(torch.cat(items, dim=0) for items in zip(*results))
+
+    @torch.no_grad()
+    def _search_batch(self, batch, pred_struc, start_angle):
+        """粗搜索 → 多轮细化；输入实域图，返回 YX 平移。"""
+        images = self._symmetric_spectrum(primal_to_fourier_2d(batch["proj"].squeeze(1)))
+        # 读取批量大小、图像尺寸和计算设备
+        batch_size = images.shape[0]
+        res = images.shape[-1]
+        device = images.device
+        # 准备粗搜索的旋转和平移候选
+        quaternions = self.so3_base_quat.to(device)
+        shifts = self.base_shifts.to(device)
+        # 生成粗搜索使用的低频圆盘
+        radius = self.get_l(0, res)
+        mask = self.get_frequency_mask(res, radius, device)
+        # 计算候选误差，每张图保留最好的几个姿态
+        loss = self._eval_base_grid(images, shifts, mask, batch, pred_struc, start_angle)
+        keep_count = self.nkeptposes if self.niter > 0 else 1
+        image_indices, translation_indices, rotation_indices = self.keep_matrix(
+            loss, batch_size, keep_count
+        )
+        # 取出保留的旋转、网格编号和平移，作为细化起点
+        quaternions = quaternions[rotation_indices]
+        grid_indices = so3_grid.get_base_ind(
+            rotation_indices.cpu().numpy(), self.base_healpy
+        )
+        translations = shifts[translation_indices]
+        for step in range(1, self.niter + 1):
+            # 每个保留旋转生成 8 个更细的子旋转
+            quaternions, grid_indices, rotations = subdivide(
+                quaternions, grid_indices, self.base_healpy + step - 1, device
+            )
+            # 平移网格缩小一半，并移到各候选平移附近
+            shifts = shifts / 2
+            candidate_translations = translations[:, None, :] + shifts[None, :, :]
+            # 扩大频率圆盘，逐渐加入高频细节
+            radius = self.get_l(step, res)
+            mask = self.get_frequency_mask(res, radius, device)
+            # 为每组子旋转匹配实验图，并生成对应预测投影
+            rotations = rotations.reshape(-1, 8, 3, 3)
+            losses = []
+            for start in range(0, len(image_indices), self.particle_chunk_size):
+                stop = start + self.particle_chunk_size
+                indices = image_indices[start:stop]
+                projections_ft = self._predict_hps_projections(
+                    batch, pred_struc, rotations[start:stop], indices
+                )
+                shifted_images = self.translate_images(
+                    images[indices], candidate_translations[start:stop], mask
+                )
+                losses.append(self.compute_err(shifted_images, projections_ft[..., mask]))
+            loss = torch.cat(losses)
+            # 中间轮保留多个候选，最后一轮选出最佳姿态
+            keep_count = self.nkeptposes if step < self.niter else 1
+            parent_indices, translation_indices, rotation_indices = self.keep_matrix(
+                loss, batch_size, keep_count
+            )
+            quaternions = quaternions[parent_indices, rotation_indices]
+            grid_indices = grid_indices[
+                parent_indices.cpu().numpy(), rotation_indices.cpu().numpy()
+            ]
+            translations = candidate_translations[parent_indices, translation_indices]
+            image_indices = image_indices[parent_indices]
+        best_rotations = lie_tools.quaternions_to_SO3(quaternions)
+        return best_rotations, translations
 
 
 class AbstractCryoEMTask(pl.LightningModule, ABC):
@@ -208,12 +529,12 @@ class AbstractCryoEMTask(pl.LightningModule, ABC):
         """计算加权的原子碰撞 loss。"""
         raise NotImplementedError
 
-    # Pose 增量修正接口
+    # 姿态估计接口
     @abstractmethod
     def predict_pose(
-        self, mu: torch.Tensor, rot_mats: torch.Tensor
+        self, batch: dict[str, torch.Tensor], pred_struc: torch.Tensor, mu: torch.Tensor
     ) -> tuple[torch.Tensor, torch.Tensor]:
-        """预测轴角增量；返回修正后的旋转矩阵和 delta omega。"""
+        """根据训练阶段返回旋转矩阵和 YX 平移。"""
         raise NotImplementedError
 
 
@@ -275,6 +596,21 @@ class CryoEMTask(AbstractCryoEMTask):
         super().__init__()
         cfg = deepcopy(cfg)
         self.cfg = cfg
+        if cfg.get("pose_init", "given") == "hps" and cfg.get("n_imgs_pose_search", 500000) <= 0:
+            raise ValueError("pose_init=hps requires a positive pose-search budget")
+        # HPS caches initialize optional differentiable per-particle poses.
+        self.use_pose_table = cfg.get("use_pose_table", False)
+        self.pose_table = PoseTable(len(dataset), cfg.get("optimize_translations", True)) if self.use_pose_table else None
+        self.register_buffer("predicted_rots", torch.eye(3).repeat(len(dataset), 1, 1))
+        self.register_buffer("predicted_trans", torch.zeros(len(dataset), 2))
+        self.register_buffer("predicted_pose_valid", torch.zeros(len(dataset), dtype=torch.bool))
+        # HPS setup
+        n_imgs_pose_search = cfg.get("n_imgs_pose_search", 500000)
+        self.epochs_pose_search = (
+            max(2, n_imgs_pose_search // len(dataset) + 1)
+            if n_imgs_pose_search > 0 else 0
+        )
+
         self.mask = Mask(cfg.data_process.down_side_shape, rad=cfg.loss.mask_rad_for_image_loss)
         
         meta = Polymer.from_pdb(cfg.dataset_attr.ref_pdb_path)
@@ -314,6 +650,7 @@ class CryoEMTask(AbstractCryoEMTask):
                 meta_2_node_edge = meta_2_node_edge.long(),
                 meta_2_node_vector = meta_2_node_vector,
                 **cfg.model.model_cfg)
+        self.use_pose_head = cfg.model.get("use_pose_head", True)
         pose_head_type = cfg.model.get("pose_head_type", "mlp")
         pose_max_angle_deg = cfg.model.get("pose_max_angle_deg", 45.0)
         if pose_head_type == "small_mlp":
@@ -353,8 +690,16 @@ class CryoEMTask(AbstractCryoEMTask):
         self.apix = self.cfg.data_process.down_apix
         ctf_params = infer_ctf_params_from_config(cfg)
         self.ctf = CTFCryoDRGN(**ctf_params, num_particles=len(dataset))
-
         self.translator = SpatialGridTranslate(D=cfg.data_process.down_side_shape, device=self.device)
+
+        # 是否开启HPS
+        self.pose_search = (
+            HierarchicalPoseSearch(
+                cfg, self.gmm_sigmas, self.gmm_amps, self.grid, self.ctf, self.translator
+            )
+            if self.epochs_pose_search > 0 else None
+        )
+        self.pose_head.requires_grad_(self.use_pose_head)
 
     def _prepare_structural_loss_dependencies(self, meta: Polymer) -> None:
         """从参考结构生成连接、距离、二级结构和碰撞 loss 所需索引。"""
@@ -451,6 +796,9 @@ class CryoEMTask(AbstractCryoEMTask):
         dist_loss = self.dist_loss_fn(pred_struc)
         all_dist_loss = self.all_gather(dist_loss)
         all_dist_loss = all_dist_loss.reshape(-1, dist_loss.shape[-1])
+        # 单粒子尾批跳过依赖跨粒子方差的距离损失。
+        if all_dist_loss.shape[0] < 2:
+            return dist_loss.sum() * 0.
         with torch.no_grad():
             keep_mask = torch.ones(
                 dist_loss.shape[-1],
@@ -467,6 +815,8 @@ class CryoEMTask(AbstractCryoEMTask):
                 )
                 keep_mask[chain_mask] *= chain_keep_mask
             keep_mask = keep_mask.unsqueeze(0).repeat(dist_loss.size(0), 1)
+        if not keep_mask.any():
+            return dist_loss.sum() * 0.
         return self.cfg.loss.dist_weight * torch.mean(dist_loss[keep_mask])
 
     def _calculate_clash_loss(self, pred_struc: torch.Tensor) -> torch.Tensor:
@@ -478,13 +828,47 @@ class CryoEMTask(AbstractCryoEMTask):
         )
         return self.cfg.loss.clash_weight * clash_loss
 
+    @property
+    def is_in_pose_search_step(self):
+        return 0 <= self.current_epoch < self.epochs_pose_search
+
     def predict_pose(
-        self, mu: torch.Tensor, rot_mats: torch.Tensor
+        self, batch: dict[str, torch.Tensor], pred_struc: torch.Tensor, mu: torch.Tensor
     ) -> tuple[torch.Tensor, torch.Tensor]:
-        """预测固定坐标系轴角增量，并左乘 STAR 旋转矩阵。"""
-        delta_omega = self.pose_head(mu)
-        delta_rot = axis_angle_to_matrix(delta_omega)
-        return delta_rot @ rot_mats, delta_omega
+        """先 HPS 搜索；后阶段按开关用 head 修正。返回旋转和 YX 平移。"""
+        if self.pose_search is None:
+            rot_mats, trans_mats = self.get_batch_pose(batch)
+        else:
+            indices = batch["idx"].long()
+            needs_search = (
+                torch.ones_like(indices, dtype=torch.bool)
+                if self.is_in_pose_search_step else ~self.predicted_pose_valid[indices]
+            )
+            if needs_search.any():
+                search_batch = {
+                    key: value[needs_search] if isinstance(value, torch.Tensor)
+                    and value.ndim > 0 and value.shape[0] == len(indices) else value
+                    for key, value in batch.items()
+                }
+                # Refresh references after module device moves or checkpoint loading.
+                self.pose_search.gmm_sigmas = self.gmm_sigmas
+                self.pose_search.gmm_amps = self.gmm_amps
+                rotations, translations = self.pose_search.opt_theta_trans(search_batch, pred_struc[needs_search])
+                selected = indices[needs_search]
+                self.predicted_rots[selected] = rotations.to(self.predicted_rots)
+                self.predicted_trans[selected] = translations.to(self.predicted_trans)
+                self.predicted_pose_valid[selected] = True
+            rot_mats = self.predicted_rots[indices]
+            trans_mats = self.predicted_trans[indices]
+        if getattr(self, "use_pose_table", False) and not self.is_in_pose_search_step:
+            indices = batch["idx"].long()
+            missing = ~self.pose_table.valid[indices]
+            if missing.any():
+                self.pose_table.initialize(indices[missing], rot_mats[missing], trans_mats[missing])
+            rot_mats, trans_mats = self.pose_table(indices)
+        if self.use_pose_head and not self.is_in_pose_search_step:
+            rot_mats = axis_angle_to_matrix(self.pose_head(mu)) @ rot_mats
+        return rot_mats, trans_mats
 
 
     def _shared_forward(
@@ -515,7 +899,7 @@ class CryoEMTask(AbstractCryoEMTask):
     ) -> tuple[torch.Tensor, torch.Tensor]:
         rot_mats = batch["rotmat"]
         # yx order
-        trans_mats = torch.concat((batch["shiftY"].unsqueeze(1), batch["shiftX"].unsqueeze(1)), dim=1)
+        trans_mats = torch.stack((batch["shiftY"].reshape(-1), batch["shiftX"].reshape(-1)), dim=1)
         trans_mats /= self.apix
         return rot_mats, trans_mats
     
@@ -542,20 +926,25 @@ class CryoEMTask(AbstractCryoEMTask):
     ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
         '''gt图->pred_struc+mu（隐变量）->pred图;
         然后gt图->平移矫正gt图'''
-        rot_mats, trans_mats = self.get_batch_pose(batch)
-
         gt_images = batch["proj"]
         pred_deformation, mu  = self._shared_forward(gt_images)
         pred_struc = self.deformer.transform(pred_deformation, self.gmm_centers)
-        rot_mats, _ = self.predict_pose(mu, rot_mats)
+        rot_mats, trans_mats = self.predict_pose(batch, pred_struc, mu)
         # get gmm projections
         pred_gmm_images = self._shared_projection(pred_struc, rot_mats)
         # apply ctf, low-pass
         pred_gmm_images = self._apply_ctf(batch, pred_gmm_images, self.lp_mask2d)
         
         if trans_mats is not None:
-            gt_images = self.translator.transform(einops.rearrange(gt_images, "B 1 NY NX -> B NY NX"),
-                                                einops.rearrange(trans_mats, "B C2 -> B 1 C2"))
+            res = gt_images.shape[-1]
+            freq = torch.fft.fftshift(torch.fft.fftfreq(res, device=gt_images.device))
+            phase = -2 * torch.pi * (
+                trans_mats[:, 0, None, None] * freq[None, :, None]
+                + trans_mats[:, 1, None, None] * freq[None, None, :]
+            )
+            gt_images = fourier_to_primal_2d(
+                primal_to_fourier_2d(gt_images) * torch.exp(1j * phase[:, None])
+            ).real
 
         
         return gt_images, pred_gmm_images, pred_struc, mu
@@ -574,8 +963,19 @@ class CryoEMTask(AbstractCryoEMTask):
             {
                 "model": self.model.state_dict(),
                 "pose_head": self.pose_head.state_dict(),
+                "pose_table": self.pose_table.state_dict() if self.pose_table is not None else None,
+                "encoder_unregistered": {
+                    name: [layer.state_dict() for layer in getattr(self.model.encoder, name, [])]
+                    for name in ("attn_layers", "post_norm")
+                },
                 "gmm_sigmas": self.gmm_sigmas.data,
                 "gmm_amps": self.gmm_amps.data,
+                "hps_pose": {
+                    "rotations": self.predicted_rots.detach().cpu(),
+                    "translations_yx": self.predicted_trans.detach().cpu(),
+                    "valid": self.predicted_pose_valid.detach().cpu(),
+                    "epoch": self.current_epoch,
+                },
             },
             ckpt_path,
         )
@@ -763,8 +1163,12 @@ class CryoEMTask(AbstractCryoEMTask):
         weighted_dist_loss = self._calculate_dist_loss(pred_struc)
         weighted_clash_loss = self._calculate_clash_loss(pred_struc)
         # Axis-angle vectors are in radians; average over particles, not coordinates.
-        delta_omega = self.pose_head(mu)
-        pose_reg_loss = self.cfg.loss.get("pose_reg_weight", 0.) * delta_omega.square().sum(dim=-1).mean()
+        pose_reg_loss = mu.new_zeros(())
+        if self.use_pose_head and not self.is_in_pose_search_step:
+            delta_omega = self.pose_head(mu)
+            pose_reg_loss = self.cfg.loss.get("pose_reg_weight", 0.5) * delta_omega.square().sum(dim=-1).mean()
+        if self.use_pose_table and not self.is_in_pose_search_step:
+            pose_reg_loss = pose_reg_loss + self.pose_table_regularization(batch)
         
         loss = (
             weighted_gmm_proj_loss
@@ -813,10 +1217,28 @@ class CryoEMTask(AbstractCryoEMTask):
         self.training_step_outputs.clear()
 
     def configure_optimizers(self) -> optim.Optimizer:
-        params = [*self.model.parameters(), *self.pose_head.parameters()]
+        params = [p for p in [*self.model.parameters(), *self.pose_head.parameters()] if p.requires_grad]
 
-        optimizer = optim.AdamW(params, lr=self.cfg.optimizer.lr)
+        groups = [{"params": params, "lr": self.cfg.optimizer.lr}]
+        if self.pose_table is not None:
+            groups.append({"params": self.pose_table.parameters(),
+                           "lr": self.cfg.optimizer.get("pose_lr", 1e-3), "weight_decay": 0.})
+        optimizer = optim.AdamW(groups)
         return optimizer
+
+    def pose_table_regularization(self, batch):
+        """Regularize displacement from input/HPS poses, using training inputs only."""
+        indices = batch["idx"].long()
+        rotations, translations = self.pose_table(indices)
+        if self.pose_search is None:
+            base_rotations, base_translations = self.get_batch_pose(batch)
+        else:
+            base_rotations, base_translations = self.predicted_rots[indices], self.predicted_trans[indices]
+        # Half the squared chordal distance tends to squared radians at zero.
+        rotation_penalty = .5 * (rotations-base_rotations).square().sum((-1, -2)).mean()
+        translation_penalty = (translations-base_translations).square().sum(-1).mean()
+        return (self.cfg.loss.get("pose_reg_weight", 1.) * rotation_penalty
+                + self.cfg.loss.get("translation_reg_weight", .01) * translation_penalty)
 
 
 def train():
@@ -835,8 +1257,8 @@ def train():
         down_side_shape=cfg.data_process.down_side_shape,
         mask_rad=cfg.data_process.mask_rad,
         power_images=1.0,
-        ignore_rots=False,
-        ignore_trans=False, ))
+        ignore_rots=cfg.get("pose_init", "given") == "hps",
+        ignore_trans=cfg.get("pose_init", "given") == "hps", ))
     
     # 若未指定降采样尺寸：大图默认降至 128，小图保持原尺寸
     if cfg.data_process.down_side_shape is None:
@@ -862,7 +1284,7 @@ def train():
     train_loader = DataLoader(dataset,
                               batch_size=cfg.data_loader.train_batch_per_gpu,
                               shuffle=True,
-                              drop_last=True,
+                              drop_last=False,
                               num_workers=cfg.data_loader.workers_per_gpu)
 
     test_loader = DataLoader(

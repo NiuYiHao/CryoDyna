@@ -4,6 +4,7 @@ IgG-*
 *.out
 *.ipynb
 *.txt
+!requirements-optpose.txt
 slurm_eval
 *.err
 1ake/
@@ -30,3 +31,7 @@ projects/*ipynb
 /.vscode/
 
 /develop/
+/results/
+
+# Large raster duplicates; editable figures and PNG previews are tracked.
+/docs/optpose_evidence/**/*.tiff

@@ -1,0 +1,31 @@
+/home/nyh/anaconda3/envs/cryodyna/lib/python3.9/site-packages/lightning/fabric/__init__.py:40: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+WARNING: Couldn't load cached healpy grid; will fall back to importing healpy
+09/28 21:39:39 - mmengine - INFO - Use low-pass filtering w/ 4.0 A
+09/28 21:39:40 - mmengine - INFO - found 213 connect_pairs
+09/28 21:39:40 - mmengine - INFO - found 2706 cutoff_pairs
+09/28 21:39:40 - mmengine - INFO - found 3044 clash_pairs
+09/28 21:39:40 - mmengine - INFO - 1st GMM blob amplitude 61.0, sigma 2.0
+{"run": "continuous", "epoch": 1, "angle": 5.0, "seed": 1, "particles": 64, "evaluation_particles": 52, "loss": -0.1882597655057907, "rmsd_A": 3.3683739562395782, "pose_deg": 4.912542108817667, "pose_p90_deg": 5.172951665917888, "raw_pose_deg": 4.912542108817667, "aligned_pose_deg": 4.959001293234563, "train_loss": -0.1871183216571808, "seconds": 1.4780974388122559}
+{"run": "continuous", "epoch": 2, "angle": 5.0, "seed": 1, "particles": 64, "evaluation_particles": 52, "loss": -0.189522847533226, "rmsd_A": 3.3683160312361693, "pose_deg": 4.810074901851606, "pose_p90_deg": 5.3894714326936635, "raw_pose_deg": 4.810074901851606, "aligned_pose_deg": 4.855985249583748, "train_loss": -0.1884230300784111, "seconds": 1.4582395553588867}
+09/28 21:39:47 - mmengine - INFO - Use low-pass filtering w/ 4.0 A
+09/28 21:39:47 - mmengine - INFO - found 213 connect_pairs
+09/28 21:39:47 - mmengine - INFO - found 2706 cutoff_pairs
+09/28 21:39:47 - mmengine - INFO - found 3044 clash_pairs
+09/28 21:39:47 - mmengine - INFO - 1st GMM blob amplitude 61.0, sigma 2.0
+09/28 21:39:50 - mmengine - INFO - Use low-pass filtering w/ 4.0 A
+09/28 21:39:50 - mmengine - INFO - found 213 connect_pairs
+09/28 21:39:50 - mmengine - INFO - found 2706 cutoff_pairs
+09/28 21:39:50 - mmengine - INFO - found 3044 clash_pairs
+09/28 21:39:50 - mmengine - INFO - 1st GMM blob amplitude 61.0, sigma 2.0
+{"run": "resumed", "epoch": 2, "angle": 5.0, "seed": 1, "particles": 64, "evaluation_particles": 52, "loss": -0.189522847533226, "rmsd_A": 3.368316031157656, "pose_deg": 4.810073944646348, "pose_p90_deg": 5.3894714326936635, "raw_pose_deg": 4.810073944646348, "aligned_pose_deg": 4.8559846042495405, "train_loss": -0.1884230375289917, "seconds": 1.4680368900299072}
+09/28 21:39:55 - mmengine - INFO - Use low-pass filtering w/ 4.0 A
+09/28 21:39:55 - mmengine - INFO - found 213 connect_pairs
+09/28 21:39:55 - mmengine - INFO - found 2706 cutoff_pairs
+09/28 21:39:55 - mmengine - INFO - found 3044 clash_pairs
+09/28 21:39:55 - mmengine - INFO - 1st GMM blob amplitude 61.0, sigma 2.0
+...NOISELESS [2.643676519393921, 2.274688720703125, 2.1641035079956055] SHIFT [0.0, 0.0, 0.0]
+.................
+----------------------------------------------------------------------
+Ran 20 tests in 16.822s
+
+OK

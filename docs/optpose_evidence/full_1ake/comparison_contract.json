@@ -1,0 +1,17 @@
+{
+  "epoch": 20,
+  "center": "mean of per-run particle means",
+  "error_bars": "sample SD across seeds when >=2 seeds for every angle",
+  "budget_verification": "verified",
+  "angles": [
+    0.0,
+    5.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "labels": [
+    "Original",
+    "Optpose"
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/0deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  },
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/10deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  },
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/15deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  },
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/20deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  },
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/5deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  },
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/0deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  },
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/10deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  },
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/15deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  },
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/20deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  },
+  {
+    "source": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/5deg_seed1",
+    "structure_decoder_replay": true,
+    "scope": "endpoint",
+    "epochs": [
+      {
+        "epoch": 20,
+        "particle_count": 50000,
+        "metric_replay": "passed"
+      }
+    ]
+  }
+]

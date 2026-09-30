@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "path": "/home/nyh/tools/Cryodyna/docs/optpose_evidence/80s_pose_stages_64/source_data.csv",
+      "sha256": "0c19b961afb2c731b0389e5682b900840882a72ecab37b145bda879b91ee7632"
+    },
+    {
+      "path": "/home/nyh/tools/Cryodyna/docs/optpose_evidence/abinit_pilot/abinit_metrics.csv",
+      "sha256": "da1f071d1a23edf63b29fe34efb5c63658f29e1a59cd79ed3aefebf2d6fbaab0"
+    }
+  ],
+  "drgnai_80s": "first HPS epoch; metrics pending",
+  "release_claim": "development evidence; scientific acceptance partial"
+}

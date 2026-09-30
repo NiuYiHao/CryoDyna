@@ -1,0 +1,3 @@
+epoch,angle,seed,particles,evaluation_particles,loss,rmsd_A,pose_deg,raw_pose_deg,aligned_pose_deg,pose_p90_deg,label,source
+20.0,5.0,1,50000.0,40000.0,-0.2246430254173279,1.164842450576955,5.000000066626461,5.000000066626461,5.000223905482207,5.000012256559074,Original,/home/nyh/tools/Cryodyna/results/optpose/legacy_original_5/imported
+20.0,5.0,1,50000.0,40000.0,-0.2318600734663009,1.1604350076270125,4.516761358262944,4.516761358262944,4.516033712111259,6.79118030139879,Opt,/home/nyh/tools/Cryodyna/results/optpose/legacy_big_l2_5/imported

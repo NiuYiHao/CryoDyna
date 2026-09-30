@@ -1,0 +1,31 @@
+{
+  "mean_limit_deg": 5,
+  "p90_limit_deg": 10,
+  "status": "complete",
+  "prediction_replay": true,
+  "release_pass": false,
+  "accuracy_pass": false,
+  "controls_complete": true,
+  "better_than_controls": true,
+  "scope": "pilot",
+  "final": {
+    "method": "CryoDyna-optpose",
+    "epoch": 5,
+    "pose_deg": 80.25718117131616,
+    "pose_p90_deg": 165.0183472382581
+  },
+  "controls": {
+    "Random SO(3)": {
+      "method": "Random SO(3)",
+      "epoch": 0,
+      "pose_deg": 132.12821302913946,
+      "pose_p90_deg": 174.88502559871853
+    },
+    "DRGN-AI": {
+      "method": "DRGN-AI",
+      "epoch": 31,
+      "pose_deg": 107.48600764258049,
+      "pose_p90_deg": 170.8718736428723
+    }
+  }
+}

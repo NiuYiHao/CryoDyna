@@ -1,0 +1,2 @@
+# Install the main CryoDyna environment first; DSSP is an external executable.
+healpy>=1.16,<2

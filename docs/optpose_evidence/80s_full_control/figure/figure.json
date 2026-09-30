@@ -1,0 +1,14 @@
+{
+  "dataset": "80S | fixed density | 100,000 particles",
+  "methods": [
+    "Viewing direction",
+    "Full SO(3)"
+  ],
+  "metric": "Angular error (\u00b0)",
+  "x_label": "Adam pass (0 = HPS endpoint)",
+  "rows_input": 62,
+  "rows_displayed": 62,
+  "selection": "requested method names",
+  "endpoint": "last recorded epoch per method",
+  "caption": "All 100,000 particles; fixed external density prior, seed 0, 30 Adam passes. Each epoch fits one global frame and hand by first-100 candidate mean Frobenius selection on all particles. Both plotted series are metrics of the same method. Endpoints: viewing 0.144339 degrees, complete SO(3) 0.153260 degrees."
+}

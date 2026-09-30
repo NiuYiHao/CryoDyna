@@ -1,0 +1,1 @@
+80S | fixed density | 100,000 particles. All 100,000 particles; fixed external density prior, seed 0, 30 Adam passes. Each epoch fits one global frame and hand by first-100 candidate mean Frobenius selection on all particles. Both plotted series are metrics of the same method. Endpoints: viewing 0.144339 degrees, complete SO(3) 0.153260 degrees.

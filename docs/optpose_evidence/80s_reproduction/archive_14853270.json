@@ -1,0 +1,54 @@
+{
+  "record": 14853270,
+  "file": {
+    "id": "975fa622-3445-4ea4-ba99-e7719e066675",
+    "key": "synthetic-80S.zip",
+    "size": 31462007302,
+    "checksum": "md5:c637a3776ecbf994caca0fd5831d56b5",
+    "links": {
+      "self": "https://zenodo.org/api/records/14853270/files/synthetic-80S.zip/content"
+    }
+  },
+  "entries": [
+    {
+      "name": "synthetic-80S/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 0,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "synthetic-80S/no_noise/",
+      "size": 0,
+      "compressed": 0,
+      "offset": 72,
+      "crc32": 0,
+      "method": 0
+    },
+    {
+      "name": "synthetic-80S/no_noise/particles.500k.mrcs",
+      "size": 32768001024,
+      "compressed": 31445355066,
+      "offset": 153,
+      "crc32": 2291674137,
+      "method": 8
+    },
+    {
+      "name": "synthetic-80S/no_noise/ctf.pkl",
+      "size": 18000164,
+      "compressed": 52557,
+      "offset": 31445355339,
+      "crc32": 270679268,
+      "method": 8
+    },
+    {
+      "name": "synthetic-80S/pose.500k.pkl",
+      "size": 18000166,
+      "compressed": 16598605,
+      "offset": 31445407984,
+      "crc32": 1539191603,
+      "method": 8
+    }
+  ]
+}

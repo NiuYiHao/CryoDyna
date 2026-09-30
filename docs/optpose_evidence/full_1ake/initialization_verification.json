@@ -1,0 +1,49 @@
+{
+  "pass_initialization": true,
+  "reference": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/0deg_seed1",
+  "atol": 1e-06,
+  "rtol": 1e-06,
+  "tensor_count": 86,
+  "comparisons": [
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/0deg_seed1",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/5deg_seed1",
+      "max_absolute_difference": 1.1920928955078125e-07
+    },
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/10deg_seed1",
+      "max_absolute_difference": 6.556510925292969e-07
+    },
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/15deg_seed1",
+      "max_absolute_difference": 1.1920928955078125e-07
+    },
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original/20deg_seed1",
+      "max_absolute_difference": 1.1920928955078125e-07
+    },
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/0deg_seed1",
+      "max_absolute_difference": 6.556510925292969e-07
+    },
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/5deg_seed1",
+      "max_absolute_difference": 1.1920928955078125e-07
+    },
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/10deg_seed1",
+      "max_absolute_difference": 6.556510925292969e-07
+    },
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/15deg_seed1",
+      "max_absolute_difference": 1.1920928955078125e-07
+    },
+    {
+      "run": "/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt/20deg_seed1",
+      "max_absolute_difference": 1.1920928955078125e-07
+    }
+  ]
+}

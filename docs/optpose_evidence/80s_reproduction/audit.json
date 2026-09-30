@@ -1,0 +1,77 @@
+{
+  "date": "2026-09-30",
+  "status": "source_and_protocol_audit; training_pending",
+  "dataset": "synthetic 80S",
+  "paper_doi": "10.1038/s41592-025-02720-4",
+  "source_commit": "083c1f396022f5fb131e0cf08417b0cd6c6d2c47",
+  "source_commit_role": "publication-day public source; authors experiment commit remains to be established",
+  "metadata_crc32_checked": true,
+  "ctf_shape": [
+    500000,
+    9
+  ],
+  "ctf_unique_rows": 1,
+  "ctf_column_min": [
+    128.0,
+    3.7699999809265137,
+    15000.0,
+    15000.0,
+    0.0,
+    300.0,
+    2.0,
+    0.10000000149011612,
+    0.0
+  ],
+  "ctf_column_max": [
+    128.0,
+    3.7699999809265137,
+    15000.0,
+    15000.0,
+    0.0,
+    300.0,
+    2.0,
+    0.10000000149011612,
+    0.0
+  ],
+  "rotation_shape": [
+    500000,
+    3,
+    3
+  ],
+  "rotation_max_orthogonality_residual": 5.960464477539062e-07,
+  "rotation_det_range": [
+    0.9999993443489075,
+    1.0000007152557373
+  ],
+  "verified_files": [
+    {
+      "path": "/media/nyh/Elements/Cryodyna/80s_paper_reproduction_20260930/official/metadata/ctf.pkl",
+      "bytes": 18000164,
+      "sha256": "f159cd932f853eae2334a46c207c71e10b137c2d9dc2c4cd6618b823d0275ec4"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/80s_paper_reproduction_20260930/official/metadata/pose.500k.pkl",
+      "bytes": 18000166,
+      "sha256": "717e3277b2414a086b6d9f54ee58ccee72952a66c6cee2bf8f787307df2ca98e"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/80s_paper_reproduction_20260930/paper/published_supplement_1.pdf",
+      "bytes": 330265,
+      "sha256": "ff124977bdabb0713e4da689ce20d834287dd264e59df38679a831a0706e0465"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/80s_paper_reproduction_20260930/paper/published_supplement_2.pdf",
+      "bytes": 1676385,
+      "sha256": "5d376c97bd4290c5b263aff16f7300ba0ec2542d2ca639bd943b520afd6be7fe"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/80s_paper_reproduction_20260930/reference/drgnai-publication.tar.gz",
+      "bytes": 13236103,
+      "sha256": "efbfb238fc1d6b07528ae16bda444cc167c79946739ba51fc33938e59ba4d1c9"
+    }
+  ],
+  "archive_expected_bytes": 31462007302,
+  "archive_expected_md5": "c637a3776ecbf994caca0fd5831d56b5",
+  "archive_state": "downloading; full archive checksum pending",
+  "figure_state": "awaiting measured results from all requested methods"
+}

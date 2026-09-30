@@ -1,0 +1,175 @@
+{
+  "checkpoints": [
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch000.npz",
+      "sha256": "8b1e128f60f18ea31b5e4307c1b49571dee1a6fa88a6e8ae894d59f617f42bac"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch001.npz",
+      "sha256": "8396711a1d56d540a23e8e7ae5ed0ce040e7964efddc4c6480b2ddef749b93d1"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch002.npz",
+      "sha256": "2dd440bfa3eec67ab653aabee18f1eb7b6335da869795968299b627f663f7a6f"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch003.npz",
+      "sha256": "68fcebceaff76b0315011683c0b1ad5fdd3881b3b474b9c3ef9654dfb96d4b55"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch004.npz",
+      "sha256": "782a147519253df0fcb49ce04ea308df9046db4d468e2e9f4f2ce2dbf4814e17"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch005.npz",
+      "sha256": "dc23a4698b9a8e79a8225173ef1c3e4d7c8cbc5e7203d372f80a2936a3dc472f"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch006.npz",
+      "sha256": "b5ab8529dcc557b225b4c2485118070400237f3ac3eae27e15d6d342e609fad7"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch007.npz",
+      "sha256": "f4bf280adbd3162b40a8718011cf93c61335e1e93e6a0abebd4f267570282334"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch008.npz",
+      "sha256": "2a288c32b4ca27cab0dfcab766d8e8883ab1ee5047c3c4b643a6b68db2c67cb5"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch009.npz",
+      "sha256": "51d9ba4b1e784c9560dcd3fbecf4c636935c7d0dc7c626dd59a44bd0ab18d6ff"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch010.npz",
+      "sha256": "ad1f747c649e633c3cec5c1550a885f77c1443d651bac490efbe54bee81f9549"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch011.npz",
+      "sha256": "80ba28e333aa20ddb96b6d1ec78fea0d73bb4bb5e5e3ff4f28595b2a15c3fb60"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch012.npz",
+      "sha256": "59545425c484008a8467d49cad9ed60d4333176e45cc6bf35da20abe4c4222b6"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch013.npz",
+      "sha256": "205deb674c7746bb47257dabfef057b757038cabeff19942ce71928c06a756a3"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch014.npz",
+      "sha256": "ecdb6a5bebfef3f70e5f03cceac1f9bb29321257ae9b39b3daa3b58a53756249"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch015.npz",
+      "sha256": "fa533caa703bbb3a6cc70dab9d32515d9019552c5a42405d6fe429f78077114c"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch016.npz",
+      "sha256": "b22cca6555f0fc7398e26c0587e209a43df684ce2226aca28fd9ebe12d463ea7"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch017.npz",
+      "sha256": "aa74fe923f788c1d928c0a946be0788a3b29265d8fc84f608106710bfe89e107"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch018.npz",
+      "sha256": "7dbe758de121ed6d683945f2f1a04b37a2030f5e5bb6bea49939ac20ce866c4f"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch019.npz",
+      "sha256": "17df3652d71fb72e3ede3bde63d80156ec7d189f945875a75bb1ea9d2b817210"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch020.npz",
+      "sha256": "f10f472e63ff05d522b88bde0182a0eb0921096e44241d484188989471eac369"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch021.npz",
+      "sha256": "696e32440ac2589cb729c65e5e3c9b0f506e9d337765a6cdb929a610b4dcb49a"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch022.npz",
+      "sha256": "7469790bfe45f95f863aafb8981b21759e765020943e73a4dec93023ee492e9b"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch023.npz",
+      "sha256": "b4249ab5b396964f9a383c9b8bfd7af253088ab275d8ae75cb9fb02f0f31d11e"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch024.npz",
+      "sha256": "4df04202ac8a81032490714c1962f6c6dd95790ea0b6f8d47a3551977ce825e6"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch025.npz",
+      "sha256": "f9f4aa02e068f56b3e733b3753b2020dc7948373b85a953e69145df10577e38f"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch026.npz",
+      "sha256": "08a2435dcb2f3fa019a70b442f0906c9878a422619ce1510ea6365389f06077c"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch027.npz",
+      "sha256": "63683cc7d480f1032abb8a800b77df18f275dd48fab76f704bb3c6605c88fe07"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch028.npz",
+      "sha256": "21f6f70947b363d3b0f4ca6a179a81ea4a7df3e4f78b858d5f3d9b31435e33bf"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch029.npz",
+      "sha256": "4e84f0bb9d911386a0f679ce06e9fd933d7d5eac9cfea3ca893de02194130f90"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch030.npz",
+      "sha256": "8fba62e4495da778612e1875a0a8612cf30761ce178ae6f2f243d4cb9dcc5cfe"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/media/nyh/Elements/Cryodyna/drgnai_80s_reproduction_20260930/inputs/particles.mrcs",
+      "sha256": "b3e62080a0c041fa31c5317d49d3118ca5b9b0da9c22a4c755bc757eb42ad616"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/drgnai_80s_reproduction_20260930/inputs/ctf.pkl",
+      "sha256": "a762da96ef96606cc1a4308a4ade34a718ea2277957d568bf887c18361348a12"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/reference/80S_128.mrc",
+      "sha256": "44543347b6eb70b03bf664a2f6b11e752736816d79dac2649d89e063ef42da26"
+    },
+    {
+      "path": "/media/nyh/Elements/Cryodyna/drgnai_80s_reproduction_20260930/evaluation_truth/rotations.pkl",
+      "sha256": "5de877bc9e45182de1fa765f12a841855ef75a217581eadf9ac7488e9ecf5c3e"
+    }
+  ],
+  "manifest": {
+    "method": "CryoDyna-optpose (fixed-volume control)",
+    "variant": "Hopf HPS + existing PoseTable; fixed external density; pose-only fitting",
+    "training_pose_access": "none",
+    "initial_translation": "zero; centered simulation condition",
+    "particles": "/media/nyh/Elements/Cryodyna/drgnai_80s_reproduction_20260930/inputs/particles.mrcs",
+    "ctf": "/media/nyh/Elements/Cryodyna/drgnai_80s_reproduction_20260930/inputs/ctf.pkl",
+    "volume": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/reference/80S_128.mrc",
+    "volume_sha256": "44543347b6eb70b03bf664a2f6b11e752736816d79dac2649d89e063ef42da26",
+    "particle_selection": "first 100000 in stored order",
+    "arguments": {
+      "particles": "/media/nyh/Elements/Cryodyna/drgnai_80s_reproduction_20260930/inputs/particles.mrcs",
+      "ctf": "/media/nyh/Elements/Cryodyna/drgnai_80s_reproduction_20260930/inputs/ctf.pkl",
+      "volume": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/reference/80S_128.mrc",
+      "output": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full",
+      "count": 100000,
+      "epochs": 30,
+      "seed": 0,
+      "threads": 4,
+      "batch": 32,
+      "device": "cpu",
+      "lr": 0.003
+    },
+    "uncertainty": "deterministic control conditional on fixed reference; no training-replicate claim"
+  },
+  "evaluator_sha256": "24de3122a6e2970b24515eb3cb6b15b119e2bac1bf32608c24bbec0bd1437290",
+  "metric": "first min(100,N) candidates; global hand and frame; mean Frobenius selection; all-particle fit and evaluation",
+  "evaluator_at_evaluation_sha256": "931c53cacdacbe5b6de3603a4efe68e28dfcf4fcf4fc6853710c65eab1b1c0bd",
+  "source_formatting": "One trailing blank line removed after evaluation; evaluated and committed code otherwise byte-identical."
+}

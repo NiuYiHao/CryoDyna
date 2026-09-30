@@ -1,0 +1,102 @@
+[
+  {
+    "file": "__init__.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "analysis.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "analyze.py",
+    "syntax_equal_excluding_docstrings": false
+  },
+  {
+    "file": "command_line.py",
+    "syntax_equal_excluding_docstrings": false
+  },
+  {
+    "file": "configuration.py",
+    "syntax_equal_excluding_docstrings": false
+  },
+  {
+    "file": "ctf.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "dataset.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "dataset_fast.py",
+    "syntax_equal_excluding_docstrings": false
+  },
+  {
+    "file": "fft.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "lattice.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "lie_tools.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "losses.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "mask.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "metrics.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "models.py",
+    "syntax_equal_excluding_docstrings": false
+  },
+  {
+    "file": "mrc.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "pose_search.py",
+    "syntax_equal_excluding_docstrings": false
+  },
+  {
+    "file": "reconstruct.py",
+    "syntax_equal_excluding_docstrings": false
+  },
+  {
+    "file": "shift_grid.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "so3_grid.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "source.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "starfile.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "summary.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "utils.py",
+    "syntax_equal_excluding_docstrings": true
+  },
+  {
+    "file": "visualization.py",
+    "syntax_equal_excluding_docstrings": false
+  }
+]

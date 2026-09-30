@@ -1,6 +1,10 @@
 ## CryoDyna: Multiscale end-to-end modeling of cryo-EM macromolecule dynamics with physics-aware neural network
 
 ## User Guide
+Pose refinement, controlled perturbation experiments and the pose-free benchmark
+are documented in [the CryoDyna-optpose guide](docs/optpose.md). The entry point is
+`python scripts/benchmark_optpose.py --help`.
+
 The detailed user guide can be found at [here](https://www.notion.so/Making-reasonable-molecule-dance-video-with-CryoDyna-88b1c421ec0c825481a48159ddcf709d?source=copy_link). This comprehensive guide provides in-depth information about the topic at hand. Feel free to visit the link if you're seeking more knowledge or need extensive instructions regarding the topic. 
 
 To furthur help user install and apply CryoDyna to their own systems, We also provide test report and logs for the whole CryoDyna workflows on the 1ake dataset and EMPIAR-10073 dataset wihch can be found in the [here](https://osf.io/6pbmk/). 
@@ -239,3 +243,12 @@ You may cite this software by:
       url={https://arxiv.org/abs/2510.16510}, 
 }
 ```
+
+### Optpose development release evidence (2026-09-30)
+
+The [acceptance record](docs/OPTPOSE_ACCEPTANCE.md) includes completed five-angle
+1AKE perturbations, the [80S + 1AKE figure](docs/optpose_evidence/release_summary/80s_1ake_evidence.png),
+and all remaining scientific gates. The 80S fixed-density control reaches
+0.144° mean viewing-direction error on 100,000 particles; DRGN-AI's 80S replication
+continues separately. The current 1AKE ab-initio pilot remains far above the
+accuracy target. See [reproduction commands](docs/optpose.md).

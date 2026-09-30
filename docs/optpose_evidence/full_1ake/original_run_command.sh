@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd /media/nyh/Elements/Cryodyna/optpose_release_20260928/source_snapshot_v2
+/home/nyh/anaconda3/envs/cryodyna/bin/python -B /media/nyh/Elements/Cryodyna/optpose_release_20260928/source_snapshot_v2/scripts/benchmark_optpose.py run --config /media/nyh/Elements/Cryodyna/optpose_release_20260928/launch_config.py --pdb-dir /home/nyh/tools/Cryodyna/tutorial_data_1ake/pdbs --outdir /media/nyh/Elements/Cryodyna/optpose_release_20260928/full --methods original opt --angles 0 5 10 15 20 --particles 50000 --epochs 20 --workers 4
+/home/nyh/anaconda3/envs/cryodyna/bin/python -B /media/nyh/Elements/Cryodyna/optpose_release_20260928/source_snapshot_v2/scripts/benchmark_optpose.py compare --runs Original=/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/original Opt=/media/nyh/Elements/Cryodyna/optpose_release_20260928/full/opt --output /media/nyh/Elements/Cryodyna/optpose_release_20260928/comparison
+/home/nyh/anaconda3/envs/cryodyna/bin/python -B /media/nyh/Elements/Cryodyna/optpose_release_20260928/source_snapshot_v2/scripts/benchmark_optpose.py acceptance --outdir /media/nyh/Elements/Cryodyna/optpose_release_20260928/full --output /media/nyh/Elements/Cryodyna/optpose_release_20260928/perturbation_acceptance.json
