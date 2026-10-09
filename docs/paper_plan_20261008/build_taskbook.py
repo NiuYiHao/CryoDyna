@@ -82,5 +82,5 @@ while i < len(lines):
     elif line.strip():
         out.append(prose(line))
     i += 1
-DEST.write_text("".join(out))
+DEST.write_text("".join(out).rstrip() + "\n")
 print(DEST)

@@ -464,4 +464,3 @@ fill: (x, y) => if y == 0 { rgb("e8eff6") } else { none },
 #text("本任务书的实验数量、验收阈值与排程是预注册草案；现有实测数字仅来自第2节列出的仓库和本地结果。文献粒子数分别对应作者处理栈，实际落地的数量与筛选索引由manifest证明。source SHA、文献版本、半图划分与测试协议在10月10日前形成锁定文件。")
 
 #text("附件：PAPER_EXECPLAN_20261008.typ、PAPER_EXECPLAN_20261008.pdf、paper_plan_20261008/acceptance_contract.json、paper_plan_20261008/benchmark_matrix.csv、paper_plan_20261008/qa.json。仓库相对路径以/home/nyh/tools/Cryodyna为根；新的计划与历史结果分别保存。")
-
