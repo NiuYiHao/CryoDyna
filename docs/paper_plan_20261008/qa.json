@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-09",
+  "compile": "pass",
+  "page_count": 12,
+  "bounds": [
+    {
+      "page": 1,
+      "chars": 886,
+      "outside_page": []
+    },
+    {
+      "page": 2,
+      "chars": 1358,
+      "outside_page": []
+    },
+    {
+      "page": 3,
+      "chars": 965,
+      "outside_page": []
+    },
+    {
+      "page": 4,
+      "chars": 1502,
+      "outside_page": []
+    },
+    {
+      "page": 5,
+      "chars": 1673,
+      "outside_page": []
+    },
+    {
+      "page": 6,
+      "chars": 1585,
+      "outside_page": []
+    },
+    {
+      "page": 7,
+      "chars": 998,
+      "outside_page": []
+    },
+    {
+      "page": 8,
+      "chars": 1706,
+      "outside_page": []
+    },
+    {
+      "page": 9,
+      "chars": 2042,
+      "outside_page": []
+    },
+    {
+      "page": 10,
+      "chars": 940,
+      "outside_page": []
+    },
+    {
+      "page": 11,
+      "chars": 1040,
+      "outside_page": []
+    },
+    {
+      "page": 12,
+      "chars": 1676,
+      "outside_page": []
+    }
+  ],
+  "matrix_counts": {
+    "synthetic": 8,
+    "experimental_spa": 9,
+    "experimental_sta": 1
+  },
+  "paper_ready": false,
+  "pdf_sha256": "e7dd247a89c98d2eebce895aa722cdad022a2785f8222bc016c61a165baa093d",
+  "review": "two independent read-only reviews; eligibility, capability, independence, pairing and scope gates strengthened",
+  "artifact_scope": "task document and planning contracts; future runner is planned",
+  "visual_qa_dir": "/home/nyh/tools/Cryodyna/output/paper_plan_20261008/qa",
+  "visual_review": "pass: updated pages 1, 8 and 11 rendered and inspected; all 12 pages pass bounds checks"
+}

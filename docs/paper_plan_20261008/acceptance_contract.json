@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "planned",
+  "created": "2026-10-08",
+  "updated": "2026-10-09",
+  "compute_resources": {
+    "user_confirmed": "BRCA1-p53 project's Slurm cluster plus local workstation",
+    "cluster": {
+      "scheduler": "Slurm",
+      "partitions_observed": ["gpu1", "gpu2", "gpu3"],
+      "registered_nodes": 7,
+      "registered_gpus_per_node": 8,
+      "gpu_model_and_vram": "pending_compute_node_preflight",
+      "allocation_concurrency": "determined_by_account_quota_node_health_and_queue",
+      "assigned_work": ["full_training", "official_baselines", "multi_seed", "independent_half_maps", "long_ablations"]
+    },
+    "local": {
+      "gpu": "NVIDIA GeForce RTX 4060 Ti",
+      "memory_mib": 8188,
+      "assigned_work": ["development", "small_diagnostics", "input_validation", "metric_aggregation", "figures", "Typst_PDF"]
+    },
+    "observation_date": "2026-10-09",
+    "audit_scope": "read-only scheduler and local GPU queries",
+    "coexistence": "BRCA1-p53 jobs retain their running allocation; CryoDyna uses separate jobs, environments, logs and output directories"
+  },
+  "deadline": "2026-11-07T23:59:00+08:00",
+  "source_commit": "15ada55d23475b1bd7b6f0047e89ade27ecffdaa",
+  "release_target": "main",
+  "paper_ready": false,
+  "protocol_freeze_due": "2026-10-10",
+  "method_freeze_due": "2026-10-14",
+  "training_completion_due": "2026-10-28",
+  "minimum_coverage": {
+    "synthetic_systems": 8,
+    "experimental_spa_systems": 9,
+    "experimental_sta_systems_for_full_drgnai_coverage": 1,
+    "stochastic_training_seeds": 6,
+    "per_paper_additional_requirements": "pending_literature_coverage_freeze"
+  },
+  "primary_comparison_unit": ["dataset", "task", "prior_regime", "baseline", "common_primary_metric"],
+  "prior_regimes": ["fixed_density", "shared_atomic_prior", "image_ctf_only"],
+  "cross_regime_inference": "descriptive_only",
+  "baseline_eligibility_manifest": "configs/paper/baseline_eligibility.json (planned; freeze required)",
+  "required_job_manifest_fields": ["method", "source_sha", "dataset", "input_hash", "split_manifest", "prior_regime", "budget", "seed", "run_id", "primary_metrics"],
+  "required_capability_gates": ["image_ctf_only_V", "composition", "STA_tilt_groups"],
+  "strict_superiority": {
+    "required": "all_preregistered_applicable_comparisons",
+    "oriented_mean_advantage_gt": 0,
+    "simultaneous_95pct_ci_lower_gt": 0,
+    "inference_unit": "independent_training_seed",
+    "nested_uncertainty_units": ["micrograph", "tomogram", "particle"],
+    "multiplicity": "simultaneous_intervals_or_Holm_frozen_before_test",
+    "zero_pose_control": "separate_stability_and_noninferiority_gate"
+  },
+  "accuracy_targets": {
+    "abinit_mean_full_so3_max_deg": 5,
+    "abinit_p90_full_so3_max_deg": 10,
+    "zero_perturbation_mean_full_so3_max_deg": 0.05,
+    "positive_perturbation_relative_gain_goal_each": 0.1
+  },
+  "gates": {
+    "G1_software_and_isolation": "pending",
+    "G2_coverage": "pending",
+    "G3_superiority_and_accuracy": "pending",
+    "G4_independent_experimental_validation": "pending",
+    "G5_reproducible_evidence": "pending"
+  },
+  "planned_interfaces": ["validate-data", "plan", "run", "resume", "evaluate", "compare", "audit-release"],
+  "deadline_policy": "Publish paper-ready main only when every required gate passes; preserve deadline gaps and empirical status otherwise.",
+  "notes": "This contract is a planning artifact. It does not implement a runner, scheduler, or scientific acceptance evaluator."
+}

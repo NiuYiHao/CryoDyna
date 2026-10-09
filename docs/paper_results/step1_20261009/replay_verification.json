@@ -1,0 +1,10 @@
+{
+  "csv_sha256_first": "b7d6bd375f5c0c03ee79a79efd62d07b1e2c555c3aab554ad4c88731960646a4",
+  "csv_sha256_replay": "b7d6bd375f5c0c03ee79a79efd62d07b1e2c555c3aab554ad4c88731960646a4",
+  "csv_identical": true,
+  "particle_ids_identical": true,
+  "source_commit": "b2f6ea99792eead4af3fb32047894e06b8f19456",
+  "tests_passed": 3,
+  "matched_noiseless_truth_minimum_fraction": 1.0,
+  "scope": "oracle development diagnostic; no training or scientific acceptance"
+}
