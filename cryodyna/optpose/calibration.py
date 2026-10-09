@@ -218,4 +218,3 @@ def main():
     parser.add_argument("--bandwidths", type=float, nargs="+", default=[8, 4])
     parser.add_argument("--angles", type=float, nargs="+", default=[-20, -10, -5, 0, 5, 10, 20])
     run(parser.parse_args())
-
