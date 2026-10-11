@@ -1,0 +1,38 @@
+{
+  "scope": "oracle diagnostics; no parameter updates",
+  "particle_id": 90,
+  "class_id": 1,
+  "target": "exact same GMM+CTF projection at truth pose",
+  "gradients": {
+    "legacy": {
+      "loss": -1.4744162559509277,
+      "gradient_rad": [
+        [
+          2.546238829381764e-05,
+          -0.000531539786607027,
+          2.524451701901853e-06
+        ]
+      ],
+      "gradient_norm": 0.0005321552744135261
+    },
+    "scaled_cosine": {
+      "loss": -1.470118761062622,
+      "gradient_rad": [
+        [
+          -7.785212474686887e-09,
+          -3.023036754257191e-08,
+          3.1930014188219502e-09
+        ]
+      ],
+      "gradient_norm": 3.1379610021531334e-08
+    }
+  },
+  "source_sha256": "8341d25b5905b207c93bc17cfad1984d88221e3ba0c180fa2fd8c240efab5392",
+  "reference_CA_frame": {
+    "mean_rotation_deg": 6.451618279525267,
+    "max_rotation_deg": 13.289994885196036,
+    "mean_centroid_displacement_A": 0.9175685330289061,
+    "max_centroid_displacement_A": 1.5994865209760893,
+    "scope": "ground-truth structure Kabsch transforms to supplied reference; separate diagnostic from raw pose accuracy"
+  }
+}

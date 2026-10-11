@@ -1,0 +1,9 @@
+{
+  "same_initialization": true,
+  "same_particle_ids": true,
+  "epochs_each": 20,
+  "updates_each": 80,
+  "seed": 1,
+  "scope": "development only; true controls explicitly documented",
+  "maximum_absolute_mean_pose_difference_deg": 0.01009039556444069
+}

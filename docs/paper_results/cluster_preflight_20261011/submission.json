@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-11",
+  "source_commit": "7c42361f996f76de38b01830068ee5ca8289ac59",
+  "remote_dir": "/share/home/niuyh/data/Cryodyna_optpose_paper_20261107/preflight_7c42361",
+  "job_id": "124494",
+  "scope": "environment preflight; single GPU, five-minute maximum"
+}

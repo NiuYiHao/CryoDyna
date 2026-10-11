@@ -1,0 +1,79 @@
+{
+  "status": "dependencies_pending",
+  "python": "3.10.20 (main, Jun 11 2026, 15:17:37) [GCC 14.3.0]",
+  "host": "cn4",
+  "packages": {
+    "torch": {
+      "status": "pass",
+      "version": "2.8.0+cu128"
+    },
+    "numpy": {
+      "status": "pass",
+      "version": "1.26.3"
+    },
+    "scipy": {
+      "status": "pass",
+      "version": "1.12.0"
+    },
+    "pandas": {
+      "status": "pass",
+      "version": "2.2.0"
+    },
+    "mrcfile": {
+      "status": "pass",
+      "version": "1.5.0"
+    },
+    "starfile": {
+      "status": "pass",
+      "version": "0.5.13"
+    },
+    "biotite": {
+      "status": "pass",
+      "version": "0.39.0"
+    },
+    "gemmi": {
+      "status": "pass",
+      "version": "0.6.4"
+    },
+    "mmengine": {
+      "status": "pass",
+      "version": "0.10.2"
+    },
+    "lightning": {
+      "status": "fail",
+      "error": "No module named 'pkg_resources'"
+    },
+    "torch-geometric": {
+      "status": "pass",
+      "version": "2.8.0"
+    },
+    "einops": {
+      "status": "pass",
+      "version": "0.8.2"
+    },
+    "healpy": {
+      "status": "fail",
+      "error": "No module named 'healpy'"
+    }
+  },
+  "checks": {
+    "matmul_max_abs_difference": 3.814697265625e-06,
+    "fft_roundtrip_max_abs_difference": 4.76837158203125e-07,
+    "optpose_geometry_tests": {
+      "returncode": 1,
+      "output": "WARNING: Couldn't load cached healpy grid; will fall back to importing healpy\ntest_angles_and_perturbation (test_optpose.GeometryTests) ... ok\ntest_atomic_rmsd (test_optpose.GeometryTests) ... ok\ntest_global_gauge_and_hand (test_optpose.GeometryTests) ... ok\ntest_subdivision_against_scalar_grid (test_optpose.GeometryTests) ... ERROR\ntest_table_gradient_and_save_restore (test_optpose.GeometryTests) ... ok\ntest_abinit_input_strips_truth (test_optpose.OutputContractTests) ... ok\ntest_cli_array_and_labels (test_optpose.OutputContractTests) ... ok\ntest_comparison_rejects_different_budgets (test_optpose.OutputContractTests) ... /share/home/niuyh/.conda/envs/test_20260710_cu128/lib/python3.10/site-packages/matplotlib/_fontconfig_pattern.py:88: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n  parse = parser.parseString(pattern)\n/share/home/niuyh/.conda/envs/test_20260710_cu128/lib/python3.10/site-packages/matplotlib/_fontconfig_pattern.py:92: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n  parser.resetCache()\n/share/home/niuyh/.conda/envs/test_20260710_cu128/lib/python3.10/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n  ParserElement.enablePackrat()\nIn /share/home/niuyh/.conda/envs/test_20260710_cu128/lib/python3.10/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'\nIn /share/home/niuyh/.conda/envs/test_20260710_cu128/lib/python3.10/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'\nok\ntest_comparison_rejects_particle_mismatch (test_optpose.OutputContractTests) ... ok\ntest_empty_matrix_rejected (test_optpose.OutputContractTests) ... ok\ntest_learning_plot_shared_axis_contains_all_angles (test_optpose.OutputContractTests) ... ok\ntest_pilot_cannot_pass_release_acceptance (test_optpose.OutputContractTests) ... ok\ntest_resume_rejects_matrix_change_before_writing (test_optpose.OutputContractTests) ... ok\n\n======================================================================\nERROR: test_subdivision_against_scalar_grid (test_optpose.GeometryTests)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/share/home/niuyh/data/Cryodyna_optpose_paper_20261107/preflight_7c42361/cryodyna/utils/so3_grid.py\", line 137, in pix2ang\n    import healpy\nModuleNotFoundError: No module named 'healpy'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/share/home/niuyh/data/Cryodyna_optpose_paper_20261107/preflight_7c42361/tests/test_optpose.py\", line 61, in test_subdivision_against_scalar_grid\n    q = torch.from_numpy(so3_grid.grid_SO3(1)[[0, 59, 120]])\n  File \"/share/home/niuyh/data/Cryodyna_optpose_paper_20261107/preflight_7c42361/cryodyna/utils/so3_grid.py\", line 47, in grid_SO3\n    theta, phi = grid_s2(resol)\n  File \"/share/home/niuyh/data/Cryodyna_optpose_paper_20261107/preflight_7c42361/cryodyna/utils/so3_grid.py\", line 22, in grid_s2\n    theta, phi = pix2ang(Nside, np.arange(Npix), nest=True)\n  File \"/share/home/niuyh/data/Cryodyna_optpose_paper_20261107/preflight_7c42361/cryodyna/utils/so3_grid.py\", line 139, in pix2ang\n    raise RuntimeError(\nRuntimeError: You need to `pip install healpy` to run with non-standard grid sizes.\n\n----------------------------------------------------------------------\nRan 13 tests in 5.403s\n\nFAILED (errors=1)\n"
+    }
+  },
+  "scope": "allocated GPU environment preflight; no dataset training",
+  "cuda_available": true,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4090",
+    "memory_bytes": 25282281472,
+    "capability": [
+      8,
+      9
+    ],
+    "torch_cuda": "12.8"
+  },
+  "seconds": 121.67137932777405
+}
