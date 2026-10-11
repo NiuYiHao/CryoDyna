@@ -20,6 +20,7 @@ from .benchmark import (ROOT, resolve_config, read_star, prepare_inputs, make_da
     make_task, seed_all, move, loader, pretrain, task_state, load_task_state,
     truth_data, loss_terms, set_mode, sha256, write_json, save_checkpoint)
 from .geometry import angular_error, kabsch_rmsd, perturb_rotations
+from .objectives import scaled_masked_cosine_loss
 from cryodyna.utils.losses import calc_cor_loss
 
 GROUPS = ("shape_true_pose", "pose_true_structure", "pose_reference", "joint")
@@ -62,7 +63,7 @@ def evaluate(task, dataset, args, group, truth_rotations, truth_coordinates,
              initial_rotations, particle_ids, epoch, out):
     rng = (random.getstate(), np.random.get_state(), torch.get_rng_state())
     set_mode(task, False)
-    errors, rmsds, rotations, structures, losses = [], [], [], [], []
+    errors, rmsds, rotations, structures, losses, objectives = [], [], [], [], [], []
     for batch in loader(dataset, args.batch_size, 0, workers=0):
         batch = move(batch, args.device)
         image, structure, rot, _, _ = predict(task, batch, group, truth_rotations, truth_coordinates, initial_rotations)
@@ -70,11 +71,14 @@ def evaluate(task, dataset, args, group, truth_rotations, truth_coordinates,
         errors.extend(angular_error(rot.cpu().numpy(), truth_rotations[ix].cpu().numpy()))
         rmsds.extend(kabsch_rmsd(structure.cpu().numpy(), truth_coordinates[ix].cpu().numpy()))
         losses.append((len(ix), float(calc_cor_loss(image, task.low_pass_images(batch["proj"]), task.mask))))
+        objective = scaled_masked_cosine_loss(image, task.low_pass_images(batch["proj"]), task.mask) if args.objective == "cosine" else calc_cor_loss(image, task.low_pass_images(batch["proj"]), task.mask)
+        objectives.append((len(ix), float(objective)))
         rotations.append(rot.cpu().numpy()); structures.append(structure.cpu().numpy())
     out.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(out / f"epoch{epoch:03}.npz", rotations=np.concatenate(rotations),
         coordinates=np.concatenate(structures), raw_pose_deg=errors, rmsd_A=rmsds, particle_ids=particle_ids)
     result = {"epoch": epoch, "loss": sum(n*v for n,v in losses)/len(dataset),
+        "objective_loss": sum(n*v for n,v in objectives)/len(dataset),
         "rmsd_A": float(np.mean(rmsds)), "pose_deg": float(np.mean(errors)),
         "pose_p90_deg": float(np.quantile(errors, .9))}
     write_json(out / f"epoch{epoch:03}.json", result)
@@ -170,6 +174,8 @@ def run(args):
                     image, structure, _, _, regularization_batch = predict(task, batch, group,
                         truth_rotations, truth_coordinates, initial)
                     image_loss, structural = loss_terms(task, batch["proj"], image, structure)
+                    if args.objective == "cosine":
+                        image_loss = task.cfg.loss.gmm_cryoem_weight * scaled_masked_cosine_loss(image, task.low_pass_images(batch["proj"]), task.mask)
                     loss = image_loss + structural
                     if learn_pose:
                         loss = loss + task.pose_table_regularization(regularization_batch)
@@ -195,7 +201,7 @@ def run(args):
     write_json(out / "protocol.json", protocol)
     write_json(out / "summary.json", {"scope": protocol["scope"], "runs": final})
     with (out / "curves.csv").open("w", newline="") as f:
-        fields = ["group", "angle", "epoch", "loss", "rmsd_A", "pose_deg", "pose_p90_deg"]
+        fields = ["group", "angle", "epoch", "loss", "objective_loss", "rmsd_A", "pose_deg", "pose_p90_deg"]
         writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for run in final:
@@ -218,6 +224,7 @@ def main():
     parser.add_argument("--groups", choices=GROUPS, nargs="+", default=list(GROUPS))
     parser.add_argument("--pose-lr", type=float, default=.003)
     parser.add_argument("--pose-reg", type=float, default=.5)
+    parser.add_argument("--objective", choices=("legacy", "cosine"), default="legacy")
     parser.add_argument("--device", default="cpu")
     args = parser.parse_args()
     if args.epochs < 1 or args.batch_size < 2 or args.init_steps < 1:
