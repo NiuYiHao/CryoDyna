@@ -1,0 +1,8 @@
+{
+  "numerical": "independent candidate CSV re-sort verified all 90 top8 sets and near counts",
+  "replay_max_abs": 0,
+  "plot_min_font_pt": 6.4,
+  "selection": "post-hoc 18 of locked128 with final error>90; retained all18",
+  "visual": "all cells and exact counts inspected; color supplements numerical labels",
+  "inference": "development diagnostic; true class oracle; threshold20 for labels only"
+}

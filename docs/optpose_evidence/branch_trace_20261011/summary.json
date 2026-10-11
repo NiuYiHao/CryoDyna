@@ -1,0 +1,84 @@
+{
+  "protocol": {
+    "particle_ids": [
+      1533,
+      5703,
+      12633,
+      14844,
+      15349,
+      17321,
+      22509,
+      22720,
+      25242,
+      31935,
+      31984,
+      37021,
+      40332,
+      40364,
+      46199,
+      49350,
+      49657,
+      49711
+    ],
+    "selection": "post-hoc final angle >90 deg in locked128",
+    "scope": "development diagnostic; true-class density oracle; zero translations",
+    "radii": [
+      12,
+      17,
+      22,
+      27,
+      32
+    ],
+    "beam": 8,
+    "coarse_size": 4608,
+    "children_per_round": 64,
+    "near_threshold_deg": 20.0,
+    "truth_access": "angles and ranks computed after complete unchanged search",
+    "source_sha256": "fc5b29cc2d1b2295a16d47cc408591f3b7c6513b0dc8494791d8b4e5a59b40cb"
+  },
+  "replay_max_abs": 0.0,
+  "runtime_seconds": 3.329177594045177,
+  "stages": [
+    {
+      "stage": 0,
+      "radius": 12,
+      "near_in_pool": 18,
+      "near_in_beam": 12,
+      "near_pruned": 6,
+      "near_lost_at_expansion": 0
+    },
+    {
+      "stage": 1,
+      "radius": 17,
+      "near_in_pool": 14,
+      "near_in_beam": 11,
+      "near_pruned": 3,
+      "near_lost_at_expansion": 0
+    },
+    {
+      "stage": 2,
+      "radius": 22,
+      "near_in_pool": 13,
+      "near_in_beam": 3,
+      "near_pruned": 10,
+      "near_lost_at_expansion": 0
+    },
+    {
+      "stage": 3,
+      "radius": 27,
+      "near_in_pool": 3,
+      "near_in_beam": 0,
+      "near_pruned": 3,
+      "near_lost_at_expansion": 0
+    },
+    {
+      "stage": 4,
+      "radius": 32,
+      "near_in_pool": 0,
+      "near_in_beam": 0,
+      "near_pruned": 0,
+      "near_lost_at_expansion": 0
+    }
+  ],
+  "final_near_beam_ids": []
+}
