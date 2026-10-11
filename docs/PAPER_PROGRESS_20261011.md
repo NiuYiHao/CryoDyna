@@ -55,3 +55,5 @@ Typst的Optpose section已追加四组训练曲线；原图13缩至90%宽度，�
 集群预检124494确认cn4的RTX4090约24GiB、CUDA12.8可用；项目独立依赖overlay补齐后，124501通过依赖导入、GPU matmul/FFT和13项组件/接口测试。overlay隔离于既有环境，结果记录位于output/cluster_preflight_20261011/。DRGN-AI任务完成真实训练预检124504后提交六seed顺序数组124505，seed0从epoch1 checkpoint接续余下3HPS+25SGD，正在完成100k HPS轮。该轨道为S2-deposited，固定CTF/RNG迁移边界与论文协议验收继续单列。
 
 本机用户可用空间耗尽导致第一次cosine候选的checkpoint保存中断；其协议已标记failed_checkpoint_write并保留完成记录。仅本任务生成的pose_structure_20261011输出迁至/media/nyh/Elements/Cryodyna/paper_20261107/pose_structure_20261011/，原output路径通过符号链接维持访问。外置盘上的新目录n128_epochs20_cosine_retry完成全部13条件；失败与重跑记录分别保存。
+
+最终衔接：已将DRGN-AI发布提交d6df572并入论文执行分支；最新主报告重新编译为36页，四组图18在第22页，目标性质检查在第23页。最新入口为/home/nyh/tools/Cryodyna/output/paper_reports_20261011/20260903.pdf，保留双方section及80S集群续跑状态。
