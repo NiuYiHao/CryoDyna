@@ -1,0 +1,17 @@
+{
+  "question": "At which stage are near-truth hypotheses pruned in the large-angle tail?",
+  "conclusion": "At radius22, ten of thirteen eligible particle pools lose near-truth candidates at top8; radius27 leaves zero.",
+  "panels": {
+    "a": "Per-particle retained-beam accuracy",
+    "b": "Candidate-pool versus retained-beam counts"
+  },
+  "selection": "All 18 final >90deg particles selected post hoc from locked128",
+  "statistics": "Exact descriptive counts; near means full SO3 angle <=20deg; no inferential intervals",
+  "dimensions_inches": [
+    7.2,
+    4.65
+  ],
+  "archetype": "quantitative grid",
+  "backend": "Python/matplotlib",
+  "scope": "true-class density oracle, original images, zero translations; development diagnostic"
+}

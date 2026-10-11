@@ -1,0 +1,37 @@
+{
+  "particle_ids": [
+    1533,
+    5703,
+    12633,
+    14844,
+    15349,
+    17321,
+    22509,
+    22720,
+    25242,
+    31935,
+    31984,
+    37021,
+    40332,
+    40364,
+    46199,
+    49350,
+    49657,
+    49711
+  ],
+  "selection": "post-hoc final angle >90 deg in locked128",
+  "scope": "development diagnostic; true-class density oracle; zero translations",
+  "radii": [
+    12,
+    17,
+    22,
+    27,
+    32
+  ],
+  "beam": 8,
+  "coarse_size": 4608,
+  "children_per_round": 64,
+  "near_threshold_deg": 20.0,
+  "truth_access": "angles and ranks computed after complete unchanged search",
+  "source_sha256": "fc5b29cc2d1b2295a16d47cc408591f3b7c6513b0dc8494791d8b4e5a59b40cb"
+}

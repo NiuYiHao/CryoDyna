@@ -1,6 +1,16 @@
 # Synthetic 80S 三方法比较：来源与复现记录
 
-更新：2026-09-30。当前阶段：复用其他任务已下载的数据及正在运行的 DRGN-AI 实验，补齐三方法统一评估。重复下载和附属校验进程已停止，部分文件保留供后续清理。
+更新：2026-10-11。DRGN-AI 已迁移到 Slurm RTX 4090，作业数组 `124505`，六个种子按 `0-5%1` 顺序执行。seed0 从 `weights.1.pkl` 继续：已完成两轮 HPS，余下三轮 HPS 与二十五轮 SGD。其余种子保留 10k 图像预训练、五轮 HPS 与二十五轮 SGD。下文保留历史实验及协议记录。
+
+## 2026-10-11 集群续跑
+
+最新已完成 checkpoint 的全 100k 粒子结果：视线角均值 **0.481853°**，完整 SO(3) 角均值 **0.559051°**，视线角低于 5° 的比例 **99.737%**。该结果对应 seed0 的第二轮 HPS，六个种子的完整训练与严格论文协议验收继续进行。[原始评估](optpose_evidence/80s_cluster_20261011/previous_evaluation.json)
+
+GPU 预检作业 `124504` 通过了真实 HPS batch=8 和 SGD batch=256 的前向、反向与优化器更新，恢复边界为 start_epoch=2、总 epoch=30。输入、checkpoint 和 DRGN-AI 源码共 35 个文件通过 SHA256；适配器、六个配置和 cryoDRGN vendor 共 97 个文件另外校验。训练输入保留 `pose: null` 与四项 GT 标志为 false；真值旋转继续由本地独立评估读取。[预检记录](optpose_evidence/80s_cluster_20261011/preflight_result.json)
+
+本次沿用原始 coordinate-chunk 适配器与全局 batch。运行环境为 Torch 2.8.0+cu128、RTX 4090；原 checkpoint 保留模型及优化器参数，随机状态由启动种子重新初始化，因此跨设备恢复作为独立连续运行记录。沉积数据采用固定 CTF，论文的 lognormal 离焦协议继续单独核验。
+
+集群脚本位于 [`scripts/drgnai80s_cluster/`](../scripts/drgnai80s_cluster/)。部署时将文件放入运行根的 `code/`；同级保留 `source/`、`vendor/`、`inputs/`、`seed0/` 至 `seed5/`、`logs/`。`preflight80s.py` 在独立目录检查真实批次，`queue80s.py` 从最新完整 checkpoint 继续至 epoch29；`train.sbatch` 每次分配一张 GPU，每个种子的时限为七天。本机原等待服务已停用，训练由集群作业管理。
 
 ## 交付约定
 

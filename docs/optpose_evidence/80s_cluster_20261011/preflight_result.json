@@ -1,0 +1,33 @@
+{
+  "job_id": "124504",
+  "host": "cn4",
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "check": "isolated HPS and SGD train steps",
+  "truth_access": "evaluation truth remains on local machine",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "numpy": "1.26.3",
+    "cryodrgn": "3.4.4",
+    "healpy": "1.17.3",
+    "scipy": "1.12.0",
+    "pandas": "2.2.0"
+  },
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "start_epoch": 2,
+  "target_epochs": 30,
+  "hps": {
+    "batch_size": 8,
+    "loss": 0.31692981719970703,
+    "seconds": 6.539758431026712,
+    "peak_bytes": 996190720
+  },
+  "sgd": {
+    "batch_size": 256,
+    "loss": 0.32033148407936096,
+    "seconds": 1.166766252135858,
+    "peak_bytes": 521115136
+  },
+  "checkpoint_sha256": "79f51cdb5058006dabcb6335897959e7042d9d7368afdc5a598da3057ab292ef",
+  "status": "pass"
+}
