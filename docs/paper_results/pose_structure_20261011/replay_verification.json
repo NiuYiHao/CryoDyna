@@ -1,0 +1,9 @@
+{
+  "snapshots_replayed": 273,
+  "particle_count": 128,
+  "rotation_max_difference_deg": 0,
+  "rmsd_max_difference_A": 8.516571897290506e-15,
+  "truth_rotation_precision": "float32 forward convention; float64 geodesic evaluation",
+  "scope": "saved per-particle prediction arrays; optimizer trajectory replay pending",
+  "initialization_reset_checks": 13
+}

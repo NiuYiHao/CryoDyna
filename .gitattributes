@@ -1,1 +1,2 @@
 *.pdf -diff
+*.svg whitespace=-blank-at-eol

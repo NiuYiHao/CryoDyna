@@ -1,0 +1,12 @@
+{
+  "archetype": "quantitative grid",
+  "run": "/home/nyh/tools/Cryodyna/output/pose_structure_20261011/n128_epochs20",
+  "seed": 1,
+  "particles": 128,
+  "oracle_scope": "oracle development training controls",
+  "caption": "Four-way 1AKE diagnostic. Rows show image loss, per-particle Kabsch CA RMSD and raw full SO(3). Columns show supplied perturbations. The single true-pose/learned-structure control is shared across columns. True-structure pose controls explicitly use oracle coordinates. All 13 conditions use the same 128 particles, seed=1, 128 reference warmup steps and 20 training epochs (80 updates). Means are single-seed descriptive results. This diagnostic does not establish pose-free recovery or full-data scientific acceptance.",
+  "input_sha256": "5b925334be1a509e76578d07607e47a959f399619545de9394c497fd3bdc65e4",
+  "plot_source_sha256": "36897d50f49f5dfa4f9687dd8e869042549b9d525aad6965eebcc2fe90b0fce0",
+  "uncertainty": "single-seed means; repeated-seed uncertainty pending",
+  "formatting_note": "Plotting source EOF normalized after rendering; numeric and layout code unchanged."
+}
