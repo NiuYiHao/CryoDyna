@@ -1,0 +1,79 @@
+{
+  "method": "Optpose (density prior)",
+  "seed": 0,
+  "epoch": 27,
+  "n_particles": 100000,
+  "provenance": {
+    "truth_sha256": "5de877bc9e45182de1fa765f12a841855ef75a217581eadf9ac7488e9ecf5c3e",
+    "ids_sha256": "94e1da7c0c68f62db199c035d5c6c006b53e9d7e5c8a9237e22ba7102a15fd01",
+    "inputs": {
+      "particles.mrcs": "b3e62080a0c041fa31c5317d49d3118ca5b9b0da9c22a4c755bc757eb42ad616",
+      "ctf.pkl": "a762da96ef96606cc1a4308a4ade34a718ea2277957d568bf887c18361348a12"
+    },
+    "evaluator_sha256": "24de3122a6e2970b24515eb3cb6b15b119e2bac1bf32608c24bbec0bd1437290",
+    "analysis_sha256": "849e25c533c8d14295e871433f632cfa36c0578695080abbb7321d29a4875551",
+    "path": "/media/nyh/Elements/Cryodyna/optpose_80s_reproduction_20260930/volume_control_full/evaluation/epoch027.npz",
+    "sha256": "63683cc7d480f1032abb8a800b77df18f275dd48fab76f704bb3c6605c88fe07",
+    "method": "Optpose (density prior)",
+    "seed": 0,
+    "epoch": 27
+  },
+  "alignments": {
+    "paper_mean_frobenius": {
+      "alignment_score": 0.004168039756588959,
+      "hand_flip": false,
+      "candidate": 13,
+      "right_alignment": [
+        [
+          0.9999997993680898,
+          -4.1372404541384356e-05,
+          0.000727766264200902
+        ],
+        [
+          4.1122521112768595e-05,
+          0.9999999645102156,
+          0.0003839546144028816
+        ],
+        [
+          -0.0007277388131186058,
+          -0.00038394686014164847,
+          0.9999997174704962
+        ]
+      ],
+      "view_mean_deg": 0.15190363623724498,
+      "view_median_deg": 0.1372978415408075,
+      "view_p90_deg": 0.2545529644335203,
+      "view_fraction_below5": 1.0,
+      "so3_mean_deg": 0.16471184284073231
+    },
+    "upstream_median_squared_frobenius": {
+      "alignment_score": 1.4647564679224607e-05,
+      "hand_flip": false,
+      "candidate": 13,
+      "right_alignment": [
+        [
+          0.9999997993680898,
+          -4.1372404541384356e-05,
+          0.000727766264200902
+        ],
+        [
+          4.1122521112768595e-05,
+          0.9999999645102156,
+          0.0003839546144028816
+        ],
+        [
+          -0.0007277388131186058,
+          -0.00038394686014164847,
+          0.9999997174704962
+        ]
+      ],
+      "view_mean_deg": 0.15190363623724498,
+      "view_median_deg": 0.1372978415408075,
+      "view_p90_deg": 0.2545529644335203,
+      "view_fraction_below5": 1.0,
+      "so3_mean_deg": 0.16471184284073231
+    }
+  },
+  "raw_view_mean_deg": 0.1485442895847336,
+  "raw_so3_mean_deg": 0.16221351945737394
+}

@@ -53,19 +53,30 @@ def main():
     for i, name in enumerate(args.methods):
         data = selected[selected.method == name].sort_values("epoch")
         color = named.get(name, colors[i % len(colors)])
+        legend_name = name
+        if 'n' in data and data.n.nunique() == 1:
+            legend_name += f" (n={int(data.n.iloc[0])})"
         if len(data) == 1:
-            axes[0].axhline(data.value.iloc[0], color=color, linestyle="--", label=name)
+            axes[0].axhline(data.value.iloc[0], color=color, linestyle="--", label=legend_name)
         else:
-            axes[0].plot(data.epoch, data.value, color=color, label=name)
+            axes[0].plot(data.epoch, data.value, color=color, label=legend_name)
         if has_sd:
-            axes[0].fill_between(data.epoch.to_numpy(), (data.value-data.sd).clip(lower=0).to_numpy(),
-                                 (data.value+data.sd).to_numpy(), color=color, alpha=.15)
+            if len(data) == 1:
+                axes[0].axhspan(max(0, data.value.iloc[0]-data.sd.iloc[0]),
+                               data.value.iloc[0]+data.sd.iloc[0], color=color, alpha=.15)
+            else:
+                axes[0].fill_between(data.epoch.to_numpy(), (data.value-data.sd).clip(lower=0).to_numpy(),
+                                     (data.value+data.sd).to_numpy(), color=color, alpha=.15)
         last = data.iloc[-1]
         axes[1].bar(i, last.value, color=color, width=.65,
                     yerr=last.sd if has_sd else None, capsize=2)
     upper = max(float((selected.value + (selected.sd if has_sd else 0)).max())*1.1, .05)
+    for i, name in enumerate(args.methods):
+        last = selected[selected.method == name].sort_values('epoch').iloc[-1]
+        y = last.value + (last.sd if has_sd else 0.) + upper*.025
+        axes[1].text(i, y, f'{last.value:.3f}°', ha='center', va='bottom', fontsize=7)
     axes[0].set(xlabel=args.x_label, ylabel=args.metric_label, ylim=(0, upper))
-    axes[1].set(xticks=np.arange(len(args.methods)), xticklabels=[x.replace("CryoDyna-optpose", "Optpose") for x in args.methods],
+    axes[1].set(xticks=np.arange(len(args.methods)), xticklabels=[x.replace("CryoDyna-optpose", "Optpose").replace(' (density prior)', '\n(density prior)') for x in args.methods],
                 ylabel="Final " + args.metric_label[0].lower()+args.metric_label[1:], ylim=(0, upper))
     fig.legend(*axes[0].get_legend_handles_labels(), loc="upper center", ncol=min(3, len(args.methods)), bbox_to_anchor=(.5, .99))
     save_figure(fig, out/"figure")

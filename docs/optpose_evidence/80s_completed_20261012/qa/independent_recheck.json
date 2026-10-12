@@ -1,0 +1,35 @@
+{
+  "status": "pass",
+  "scope": "independent angle and aggregate arithmetic using saved global frame/hand",
+  "fixed_cohort": true,
+  "endpoint_checks": [
+    {
+      "seed": 0,
+      "n": 100000,
+      "view_mean_deg": 0.9798715888903378,
+      "so3_mean_deg": 1.305104518346582,
+      "view_max_deg": 2.6940799363993246,
+      "view_fraction_below5": 1.0,
+      "max_mean_difference_deg": 9.405587420019401e-12
+    },
+    {
+      "seed": 1,
+      "n": 100000,
+      "view_mean_deg": 0.8735180426737603,
+      "so3_mean_deg": 1.169526142687917,
+      "view_max_deg": 2.318123061743638,
+      "view_fraction_below5": 1.0,
+      "max_mean_difference_deg": 7.1520567246352584e-12
+    },
+    {
+      "seed": 2,
+      "n": 100000,
+      "view_mean_deg": 0.9000054461544358,
+      "so3_mean_deg": 1.2164190068238232,
+      "view_max_deg": 2.618704489407335,
+      "view_fraction_below5": 1.0,
+      "max_mean_difference_deg": 2.5227597788557432e-12
+    }
+  ],
+  "aggregate_rows_checked": 60
+}

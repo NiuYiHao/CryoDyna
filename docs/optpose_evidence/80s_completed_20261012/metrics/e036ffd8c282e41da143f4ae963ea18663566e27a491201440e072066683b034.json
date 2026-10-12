@@ -1,0 +1,82 @@
+{
+  "method": "DRGN-AI",
+  "seed": 1,
+  "epoch": 8,
+  "n_particles": 100000,
+  "provenance": {
+    "truth_sha256": "5de877bc9e45182de1fa765f12a841855ef75a217581eadf9ac7488e9ecf5c3e",
+    "ids_sha256": "94e1da7c0c68f62db199c035d5c6c006b53e9d7e5c8a9237e22ba7102a15fd01",
+    "inputs": {
+      "particles.mrcs": "b3e62080a0c041fa31c5317d49d3118ca5b9b0da9c22a4c755bc757eb42ad616",
+      "ctf.pkl": "a762da96ef96606cc1a4308a4ade34a718ea2277957d568bf887c18361348a12"
+    },
+    "evaluator_sha256": "24de3122a6e2970b24515eb3cb6b15b119e2bac1bf32608c24bbec0bd1437290",
+    "analysis_sha256": "849e25c533c8d14295e871433f632cfa36c0578695080abbb7321d29a4875551",
+    "path": "/media/nyh/ce66dee3-f568-4265-9a9c-a9c9b34c3973/nyh-storage/projects/Cryodyna/continuation_20261012/snapshot_80s/seed1/out/pose.7.pkl",
+    "sha256": "67eca806a88cf481e578572c675eabdf5b917423c34d573bae118d369c3a6ac8",
+    "weights_sha256": "f0846ea213d06563129c4fb3cebeae45fbfdfa9dd3592676cf784b66285421dc",
+    "method": "DRGN-AI",
+    "seed": 1,
+    "epoch": 8
+  },
+  "alignments": {
+    "paper_mean_frobenius": {
+      "alignment_score": 0.0311986200006635,
+      "hand_flip": false,
+      "candidate": 69,
+      "right_alignment": [
+        [
+          0.8523270010110693,
+          0.07205419219513276,
+          0.5180222513012094
+        ],
+        [
+          -0.44559392991924085,
+          0.6186236720840572,
+          0.6471096576938979
+        ],
+        [
+          -0.2738338445145949,
+          -0.7823764563105677,
+          0.5593765538282354
+        ]
+      ],
+      "view_mean_deg": 0.9896082706121822,
+      "view_median_deg": 0.9538352525567368,
+      "view_p90_deg": 1.5352467047435738,
+      "view_fraction_below5": 0.99957,
+      "so3_mean_deg": 1.2635751063762213
+    },
+    "upstream_median_squared_frobenius": {
+      "alignment_score": 0.0009317810483823272,
+      "hand_flip": false,
+      "candidate": 69,
+      "right_alignment": [
+        [
+          0.8523270010110693,
+          0.07205419219513276,
+          0.5180222513012094
+        ],
+        [
+          -0.44559392991924085,
+          0.6186236720840572,
+          0.6471096576938979
+        ],
+        [
+          -0.2738338445145949,
+          -0.7823764563105677,
+          0.5593765538282354
+        ]
+      ],
+      "view_mean_deg": 0.9896082706121822,
+      "view_median_deg": 0.9538352525567368,
+      "view_p90_deg": 1.5352467047435738,
+      "view_fraction_below5": 0.99957,
+      "so3_mean_deg": 1.2635751063762213
+    }
+  },
+  "raw_view_mean_deg": 45.90603919178509,
+  "raw_so3_mean_deg": 59.13159715557138,
+  "raw_shift_norm_mean_pixels": 2.5040201860263913,
+  "shift_scope": "raw learned shift norm; global volume origin remains uncalibrated"
+}

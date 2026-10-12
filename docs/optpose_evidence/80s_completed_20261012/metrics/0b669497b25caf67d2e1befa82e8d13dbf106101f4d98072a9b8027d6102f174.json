@@ -1,0 +1,78 @@
+{
+  "method": "Random SO(3)",
+  "seed": 5,
+  "epoch": 0,
+  "n_particles": 100000,
+  "provenance": {
+    "truth_sha256": "5de877bc9e45182de1fa765f12a841855ef75a217581eadf9ac7488e9ecf5c3e",
+    "ids_sha256": "94e1da7c0c68f62db199c035d5c6c006b53e9d7e5c8a9237e22ba7102a15fd01",
+    "inputs": {
+      "particles.mrcs": "b3e62080a0c041fa31c5317d49d3118ca5b9b0da9c22a4c755bc757eb42ad616",
+      "ctf.pkl": "a762da96ef96606cc1a4308a4ade34a718ea2277957d568bf887c18361348a12"
+    },
+    "evaluator_sha256": "24de3122a6e2970b24515eb3cb6b15b119e2bac1bf32608c24bbec0bd1437290",
+    "analysis_sha256": "849e25c533c8d14295e871433f632cfa36c0578695080abbb7321d29a4875551",
+    "distribution": "Haar SO(3)",
+    "seed": 5,
+    "method": "Random SO(3)",
+    "epoch": 0
+  },
+  "alignments": {
+    "paper_mean_frobenius": {
+      "alignment_score": 2.397476354128445,
+      "hand_flip": true,
+      "candidate": 50,
+      "right_alignment": [
+        [
+          -0.7221345698167587,
+          -0.6881678722510571,
+          -0.07033487492259095
+        ],
+        [
+          0.5458624468444484,
+          -0.5044274131181339,
+          -0.6690198585288206
+        ],
+        [
+          -0.42491905035327837,
+          0.5215153820167309,
+          -0.7399092665210026
+        ]
+      ],
+      "view_mean_deg": 89.8695345819045,
+      "view_median_deg": 89.93020731914193,
+      "view_p90_deg": 142.8178495443431,
+      "view_fraction_below5": 0.00192,
+      "so3_mean_deg": 126.23533171051089
+    },
+    "upstream_median_squared_frobenius": {
+      "alignment_score": 6.670898938052044,
+      "hand_flip": true,
+      "candidate": 58,
+      "right_alignment": [
+        [
+          -0.33113902570815573,
+          0.4052036029318872,
+          -0.8521484903617497
+        ],
+        [
+          0.7986846763468286,
+          0.6012523187862301,
+          -0.024462891670381386
+        ],
+        [
+          -0.5024438768079634,
+          0.6886984744443447,
+          0.5227280551741658
+        ]
+      ],
+      "view_mean_deg": 89.76645088195771,
+      "view_median_deg": 89.82349820943841,
+      "view_p90_deg": 142.81950722278398,
+      "view_fraction_below5": 0.00198,
+      "so3_mean_deg": 126.27286634756564
+    }
+  },
+  "raw_view_mean_deg": 90.03759822693505,
+  "raw_so3_mean_deg": 126.64102771106371
+}

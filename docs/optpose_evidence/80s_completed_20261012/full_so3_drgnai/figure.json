@@ -1,0 +1,13 @@
+{
+  "dataset": "Synthetic 80S",
+  "methods": [
+    "DRGN-AI"
+  ],
+  "metric": "Aligned full SO(3) error (\u00b0)",
+  "x_label": "Training pass",
+  "rows_input": 61,
+  "rows_displayed": 30,
+  "selection": "requested method names",
+  "endpoint": "last recorded epoch per method",
+  "caption": "All 100,000 particles; DRGN-AI completed seeds [0, 1, 2], 3/6 planned runs; every displayed epoch uses this same completed cohort. Mean and sample SD across runs; fixed-density Optpose is one deterministic trajectory; Random SO(3) uses six Haar seeds. Global frame and hand selected from the first 100 particle-derived candidates by mean Frobenius norm. Fixed 15000-A defocus deposited dataset; lognormal-defocus paper fidelity remains pending. DRGN-AI learns density and poses from images/CTF; Optpose uses a fixed external density. Seed0 resumes after HPS2 with a new Torch/CUDA environment; other completed seeds start from pretraining."
+}

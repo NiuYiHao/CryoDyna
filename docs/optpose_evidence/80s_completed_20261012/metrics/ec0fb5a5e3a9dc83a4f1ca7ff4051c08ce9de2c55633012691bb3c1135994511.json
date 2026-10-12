@@ -1,0 +1,78 @@
+{
+  "method": "Random SO(3)",
+  "seed": 3,
+  "epoch": 0,
+  "n_particles": 100000,
+  "provenance": {
+    "truth_sha256": "5de877bc9e45182de1fa765f12a841855ef75a217581eadf9ac7488e9ecf5c3e",
+    "ids_sha256": "94e1da7c0c68f62db199c035d5c6c006b53e9d7e5c8a9237e22ba7102a15fd01",
+    "inputs": {
+      "particles.mrcs": "b3e62080a0c041fa31c5317d49d3118ca5b9b0da9c22a4c755bc757eb42ad616",
+      "ctf.pkl": "a762da96ef96606cc1a4308a4ade34a718ea2277957d568bf887c18361348a12"
+    },
+    "evaluator_sha256": "24de3122a6e2970b24515eb3cb6b15b119e2bac1bf32608c24bbec0bd1437290",
+    "analysis_sha256": "849e25c533c8d14295e871433f632cfa36c0578695080abbb7321d29a4875551",
+    "distribution": "Haar SO(3)",
+    "seed": 3,
+    "method": "Random SO(3)",
+    "epoch": 0
+  },
+  "alignments": {
+    "paper_mean_frobenius": {
+      "alignment_score": 2.397761093069295,
+      "hand_flip": false,
+      "candidate": 20,
+      "right_alignment": [
+        [
+          0.005760930901855908,
+          0.1502075113552518,
+          0.9886377543011906
+        ],
+        [
+          0.9839052507394954,
+          -0.17742656434586712,
+          0.021223752856866805
+        ],
+        [
+          0.17859856501110408,
+          0.9726035491238623,
+          -0.14881210932528124
+        ]
+      ],
+      "view_mean_deg": 89.93598699263708,
+      "view_median_deg": 90.08441630766087,
+      "view_p90_deg": 142.8385019815468,
+      "view_fraction_below5": 0.00213,
+      "so3_mean_deg": 126.14835561945212
+    },
+    "upstream_median_squared_frobenius": {
+      "alignment_score": 6.66129143730233,
+      "hand_flip": false,
+      "candidate": 20,
+      "right_alignment": [
+        [
+          0.005760930901855908,
+          0.1502075113552518,
+          0.9886377543011906
+        ],
+        [
+          0.9839052507394954,
+          -0.17742656434586712,
+          0.021223752856866805
+        ],
+        [
+          0.17859856501110408,
+          0.9726035491238623,
+          -0.14881210932528124
+        ]
+      ],
+      "view_mean_deg": 89.93598699263708,
+      "view_median_deg": 90.08441630766087,
+      "view_p90_deg": 142.8385019815468,
+      "view_fraction_below5": 0.00213,
+      "so3_mean_deg": 126.14835561945212
+    }
+  },
+  "raw_view_mean_deg": 90.05299512757635,
+  "raw_so3_mean_deg": 126.44866944685933
+}

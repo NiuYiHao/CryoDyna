@@ -1,0 +1,22 @@
+{
+  "pages": 37,
+  "pdf_sha256": "35867498792453da3a1ab412b8f89b5fc184f9af8b14156265a02600600e88fd",
+  "review_pages": [
+    12,
+    13,
+    14,
+    19
+  ],
+  "compile": "pass",
+  "section_sources": {
+    "drgnai_80s_20261001.typ": "3da7f016e55e0cb3f7e00db3a555d6337383e6987b6fd208d62d694f81c48188",
+    "optpose_results_20261001.typ": "1b4ae8bec551002fe273c79d151091a55ce4f98a9d5bbf7a9d7310c959d8abf0"
+  },
+  "visual_review": "pass: pages 12,13,14,19",
+  "new_figures_page": 13,
+  "new_figures": [
+    9,
+    10
+  ],
+  "minimum_glyph_size_new_figure_page": 5.249342918395996
+}

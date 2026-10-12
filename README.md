@@ -249,6 +249,8 @@ You may cite this software by:
 The [acceptance record](docs/OPTPOSE_ACCEPTANCE.md) includes completed five-angle
 1AKE perturbations, the [80S + 1AKE figure](docs/optpose_evidence/release_summary/80s_1ake_evidence.png),
 and all remaining scientific gates. The 80S fixed-density control reaches
-0.144° mean viewing-direction error on 100,000 particles; DRGN-AI's 80S replication
-continues separately. The current 1AKE ab-initio pilot remains far above the
+0.144° mean viewing-direction error on 100,000 particles. [Three completed DRGN-AI
+80S runs](docs/optpose_evidence/80s_completed_20261012/README.md) reach
+0.918 ± 0.055° after 30 passes; the remaining three seeds and paper-protocol audit
+continue separately. The current 1AKE ab-initio pilot remains far above the
 accuracy target. See [reproduction commands](docs/optpose.md).

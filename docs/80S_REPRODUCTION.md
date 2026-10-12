@@ -1,10 +1,20 @@
 # Synthetic 80S 三方法比较：来源与复现记录
 
-更新：2026-10-11。DRGN-AI 已迁移到 Slurm RTX 4090，作业数组 `124505`，六个种子按 `0-5%1` 顺序执行。seed0 从 `weights.1.pkl` 继续：已完成两轮 HPS，余下三轮 HPS 与二十五轮 SGD。其余种子保留 10k 图像预训练、五轮 HPS 与二十五轮 SGD。下文保留历史实验及协议记录。
+## 最新完整运行：2026-10-12
+
+seed 0、1、2 均完成全部 30 轮，各覆盖 100,000 粒子。跨运行的终点平均视线角为 **0.917798 ± 0.055364°**（mean ± sample SD），完整 SO(3) 为 **1.230350 ± 0.068854°**。各运行全部粒子的视线角均低于 5°。其余三个计划种子继续执行；完整六次重复与严格论文协议核验继续单列。
+
+[完整图表及逐种子证据](optpose_evidence/80s_completed_20261012/README.md) · [视线角细节图](optpose_evidence/80s_completed_20261012/viewing_direction_drgnai/figure.png) · [三方法比较](optpose_evidence/80s_completed_20261012/viewing_direction/figure.png)
+
+每个曲线点使用同一组完整运行，保留全部 30 个观测；三方法采用同一 100k 粒子顺序与对齐口径。固定密度 Optpose 终点为 0.144339°，六次 Haar 随机预测为 89.814062 ± 0.082625°。Optpose 的结构先验及运行次数单独标注。
+
+新入口 `scripts/sync_80s_results.py` 和 `scripts/evaluate_80s_snapshot.py` 保存完整运行快照、逐轮 pose/权重 SHA256、训练配置和原始日志，并核对集群/本地图像与 CTF 哈希。`scripts/recheck_80s_snapshot.py` 独立核验终点角度和 60 项曲线聚合；最大终点均值差为 9.41e-12°。运行与存储说明见 [当日记录](PAPER_PROGRESS_20261012.md)。
+
+历史迁移记录（2026-10-11）：DRGN-AI 已迁移到 Slurm RTX 4090，作业数组 `124505`，六个种子按 `0-5%1` 顺序执行。seed0 从 `weights.1.pkl` 继续：已完成两轮 HPS，余下三轮 HPS 与二十五轮 SGD。其余种子保留 10k 图像预训练、五轮 HPS 与二十五轮 SGD。下文保留历史实验及协议记录。
 
 ## 2026-10-11 集群续跑
 
-最新已完成 checkpoint 的全 100k 粒子结果：视线角均值 **0.481853°**，完整 SO(3) 角均值 **0.559051°**，视线角低于 5° 的比例 **99.737%**。该结果对应 seed0 的第二轮 HPS，六个种子的完整训练与严格论文协议验收继续进行。[原始评估](optpose_evidence/80s_cluster_20261011/previous_evaluation.json)
+迁移时 checkpoint 的全 100k 粒子结果：视线角均值 **0.481853°**，完整 SO(3) 角均值 **0.559051°**，视线角低于 5° 的比例 **99.737%**。该结果对应 seed0 的第二轮 HPS，六个种子的完整训练与严格论文协议验收继续进行。[原始评估](optpose_evidence/80s_cluster_20261011/previous_evaluation.json)
 
 GPU 预检作业 `124504` 通过了真实 HPS batch=8 和 SGD batch=256 的前向、反向与优化器更新，恢复边界为 start_epoch=2、总 epoch=30。输入、checkpoint 和 DRGN-AI 源码共 35 个文件通过 SHA256；适配器、六个配置和 cryoDRGN vendor 共 97 个文件另外校验。训练输入保留 `pose: null` 与四项 GT 标志为 false；真值旋转继续由本地独立评估读取。[预检记录](optpose_evidence/80s_cluster_20261011/preflight_result.json)
 
@@ -41,7 +51,7 @@ GPU 预检作业 `124504` 通过了真实 HPS batch=8 和 SGD batch=256 的前�
 
 本任务早期来源审计见 [audit.json](optpose_evidence/80s_reproduction/audit.json)，该文件保留早期下载状态。当前状态以本文和实际训练根为准。
 
-DRGN-AI 的现有运行由 `develop/artifacts/drgnai_reproduction_20260930/run80s.sh` 管理。源码 d0872ff、六个种子、5 HPS + 25 SGD、batch 32/8/256，使用保持全局 batch 的 coordinate-chunk checkpointing。其他任务已保存前向/梯度校验。seed0 已完成 10k 随机 pose 预训练，正在 HPS epoch 0；训练输出由该任务继续管理。
+DRGN-AI 的现有运行由 `develop/artifacts/drgnai_reproduction_20260930/run80s.sh` 管理。源码 d0872ff、六个种子、5 HPS + 25 SGD、batch 32/8/256，使用保持全局 batch 的 coordinate-chunk checkpointing。其他任务已保存前向/梯度校验。2026-09-30 的初始记录为 seed0 完成 10k 随机 pose 预训练并进入 HPS；当前完成状态见上方最新完整运行。
 
 ## 影响严格复现的具体差异
 
@@ -59,7 +69,7 @@ DRGN-AI 的现有运行由 `develop/artifacts/drgnai_reproduction_20260930/run80
 - Random SO(3)：固定种子的 Haar 随机旋转，与其余方法共用评估口径。
 - 出图：三方法都有真实观测值后输出 PNG/PDF/SVG、CSV、图注与来源记录；保留失败运行的记录。
 
-当前源码、元数据、补充材料及模板的准备工作均已记录。80S 三方法准确度仍待实际训练与统一评估。
+当前三方法全量实测曲线见最新完整运行条目；六次重复与严格论文协议的验收继续进行。
 
 ## 2026-09-30 实际运行补充
 

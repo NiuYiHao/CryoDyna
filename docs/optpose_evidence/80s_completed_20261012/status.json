@@ -1,0 +1,78 @@
+{
+  "required_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "completed_seeds": [
+    0,
+    1,
+    2
+  ],
+  "completed_run_count": 3,
+  "complete_30pass_seeds": false,
+  "n_particles": 100000,
+  "fixed_cohort_per_epoch": true,
+  "completed_view_mean_deg": [
+    0.9798715888997434,
+    0.8735180426666083,
+    0.9000054461569585
+  ],
+  "completed_so3_mean_deg": [
+    1.3051045183465826,
+    1.1695261426879178,
+    1.2164190068238236
+  ],
+  "completed_runs_below5": true,
+  "paper_protocol_status": "pending fixed-CTF versus lognormal defocus reconciliation",
+  "snapshot_sha256": "3dbca0accde4b74de4d777443ea078ae20d2fcb708db4e1074e329a946ace38d",
+  "truth_sha256": "5de877bc9e45182de1fa765f12a841855ef75a217581eadf9ac7488e9ecf5c3e",
+  "ids_sha256": "94e1da7c0c68f62db199c035d5c6c006b53e9d7e5c8a9237e22ba7102a15fd01",
+  "inputs": {
+    "particles.mrcs": "b3e62080a0c041fa31c5317d49d3118ca5b9b0da9c22a4c755bc757eb42ad616",
+    "ctf.pkl": "a762da96ef96606cc1a4308a4ade34a718ea2277957d568bf887c18361348a12"
+  },
+  "evaluator_sha256": "24de3122a6e2970b24515eb3cb6b15b119e2bac1bf32608c24bbec0bd1437290",
+  "analysis_sha256": "849e25c533c8d14295e871433f632cfa36c0578695080abbb7321d29a4875551",
+  "training_config_audit": {
+    "seed0/configs.yaml": {
+      "sha256": "f8f8efa68cc6bbef1623db76ae373c71e05a54a95c5b548ed50379b3190b9f0e",
+      "pose": null,
+      "gt_pose_flags": false,
+      "learn_trans": true
+    },
+    "seed0/out/drgnai-configs.yaml": {
+      "sha256": "c831a34dbb2b1e671b19b7ea6644f21d4c89054cc1228a8c44424c28f4dd6256",
+      "pose": null,
+      "gt_pose_flags": false,
+      "learn_trans": true
+    },
+    "seed1/configs.yaml": {
+      "sha256": "e622f47db94b3a0540e4e9adf447f52de5a0c6063c5ad70e27fed0e568e16b5f",
+      "pose": null,
+      "gt_pose_flags": false,
+      "learn_trans": true
+    },
+    "seed1/out/drgnai-configs.yaml": {
+      "sha256": "22d88b6bd377ee050029381d49be97bffb9f6daf92e826ea33c46530550b23f5",
+      "pose": null,
+      "gt_pose_flags": false,
+      "learn_trans": true
+    },
+    "seed2/configs.yaml": {
+      "sha256": "51d2f551a688be43f697b4931edb2ebcc605a1b98b541ec6930f526ce3cc857c",
+      "pose": null,
+      "gt_pose_flags": false,
+      "learn_trans": true
+    },
+    "seed2/out/drgnai-configs.yaml": {
+      "sha256": "fbc6be6915952b36d43546eb797dc3ae088eaf65fef2558794a46b2c0338c2c8",
+      "pose": null,
+      "gt_pose_flags": false,
+      "learn_trans": true
+    }
+  }
+}

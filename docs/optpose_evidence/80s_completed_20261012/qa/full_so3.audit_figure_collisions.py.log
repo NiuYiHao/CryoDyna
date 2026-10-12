@@ -1,0 +1,10 @@
+Nature Figure Rendered Collision Audit
+pdf: /media/nyh/ce66dee3-f568-4265-9a9c-a9c9b34c3973/nyh-storage/projects/Cryodyna/continuation_20261012/evaluation_80s/full_so3/figure.pdf
+pages: 1
+visible text boxes: 34
+stroke paths: 46
+
+
+summary: 0 fail, 0 warn, 0 contained fill overlays, 0 contained image overlays
+verdict: PASS
+note: contained overlays can be intentional; WARN findings need final-size visual review
